@@ -15,10 +15,10 @@ const P = {
   // Replace null with your image URL, e.g.:
   //   photo: "https://i.imgur.com/yourphoto.jpg"   (hosted)
   //   photo: "/photo.jpg"                           (file in /public/)
-  photo: null,
+  photo: "/photo.jpg",
   // ───────────────────────────────────────────────────────────────────
   stats:[
-    {value:"4.37",label:"CGPA / 5.00",sub:"Dean's List",detail:"B.Eng. Mechanical Engineering · Redeemer's University · Oct 2023 – Present"},
+    {value:"4.32",label:"CGPA / 5.00",detail:"B.Eng. Mechanical Engineering · Redeemer's University · Oct 2023 – Present"},
     {value:"1360",label:"SAT Score",sub:"90th Percentile",detail:"Math: 710 (92nd %ile) · R&W: 650 (85th %ile) · College Board, March 2023"},
     {value:"611",label:"Delegates",sub:"RUNSA 2026",detail:"611 delegates processed across three solo-built production apps. Zero data loss."},
     {value:"3",label:"Live Apps",sub:"Built Solo",detail:"Registration Portal, Live Agenda, ID Card Generator — shipped in under 10 weeks as sole developer."},
@@ -124,7 +124,7 @@ const EXPERIENCE=[
 const EDUCATION=[
   {id:"uni",icon:"🎓",title:"B.Eng. Mechanical Engineering",org:"Redeemer's University, Ede",period:"Oct 2023 – Present",badge:"4.37 / 5.00",
     modal:{tag:"Current · Dean's List Candidate",title:"B.Eng. Mechanical Engineering",subtitle:"Redeemer's University, Ede · Osun State, Nigeria",
-      desc:"CGPA: 4.37 / 5.00 · Dean's List Candidate",ptsLabel:"Relevant Coursework:",
+      desc:"CGPA: 4.32 / 5.00",ptsLabel:"Relevant Coursework:",
       pts:["Engineering Thermodynamics","Strength of Materials","Engineering Materials","Workshop Practice","Fluid Mechanics","Engineering Mathematics","Introduction to Python Programming"]}},
   {id:"waec",icon:"📜",title:"WAEC Senior School Certificate",org:"Yabtech Secondary School, Lagos",period:"Sep 2016 – Jul 2022",badge:"3 Distinctions",
     modal:{tag:"WAEC",title:"West African Senior School Certificate",subtitle:"Yaba College of Technology Secondary School · 2016 – 2022",
