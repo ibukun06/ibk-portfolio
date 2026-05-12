@@ -10,7 +10,7 @@ const P = {
   location:"Lagos, Nigeria", email:"oluwafemiibk@gmail.com", phone:"+234 708 057 2415",
   whatsapp:"https://wa.me/2347080572415", linkedin:"https://linkedin.com/in/ibk-co",
   github:"https://github.com/ibukun06",
-  resume:"https://ibukun06.github.io/Ibukunoluwa-portfolio/Ibukunoluwa_Oluwafemi_Resume.docx",
+  resume:"/Resumé.pdf",
   // ── PROFILE PHOTO ──────────────────────────────────────────────────
   // Replace null with your image URL, e.g.:
   //   photo: "https://i.imgur.com/yourphoto.jpg"   (hosted)
