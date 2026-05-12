@@ -15,7 +15,7 @@ const P = {
   // Replace null with your image URL, e.g.:
   //   photo: "https://i.imgur.com/yourphoto.jpg"   (hosted)
   //   photo: "/photo.jpg"                           (file in /public/)
-  photo: "/photo.jpg",
+  photo: "/profile.jpg",
   // ───────────────────────────────────────────────────────────────────
   stats:[
     {value:"4.32",label:"CGPA / 5.00",detail:"B.Eng. Mechanical Engineering · Redeemer's University · Oct 2023 – Present"},
