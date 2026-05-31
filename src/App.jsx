@@ -1,12 +1,12 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 
-/* ═══════ DATA — edit here to update your portfolio ═══════ */
+/* ═══════ DATA -- edit here to update your portfolio ═══════ */
 
 const P = {
   name:"Ibukunoluwa J. Oluwafemi", nick:"IBK",
   titles:["Mechanical Engineering Student","Fabrication & Workshop Trained","AI Workflow Optimizer"],
-  tagline:"I weld steel frames, design in AutoCAD, and use AI to build production tools — a mechanical engineer who ships at the speed of software.",
-  summary:"Mechanical Engineering student at Redeemer's University (CGPA 4.32/5.00) with hands-on fabrication experience: SMAW welding, lathe, milling, drilling, and machine operations through SWEP. Used AI-assisted development to design and ship three live web applications for the RUNSA Legislative Summit 2026 — serving 611 registered delegates with zero data loss. SAT 1360/1600 (90th percentile, Math 710). Seeking SIWES/engineering internships in manufacturing, production, or mechanical systems — and AI workflow roles where I help organizations identify and implement tools that cut costs and increase efficiency.",
+  tagline:"I weld steel frames, design in AutoCAD, and use AI to build production tools -- a mechanical engineer who ships at the speed of software.",
+  summary:"Mechanical Engineering student at Redeemer's University (CGPA 4.32/5.00) with hands-on fabrication experience: SMAW welding, lathe, milling, drilling, and machine operations through SWEP. Used AI-assisted development to design and ship three live web applications for the RUNSA Legislative Summit 2026 -- serving 611 registered delegates with zero data loss. SAT 1360/1600 (90th percentile, Math 710). Seeking SIWES/engineering internships in manufacturing, production, or mechanical systems -- and AI workflow roles where I help organizations identify and implement tools that cut costs and increase efficiency.",
   location:"Lagos, Nigeria",
   emailAcademic:"oluwafemi14634@run.edu.ng",
   emailPersonal:"oluwafemiibk@gmail.com",
@@ -21,7 +21,7 @@ const P = {
     {value:"4.32",label:"CGPA / 5.00",detail:"B.Eng. Mechanical Engineering · Redeemer's University · Oct 2023 – Present"},
     {value:"1360",label:"SAT Score",sub:"90th Percentile",detail:"Math: 710 (92nd %ile) · R&W: 650 (85th %ile) · College Board, March 2023"},
     {value:"611",label:"Delegates",sub:"RUNSA 2026",detail:"611 delegates processed across three solo-built production apps. Zero data loss."},
-    {value:"3",label:"Live Apps",sub:"Built Solo",detail:"Registration Portal, Live Agenda, ID Card Generator — shipped in under 10 weeks as sole developer."},
+    {value:"3",label:"Live Apps",sub:"Built Solo",detail:"Registration Portal, Live Agenda, ID Card Generator -- shipped in under 10 weeks as sole developer."},
   ],
   seeking:["⚙️ SIWES / Engineering Internship","🔧 Manufacturing & Fabrication","🤖 AI Workflow Role","🌍 Nigeria & Abroad"],
 };
@@ -60,12 +60,19 @@ const SKILLS=[
       pts:["RJ45 Cat6 crimping and cable assembly","Straight-through and crossover configurations","Cable testing with network verifiers","Structured cabling and troubleshooting fundamentals"]}},
 ];
 
+// Projects with scalable image gallery support
 const PROJECTS=[
   {id:"runsa",featured:true,icon:"🚀",title:"RUNSA Legislative Summit 2026",period:"Jan – Apr 2026",
     subtitle:"AI-Assisted Build · Production · Solo Developer",
     link:"https://legislative-summit-registration.vercel.app",
     summary:"Three independent production web apps built solo in under 10 weeks. 611 delegates. Zero data loss.",
     tags:["React.js","Firebase","Firestore","Realtime DB","Vercel","JavaScript"],
+    images:[
+      {src:"/projects/runsa-registration.jpg",caption:"Registration Portal - 611 delegates registered",alt:"RUNSA Registration Portal"},
+      {src:"/projects/runsa-agenda.jpg",caption:"Live Order of Events Platform",alt:"RUNSA Agenda Platform"},
+      {src:"/projects/runsa-idcard.jpg",caption:"ID Card Generator output",alt:"RUNSA ID Card Generator"},
+      {src:"/projects/runsa-dashboard.jpg",caption:"Admin accreditation dashboard",alt:"RUNSA Admin Dashboard"},
+    ],
     modal:{tag:"⭐ Featured Project",title:"RUNSA Legislative Summit 2026",
       subtitle:"Jan 2026 – Apr 2026 · AI-Assisted Solo Build · Redeemer's University Student Association",
       desc:"Used AI-assisted development to design, build, and deploy three independent production web applications in under 10 weeks — with no formal software training. 611 delegates served across all three platforms with zero data loss on summit day.",
@@ -78,14 +85,27 @@ const PROJECTS=[
     subtitle:"Python · Engineering Calculation Tool",
     summary:"Automates the Double Integration Method for structural beam analysis. Cuts lab calculation time by 90%+.",
     tags:["Python","NumPy","Structural Analysis"],
+    images:[
+      {src:"/projects/beam-code.jpg",caption:"Python implementation of Double Integration Method",alt:"Beam Deflection code"},
+      {src:"/projects/beam-output.jpg",caption:"Terminal output showing deflection results",alt:"Beam Deflection output"},
+      {src:"/projects/beam-calculations.jpg",caption:"Sample engineering calculations",alt:"Beam calculations"},
+    ],
     modal:{tag:"Engineering Tool",title:"Beam Deflection Automator",subtitle:"2024 · Personal Project · Python + NumPy",
       desc:"Built a Python script that automates the Double Integration Method for structural beam analysis — eliminating propagation errors and dramatically cutting lab report preparation time.",
       pts:["Reduced lab report calculation time by over 90%","Eliminated propagation errors common in manual double integration","Used by coursemates for Strength of Materials coursework","Demonstrates engineering analysis + programming integration"],
-      code:`import numpy as np\n\ndef double_integration(load, length, E, I):\n    M     = (load * length) / 2\n    theta = M / (E * I)\n    delta = (load * length**3) / (48 * E * I)\n    return {"slope": theta, "deflection": delta}`}},
+      code:"import numpy as np\n\ndef double_integration(load, length, E, I):\n    M = (load * length) / 2\n    theta = M / (E * I)\n    delta = (load * length**3) / (48 * E * I)\n    return {\"slope\": theta, \"deflection\": delta}"}},
   {id:"maize",featured:false,icon:"⚙️",title:"Maize Sheller Machine",period:"SWEP 2024",
     subtitle:"Fabrication · Lead Role · Petrol-Powered",
     summary:"Led chassis fabrication. SMAW welded mild steel angle iron frame. Aligned petrol engine drive system. Throughput: 50 kg/hr.",
     tags:["SMAW Welding","Metal Fabrication","Mechanical Design"],
+    images:[
+      {src:"/projects/maize-sketch.jpg",caption:"Design sketch of Maize Sheller chassis",alt:"Maize Sheller design"},
+      {src:"/projects/maize-materials.jpg",caption:"Material preparation - angle iron cutting",alt:"Material preparation"},
+      {src:"/projects/maize-welding.jpg",caption:"SMAW welding process on mild steel frame",alt:"SMAW welding"},
+      {src:"/projects/maize-chassis.jpg",caption:"Chassis fabrication and assembly",alt:"Chassis fabrication"},
+      {src:"/projects/maize-assembly.jpg",caption:"Final assembly with petrol engine",alt:"Final assembly"},
+      {src:"/projects/maize-final.jpg",caption:"Final machine - 50 kg/hr throughput",alt:"Final Maize Sheller"},
+    ],
     modal:{tag:"SWEP 2024",title:"Maize Sheller Machine",subtitle:"Lead Fabricator · Student Work Experience Program",
       specs:[{l:"Role",v:"Lead Fabricator — Chassis Team"},{l:"Chassis",v:"Mild steel angle iron (SMAW welded)"},
         {l:"Power Source",v:"Petrol Engine"},{l:"Drive",v:"Pulley & Belt Transmission"},{l:"Throughput",v:"50 kg/hr"},{l:"Outcome",v:"Functional agricultural prototype delivered"}]}},
@@ -93,6 +113,12 @@ const PROJECTS=[
     subtitle:"Fluid Mechanics · Fabrication",
     summary:"Low-speed open-circuit wind tunnel for aerodynamic flow visualization. Contraction cone ratio calculated analytically.",
     tags:["Fluid Mechanics","Fabrication","Aerodynamics"],
+    images:[
+      {src:"/projects/tunnel-design.jpg",caption:"Design phase - contraction cone calculations",alt:"Wind Tunnel design"},
+      {src:"/projects/tunnel-construction.jpg",caption:"Construction phase - acrylic assembly",alt:"Wind Tunnel construction"},
+      {src:"/projects/tunnel-testing.jpg",caption:"Testing phase - flow visualization",alt:"Wind Tunnel testing"},
+      {src:"/projects/tunnel-final.jpg",caption:"Final wind tunnel apparatus",alt:"Final Wind Tunnel"},
+    ],
     modal:{tag:"SWEP 2024",title:"Wind Tunnel Apparatus",subtitle:"Builder & Designer · Student Work Experience Program",
       specs:[{l:"Type",v:"Low-speed open-circuit wind tunnel"},{l:"Test Section",v:"Transparent acrylic for flow visualization"},
         {l:"Physics",v:"Bernoulli's Principle & continuity equation"},{l:"Design",v:"Contraction cone ratio calculated analytically"},
@@ -143,8 +169,6 @@ const EDUCATION=[
 ];
 
 // ── CERTIFICATES — scalable data-driven system ────────────────────
-// To add a certificate: copy any "earned" block, set status:"earned", fill all fields.
-// Fields: id, status, icon, title, issuer, year, credentialId, verifyUrl, skills, topics, modal
 const CERTIFICATES=[
   {id:"prog",status:"earned",icon:"💻",title:"Fundamentals of Programming",issuer:"Programming Hero",year:"2020",
     credentialId:null,verifyUrl:null,
@@ -201,11 +225,10 @@ const CERTIFICATES=[
       pts:["Foundational concepts of artificial intelligence and machine learning","AI applications across industries and professional contexts","Ethical considerations and responsible use of AI systems","Certificate Number: 8487641051OI"]}},
   {id:"ph1",status:"placeholder",icon:"📜",title:"Add Certificate",issuer:"Issuing Body",year:"—",topics:["Topic 1","Topic 2"],skills:[],
     modal:{tag:"Placeholder",title:"Add a Certificate Here",subtitle:"App.jsx → CERTIFICATES array → duplicate an earned entry",
-      desc:"Set status:'earned' and fill in: id, title, issuer, year, credentialId, verifyUrl, topics, skills, and modal details."}},
+      desc:"Set status:'earned' and fill in: id, title, issuer, year, credentialId, verifyUrl, topics, skills, and modal details."}}},
 ];
 
 // ── AWARDS — dedicated section ───────────────────────────────────
-// To add: set status:"awarded", fill all fields.
 const AWARDS=[
   {id:"chiefwhip-award",status:"awarded",icon:"🏅",title:"Chief Whip Award",org:"RUNSA Legislative Council",year:"2025–2026",
     category:"Leadership",
@@ -217,20 +240,25 @@ const AWARDS=[
     category:"Competition / Leadership",
     desc:"Placeholder — fill in your award details.",
     modal:{tag:"Placeholder",title:"Add an Award Here",subtitle:"App.jsx → AWARDS array → duplicate an 'awarded' entry",
-      desc:"Set status:'awarded' and fill in: id, title, org, year, category, desc, and modal details."}},
+      desc:"Set status:'awarded' and fill in: id, title, org, year, category, desc, and modal details."}}},
 ];
 
-// ── EVENTS ───────────────────────────────────────────────────────
+// ── EVENTS — with gallery support ────────────────────────────────
 const EVENTS=[
   {id:"ev1",status:"placeholder",type:"past",title:"Event Name",org:"Organizing Body",date:"Month Year",
     loc:"City, Country",role:"Your Role",desc:"What happened and what you gained or contributed.",
     image:null,
+    images:[
+      {src:"/events/event1-photo1.jpg",caption:"Event photo 1",alt:"Event photo"},
+      {src:"/events/event1-photo2.jpg",caption:"Event photo 2",alt:"Event photo"},
+    ],
     modal:{tag:"Past Event",title:"Event Name",subtitle:"Month Year · City, Country",
       desc:"What happened and what you gained or contributed.",
       specs:[{l:"Organizer",v:"Organizing Body"},{l:"Role",v:"Your Role"},{l:"Date",v:"Month Year"},{l:"Location",v:"City, Country"}]}},
   {id:"ev2",status:"placeholder",type:"upcoming",title:"Upcoming Event",org:"Organizing Body",date:"Coming Soon",
     loc:"TBD",role:"Attendee / Participant",desc:"Event you are registered for or planning to attend.",
     image:null,
+    images:[],
     modal:{tag:"Upcoming",title:"Upcoming Event",subtitle:"Coming Soon",
       desc:"Event you are registered for or planning to attend.",
       specs:[{l:"Status",v:"Registered / Planning"},{l:"Date",v:"TBD"},{l:"Location",v:"TBD"}]}},
@@ -274,9 +302,18 @@ const Chip=({label,t})=>(
 
 // Clickable indicator shown on all interactive cards
 const ClickHint=({label="Click for Details",t})=>(
-  <span style={{display:"inline-flex",alignItems:"center",gap:4,fontSize:10,fontWeight:700,color:t.accent,opacity:0.75,letterSpacing:"0.3px",textTransform:"uppercase"}}>
+  <span className="click-hint" style={{display:"inline-flex",alignItems:"center",gap:4,fontSize:10,fontWeight:700,color:t.accent,opacity:0.75,letterSpacing:"0.3px",textTransform:"uppercase"}}>
     {label} <span style={{fontSize:9}}>↗</span>
   </span>
+);
+
+// Section separator with accent line
+const SectionSep=({t})=>(
+  <div style={{display:"flex",alignItems:"center",gap:16,padding:"0 1.5rem",maxWidth:1100,margin:"0 auto"}}>
+    <div style={{flex:1,height:1,background:`linear-gradient(to right,transparent,${t.border})`}}/>
+    <div style={{width:6,height:6,borderRadius:"50%",background:t.accent,opacity:0.5}}/>
+    <div style={{flex:1,height:1,background:`linear-gradient(to left,transparent,${t.border})`}}/>
+  </div>
 );
 
 function STitle({title,sub,skey,open,t}){
@@ -292,14 +329,143 @@ function STitle({title,sub,skey,open,t}){
   );
 }
 
-/* ═══════ MODAL ═══════ */
-function Modal({data,onClose,t}){
+/* ═══════ CONTACT POP-UP MODAL ═══════ */
+function ContactModal({onClose,t}){
+  const [copied,setCopied]=useState(null);
   useEffect(()=>{
     const fn=(e)=>e.key==="Escape"&&onClose();
     window.addEventListener("keydown",fn);
     document.body.style.overflow="hidden";
-    return()=>{window.removeEventListener("keydown",fn);document.body.style.overflow="";};
-  },[onClose]);
+    return()=>{window.removeEventListener("keydown",fn);document.body.style.overflow="";};}
+  ,[onClose]);
+
+  const doCopy=async(text,label)=>{
+    try{await navigator.clipboard.writeText(text);setCopied(label);setTimeout(()=>setCopied(null),2000);}catch(e){}
+  };
+
+  const contacts=[
+    {icon:"📚",label:"Academic / Internship",value:P.emailAcademic,href:`mailto:${P.emailAcademic}`,copyable:true},
+    {icon:"👤",label:"Personal",value:P.emailPersonal,href:`mailto:${P.emailPersonal}`,copyable:true},
+    {icon:"💬",label:"WhatsApp",value:"+234 708 057 2415",href:P.whatsapp,external:true},
+    {icon:"🔗",label:"LinkedIn",value:"linkedin.com/in/ibk-co",href:P.linkedin,external:true},
+    {icon:"🐙",label:"GitHub",value:"github.com/ibukun06",href:P.github,external:true},
+    {icon:"📄",label:"Download Résumé",value:"Resumé.pdf",href:P.resume,download:true},
+  ];
+
+  return(
+    <div onClick={onClose} style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.68)",zIndex:10000,display:"flex",alignItems:"center",justifyContent:"center",padding:"1rem",backdropFilter:"blur(8px)"}}>
+      <div onClick={e=>e.stopPropagation()} style={{background:t.card,color:t.text,borderRadius:20,padding:"2rem",maxWidth:420,width:"100%",maxHeight:"88vh",overflowY:"auto",boxShadow:"0 24px 72px rgba(0,0,0,0.35)",position:"relative",animation:"popIn 0.25s ease both"}}>
+        <button onClick={onClose} style={{position:"absolute",top:14,right:14,background:"none",border:"none",cursor:"pointer",color:t.muted,fontSize:22,lineHeight:1,padding:"2px 6px"}}>✕</button>
+        <div style={{marginBottom:24,paddingRight:36}}>
+          <h2 style={{margin:"0 0 5px",fontSize:22,fontWeight:900,color:t.text,letterSpacing:"-0.5px"}}>Ways to reach me</h2>
+          <p style={{margin:0,color:t.muted,fontSize:13}}>I respond within 24 hours</p>
+        </div>
+        <div style={{display:"flex",flexDirection:"column",gap:10}}>
+          {contacts.map((c,i)=>{
+            const isCopied=copied===c.label;
+            return(
+              <div key={i} style={{display:"flex",alignItems:"center",gap:10,background:t.bgAlt,border:`1px solid ${t.border}`,borderRadius:12,padding:"10px 14px",transition:"all 0.2s"}}>
+                <span style={{fontSize:20,flexShrink:0}}>{c.icon}</span>
+                <div style={{flex:1,minWidth:0}}>
+                  <div style={{fontSize:10,fontWeight:700,color:t.muted,textTransform:"uppercase",letterSpacing:"0.5px"}}>{c.label}</div>
+                  <a href={c.href} target={c.external?"_blank":undefined} rel={c.external?"noreferrer":undefined} download={c.download} style={{color:t.accent,fontSize:13,fontWeight:600,textDecoration:"none",wordBreak:"break-all"}}>
+                    {c.value}
+                  </a>
+                </div>
+                {c.copyable&&(
+                  <button onClick={()=>doCopy(c.value,c.label)} style={{background:isCopied?"rgba(22,163,74,0.15)":t.aLight,border:"none",borderRadius:8,padding:"5px 10px",cursor:"pointer",fontSize:11,fontWeight:700,color:isCopied?"#16a34a":t.accent,flexShrink:0,transition:"all 0.2s"}}>
+                    {isCopied?"Copied!":"Copy"}
+                  </button>
+                )}
+                {c.external&&<span style={{fontSize:11,color:t.muted,flexShrink:0}}>↗</span>}
+                {c.download&&<span style={{fontSize:11,color:t.muted,flexShrink:0}}>↓</span>}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════ GALLERY LIGHTBOX ═══════ */
+function GalleryModal({images,title,onClose,t}){
+  const [idx,setIdx]=useState(0);
+  const [touchX,setTouchX]=useState(null);
+  useEffect(()=>{
+    const fn=(e)=>{
+      if(e.key==="Escape")onClose();
+      if(e.key==="ArrowLeft")setIdx(i=>Math.max(0,i-1));
+      if(e.key==="ArrowRight")setIdx(i=>Math.min(images.length-1,i+1));
+    };
+    window.addEventListener("keydown",fn);
+    document.body.style.overflow="hidden";
+    return()=>{window.removeEventListener("keydown",fn);document.body.style.overflow="";};}
+  ,[onClose,images.length]);
+
+  const onTouchStart=e=>setTouchX(e.changedTouches[0].screenX);
+  const onTouchEnd=e=>{
+    const endX=e.changedTouches[0].screenX;
+    if(touchX!==null&&endX<touchX-40&&idx<images.length-1)setIdx(idx+1);
+    if(touchX!==null&&endX>touchX+40&&idx>0)setIdx(idx-1);
+    setTouchX(null);
+  };
+
+  if(!images||images.length===0)return null;
+  const cur=images[idx];
+
+  return(
+    <div onClick={onClose} style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.92)",zIndex:10001,display:"flex",alignItems:"center",justifyContent:"center",backdropFilter:"blur(4px)"}}>
+      <div onClick={e=>e.stopPropagation()} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd} style={{width:"100%",height:"100%",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",position:"relative"}}>
+        {/* Close */}
+        <button onClick={onClose} style={{position:"absolute",top:16,right:16,background:"rgba(0,0,0,0.5)",border:"none",borderRadius:999,padding:"8px 14px",cursor:"pointer",color:"#fff",fontSize:18,zIndex:10,backdropFilter:"blur(8px)"}}>✕</button>
+        {/* Counter */}
+        <div style={{position:"absolute",top:16,left:16,background:"rgba(0,0,0,0.5)",color:"#fff",padding:"5px 14px",borderRadius:999,fontSize:12,fontWeight:700,backdropFilter:"blur(8px)",zIndex:10}}>
+          {idx+1} / {images.length}
+        </div>
+        {/* Image */}
+        <div style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",width:"100%",padding:"60px 20px 20px"}}>
+          <img
+            src={cur.src}
+            alt={cur.alt||cur.caption||title}
+            style={{maxWidth:"100%",maxHeight:"calc(100vh - 140px)",objectFit:"contain",borderRadius:8,boxShadow:"0 8px 32px rgba(0,0,0,0.5)",animation:"fadeUp 0.3s ease both"}}
+            onError={e=>{e.target.style.display="none";e.target.nextSibling.style.display="flex";}}
+          />
+          <div style={{display:"none",flexDirection:"column",alignItems:"center",justifyContent:"center",color:"rgba(255,255,255,0.5)",fontSize:13}}>
+            <div style={{fontSize:40,marginBottom:8}}>🖼️</div>
+            <div>Add photo: {cur.src}</div>
+          </div>
+        </div>
+        {/* Caption */}
+        {cur.caption&&<div style={{color:"rgba(255,255,255,0.8)",fontSize:13,padding:"8px 20px",textAlign:"center",maxWidth:600}}>{cur.caption}</div>}
+        {/* Nav buttons */}
+        {images.length>1&&(
+          <>
+            <button onClick={()=>setIdx(Math.max(0,idx-1))} style={{position:"absolute",left:12,top:"50%",transform:"translateY(-50%)",background:"rgba(0,0,0,0.5)",border:"none",borderRadius:999,padding:"10px 14px",cursor:"pointer",color:"#fff",fontSize:18,backdropFilter:"blur(8px)",opacity:idx>0?1:0.3,transition:"opacity 0.2s"}}>←</button>
+            <button onClick={()=>setIdx(Math.min(images.length-1,idx+1))} style={{position:"absolute",right:12,top:"50%",transform:"translateY(-50%)",background:"rgba(0,0,0,0.5)",border:"none",borderRadius:999,padding:"10px 14px",cursor:"pointer",color:"#fff",fontSize:18,backdropFilter:"blur(8px)",opacity:idx<images.length-1?1:0.3,transition:"opacity 0.2s"}}>→</button>
+          </>
+        )}
+        {/* Dots */}
+        {images.length>1&&(
+          <div style={{display:"flex",gap:6,padding:"10px 0 20px"}}>
+            {images.map((_,i)=>(
+              <button key={i} onClick={()=>setIdx(i)} style={{width:8,height:8,borderRadius:"50%",border:"none",padding:0,cursor:"pointer",background:i===idx?"#fff":"rgba(255,255,255,0.3)",transition:"all 0.2s"}}/>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* ═══════ DETAIL MODAL ═══════ */
+function Modal({data,onClose,t,openGallery}){
+  useEffect(()=>{
+    const fn=(e)=>e.key==="Escape"&&onClose();
+    window.addEventListener("keydown",fn);
+    document.body.style.overflow="hidden";
+    return()=>{window.removeEventListener("keydown",fn);document.body.style.overflow="";};}
+  ,[onClose]);
   const m=data?.modal; if(!m) return null;
   return(
     <div onClick={onClose} style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.68)",zIndex:9999,display:"flex",alignItems:"center",justifyContent:"center",padding:"1rem",backdropFilter:"blur(8px)"}}>
@@ -315,11 +481,11 @@ function Modal({data,onClose,t}){
         {m.pts&&<ul style={{margin:"0 0 16px",paddingLeft:20}}>{m.pts.map((pt,i)=><li key={i} style={{color:t.muted,fontSize:14,lineHeight:1.75,marginBottom:5}}>{pt}</li>)}</ul>}
         {m.specs&&(
           <table style={{width:"100%",borderCollapse:"collapse",marginBottom:16}}>
-            <tbody>{m.specs.map((s,i)=>(
-              <tr key={i} style={{borderBottom:`1px solid ${t.border}`}}>
+            <tbody>{m.specs.map((s,i)=>{
+              return(<tr key={i} style={{borderBottom:`1px solid ${t.border}`}}>
                 <td style={{padding:"9px 12px 9px 0",fontWeight:700,fontSize:13,color:t.text,width:165,verticalAlign:"top"}}>{s.l}</td>
                 <td style={{padding:"9px 0",fontSize:13,color:t.muted}}>{s.v}</td>
-              </tr>))}
+              </tr>);})}
             </tbody>
           </table>)}
         {m.code&&<pre style={{background:t.code,border:`1px solid ${t.border}`,borderRadius:10,padding:"1rem",overflowX:"auto",fontSize:12,lineHeight:1.75,color:t.codeText,fontFamily:"'Fira Code','Courier New',monospace",margin:"0 0 16px"}}>{m.code}</pre>}
@@ -328,6 +494,12 @@ function Modal({data,onClose,t}){
           <div style={{display:"flex",gap:14,flexWrap:"wrap",paddingTop:8,borderTop:`1px solid ${t.border}`}}>
             {m.links.map((l,i)=><a key={i} href={l.url} target="_blank" rel="noreferrer" style={{color:t.accent,fontSize:13,fontWeight:700,textDecoration:"none"}}>{l.label} ↗</a>)}
           </div>)}
+        {/* Open Gallery button if item has images */}
+        {openGallery&&data?.images&&data.images.length>0&&(
+          <button onClick={openGallery} style={{marginTop:16,display:"flex",alignItems:"center",gap:8,background:t.aLight,border:`1px solid ${t.accent}40`,borderRadius:10,padding:"8px 16px",cursor:"pointer",color:t.accent,fontSize:12,fontWeight:700,width:"100%",justifyContent:"center",transition:"all 0.2s"}}>
+            🖼️ View Gallery ({data.images.length} {data.images.length===1?"image":"images"})
+          </button>
+        )}
       </div>
     </div>
   );
@@ -342,8 +514,7 @@ function Nav({dark,toggle,t,open}){
   useEffect(()=>{
     const onScroll=()=>{
       setScrolled(window.scrollY>30);
-      // Active section detection
-      const sections=["skills","projects","experience","education","certificates","events"];
+      const sections=["skills","projects","experience","education","certificates","awards","events"];
       for(const s of [...sections].reverse()){
         const el=document.getElementById(s);
         if(el&&window.scrollY>=el.offsetTop-120){setActive(s);break;}
@@ -354,7 +525,7 @@ function Nav({dark,toggle,t,open}){
     window.addEventListener("resize",onResize);
     return()=>{window.removeEventListener("scroll",onScroll);window.removeEventListener("resize",onResize);};
   },[]);
-  const links=["Skills","Projects","Experience","Education","Certificates","Events"];
+  const links=["Skills","Projects","Experience","Education","Certificates","Awards","Events"];
   const closeMenu=()=>setMenuOpen(false);
   const pillStyle={
     position:"fixed",top:16,left:"50%",transform:"translateX(-50%)",
@@ -424,7 +595,7 @@ function Nav({dark,toggle,t,open}){
 }
 
 /* ═══════ HERO ═══════ */
-function Hero({open,t,dark}){
+function Hero({open,t,dark,openContact}){
   const [ti,setTi]=useState(0);
   const [avatarHov,setAvatarHov]=useState(false);
   const [mobile,setMobile]=useState(()=>typeof window!=="undefined"&&window.innerWidth<600);
@@ -474,43 +645,27 @@ function Hero({open,t,dark}){
 
         <p style={{fontSize:15,color:t.muted,lineHeight:1.8,maxWidth:520,margin:"0 auto 36px",animation:"fadeUp 0.7s 0.5s ease both"}}>{P.tagline}</p>
 
-        {/* CTA buttons */}
+        {/* CTA buttons - consolidated: Download Résumé + Get in Touch */}
         <div style={{display:"flex",gap:12,justifyContent:"center",flexWrap:"wrap",marginBottom:20,animation:"fadeUp 0.7s 0.6s ease both"}}>
           <a href={P.resume} download style={{background:t.accent,color:"#fff",padding:"11px 26px",borderRadius:10,fontWeight:800,fontSize:14,textDecoration:"none",boxShadow:"0 4px 20px rgba(13,148,136,0.38)",transition:"all 0.25s"}}
             onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-2px)";e.currentTarget.style.boxShadow="0 8px 28px rgba(13,148,136,0.48)";}}
-            onMouseLeave={e=>{e.currentTarget.style.transform="none";e.currentTarget.style.boxShadow="0 4px 20px rgba(13,148,136,0.38)";}}>Download Résumé</a>
-          <a href={`mailto:${P.emailPersonal}`} style={{background:"none",color:t.accent,padding:"11px 26px",borderRadius:10,fontWeight:700,fontSize:14,textDecoration:"none",border:`2px solid ${t.accent}`,transition:"all 0.25s"}}
+            onMouseLeave={e=>{e.currentTarget.style.transform="none";e.currentTarget.style.boxShadow="0 4px 20px rgba(13,148,136,0.38)";}}>Download Résumé ↓</a>
+          <button onClick={openContact} style={{background:"none",color:t.accent,padding:"11px 26px",borderRadius:10,fontWeight:700,fontSize:14,textDecoration:"none",border:`2px solid ${t.accent}`,cursor:"pointer",transition:"all 0.25s"}}
             onMouseEnter={e=>{e.currentTarget.style.background=t.accent;e.currentTarget.style.color="#fff";}}
-            onMouseLeave={e=>{e.currentTarget.style.background="none";e.currentTarget.style.color=t.accent;}}>Get in Touch</a>
-          <a href={P.linkedin} target="_blank" rel="noreferrer" style={{background:"none",color:t.text,padding:"11px 26px",borderRadius:10,fontWeight:600,fontSize:14,textDecoration:"none",border:`2px solid ${t.border}`,transition:"all 0.25s"}}
-            onMouseEnter={e=>e.currentTarget.style.borderColor=t.accent} onMouseLeave={e=>e.currentTarget.style.borderColor=t.border}>LinkedIn</a>
-        </div>
-
-        {/* Dual email contacts */}
-        <div style={{display:"flex",gap:10,justifyContent:"center",flexWrap:"wrap",marginBottom:44,animation:"fadeUp 0.7s 0.65s ease both"}}>
-          <a href={`mailto:${P.emailAcademic}`} style={{display:"flex",alignItems:"center",gap:6,background:t.card,border:`1px solid ${t.border}`,borderRadius:10,padding:"7px 14px",fontSize:12,fontWeight:600,color:t.muted,textDecoration:"none",transition:"all 0.2s"}}
-            onMouseEnter={e=>{e.currentTarget.style.borderColor=t.accent;e.currentTarget.style.color=t.accent;}}
-            onMouseLeave={e=>{e.currentTarget.style.borderColor=t.border;e.currentTarget.style.color=t.muted;}}>
-            📚 Academic / Internship: {P.emailAcademic}
-          </a>
-          <a href={`mailto:${P.emailPersonal}`} style={{display:"flex",alignItems:"center",gap:6,background:t.card,border:`1px solid ${t.border}`,borderRadius:10,padding:"7px 14px",fontSize:12,fontWeight:600,color:t.muted,textDecoration:"none",transition:"all 0.2s"}}
-            onMouseEnter={e=>{e.currentTarget.style.borderColor=t.accent;e.currentTarget.style.color=t.accent;}}
-            onMouseLeave={e=>{e.currentTarget.style.borderColor=t.border;e.currentTarget.style.color=t.muted;}}>
-            👤 Personal: {P.emailPersonal}
-          </a>
+            onMouseLeave={e=>{e.currentTarget.style.background="none";e.currentTarget.style.color=t.accent;}}>Get in Touch</button>
         </div>
 
         {/* Stats */}
         <div style={{display:"grid",gridTemplateColumns:mobile?"repeat(2,1fr)":"repeat(4,1fr)",gap:12,animation:"fadeUp 0.7s 0.7s ease both"}}>
-          {P.stats.map((s,i)=>(
-            <button key={s.value} onClick={()=>open({modal:{tag:"Quick Stat",title:s.value,subtitle:s.label,desc:s.detail}})} style={{background:t.card,border:`1px solid ${t.border}`,borderRadius:14,padding:"16px 8px 12px",cursor:"pointer",textAlign:"center",boxShadow:t.shadow,transition:"all 0.25s",animation:`fadeUp 0.5s ${0.7+i*0.08}s ease both`,position:"relative"}}
+          {P.stats.map((s,i)=>{
+            return(<button key={s.value} onClick={()=>open({modal:{tag:"Quick Stat",title:s.value,subtitle:s.label,desc:s.detail}})} style={{background:t.card,border:`1px solid ${t.border}`,borderRadius:14,padding:"16px 8px 12px",cursor:"pointer",textAlign:"center",boxShadow:t.shadow,transition:"all 0.25s",animation:`fadeUp 0.5s ${0.7+i*0.08}s ease both`,position:"relative"}}
               onMouseEnter={e=>{e.currentTarget.style.borderColor=t.accent;e.currentTarget.style.transform="translateY(-4px)";e.currentTarget.style.boxShadow=`0 8px 24px rgba(13,148,136,0.2)`;}}
               onMouseLeave={e=>{e.currentTarget.style.borderColor=t.border;e.currentTarget.style.transform="none";e.currentTarget.style.boxShadow=t.shadow;}}>
               <div style={{fontSize:"1.65rem",fontWeight:900,color:t.accent,lineHeight:1}}>{s.value}</div>
               <div style={{fontSize:11,color:t.text,fontWeight:700,marginTop:5,lineHeight:1.3}}>{s.label}</div>
               <div style={{fontSize:10,color:t.muted,marginTop:2}}>{s.sub}</div>
               <div style={{marginTop:6,fontSize:9,fontWeight:700,color:t.accent,opacity:0.6,letterSpacing:"0.3px",textTransform:"uppercase"}}>tap for details</div>
-            </button>))}
+            </button>);})}
         </div>
       </div>
     </section>
@@ -539,12 +694,12 @@ function Skills({open,t}){
     <section id="skills" style={{padding:"80px 1.5rem",background:t.bgAlt}}>
       <div ref={ref} style={{maxWidth:1100,margin:"0 auto",opacity:vis?1:0,transform:vis?"none":"translateY(32px)",transition:"all 0.7s ease"}}>
         <STitle title="Technical Arsenal" sub="Click any skill card for full details" skey="skills" open={open} t={t}/>
-        {cats.map(cat=>(
-          <div key={cat} style={{marginBottom:32}}>
+        {cats.map(cat=>{
+          return(<div key={cat} style={{marginBottom:32}}>
             <p style={{fontSize:10.5,fontWeight:800,color:t.accent,textTransform:"uppercase",letterSpacing:2.5,marginBottom:12}}>{cat}</p>
             <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(180px,1fr))",gap:10}}>
-              {SKILLS.filter(s=>s.cat===cat).map(skill=>(
-                <button key={skill.id} onClick={()=>open(skill)}
+              {SKILLS.filter(s=>s.cat===cat).map(skill=>{
+                return(<button key={skill.id} onClick={()=>open(skill)}
                   style={{background:t.card,border:`1px solid ${skill.id==="ai"?t.accent+"55":t.border}`,borderRadius:12,padding:"15px 14px 12px",cursor:"pointer",textAlign:"left",transition:"all 0.2s",display:"flex",flexDirection:"column",gap:4,position:"relative"}}
                   onMouseEnter={e=>{e.currentTarget.style.borderColor=t.accent;e.currentTarget.style.background=t.cardHov;e.currentTarget.style.transform="translateY(-3px) scale(1.02)";e.currentTarget.style.boxShadow=t.shadow;}}
                   onMouseLeave={e=>{e.currentTarget.style.borderColor=skill.id==="ai"?t.accent+"55":t.border;e.currentTarget.style.background=t.card;e.currentTarget.style.transform="none";e.currentTarget.style.boxShadow="none";}}>
@@ -552,53 +707,77 @@ function Skills({open,t}){
                   <span style={{fontWeight:700,fontSize:13,color:t.text,lineHeight:1.3}}>{skill.title}</span>
                   <span style={{fontSize:10.5,color:t.accent,fontWeight:700}}>{skill.level}</span>
                   <ClickHint t={t}/>
-                </button>))}
+                </button>);})}
             </div>
-          </div>))}
+          </div>);})}
       </div>
     </section>
   );
 }
 
 /* ═══════ PROJECTS ═══════ */
-function Projects({open,t}){
+function Projects({open,t,setGallery}){
   const [ref,vis]=useReveal();
   return(
     <section id="projects" style={{padding:"80px 1.5rem",background:t.bg}}>
       <div ref={ref} style={{maxWidth:1100,margin:"0 auto",opacity:vis?1:0,transform:vis?"none":"translateY(32px)",transition:"all 0.7s ease"}}>
-        <STitle title="Projects" sub="Click any project card to view full details" skey="projects" open={open} t={t}/>
+        <STitle title="Projects" sub="Click any project card to view details or gallery" skey="projects" open={open} t={t}/>
 
         {/* Featured project */}
-        {PROJECTS.filter(p=>p.featured).map(p=>(
-          <button key={p.id} onClick={()=>open(p)} style={{width:"100%",display:"block",background:`linear-gradient(135deg,${t.aLight} 0%,${t.card} 100%)`,border:`1px solid rgba(13,148,136,0.3)`,borderRadius:16,padding:"2rem",cursor:"pointer",textAlign:"left",marginBottom:20,transition:"all 0.25s",position:"relative"}}
-            onMouseEnter={e=>{e.currentTarget.style.boxShadow="0 12px 48px rgba(13,148,136,0.25)";e.currentTarget.style.transform="translateY(-3px)";}}
-            onMouseLeave={e=>{e.currentTarget.style.boxShadow="none";e.currentTarget.style.transform="none";}}>
-            <div style={{position:"absolute",top:14,right:14}}><ClickHint label="View Details" t={t}/></div>
-            <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",flexWrap:"wrap",gap:12,marginBottom:14}}>
-              <div>
-                <Chip label="⭐ Featured" t={t}/>
-                <h3 style={{fontSize:"1.25rem",fontWeight:900,margin:"10px 0 4px",color:t.text,letterSpacing:"-0.5px"}}>{p.icon} {p.title}</h3>
-                <p style={{color:t.muted,margin:0,fontSize:13}}>{p.subtitle} · {p.period}</p>
+        {PROJECTS.filter(p=>p.featured).map(p=>{
+          return(<div key={p.id}>
+            <button onClick={()=>open(p)} style={{width:"100%",display:"block",background:`linear-gradient(135deg,${t.aLight} 0%,${t.card} 100%)`,border:`1px solid rgba(13,148,136,0.3)`,borderRadius:16,padding:"2rem",cursor:"pointer",textAlign:"left",marginBottom:20,transition:"all 0.25s",position:"relative"}}
+              onMouseEnter={e=>{e.currentTarget.style.boxShadow="0 12px 48px rgba(13,148,136,0.25)";e.currentTarget.style.transform="translateY(-3px)";}}
+              onMouseLeave={e=>{e.currentTarget.style.boxShadow="none";e.currentTarget.style.transform="none";}}>
+              <div style={{position:"absolute",top:14,right:14}}><ClickHint label="View Details" t={t}/></div>
+              <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",flexWrap:"wrap",gap:12,marginBottom:14}}>
+                <div>
+                  <Chip label="⭐ Featured" t={t}/>
+                  <h3 style={{fontSize:"1.25rem",fontWeight:900,margin:"10px 0 4px",color:t.text,letterSpacing:"-0.5px"}}>{p.icon} {p.title}</h3>
+                  <p style={{color:t.muted,margin:0,fontSize:13}}>{p.subtitle} · {p.period}</p>
+                </div>
+                {p.link&&<a href={p.link} target="_blank" rel="noreferrer" onClick={e=>e.stopPropagation()} style={{color:t.accent,fontSize:12,fontWeight:700,textDecoration:"none",border:`1px solid ${t.accent}`,padding:"5px 14px",borderRadius:7,flexShrink:0}}>Live ↗</a>}
               </div>
-              {p.link&&<a href={p.link} target="_blank" rel="noreferrer" onClick={e=>e.stopPropagation()} style={{color:t.accent,fontSize:12,fontWeight:700,textDecoration:"none",border:`1px solid ${t.accent}`,padding:"5px 14px",borderRadius:7,flexShrink:0}}>Live ↗</a>}
-            </div>
-            <p style={{color:t.muted,fontSize:14,lineHeight:1.8,marginBottom:16}}>{p.summary}</p>
-            <div style={{display:"flex",flexWrap:"wrap",gap:7}}>{p.tags.map(tag=><Chip key={tag} label={tag} t={t}/>)}</div>
-          </button>))}
+              <p style={{color:t.muted,fontSize:14,lineHeight:1.8,marginBottom:16}}>{p.summary}</p>
+              {/* Gallery preview thumbnails */}
+              {p.images&&p.images.length>0&&(
+                <div onClick={e=>{e.stopPropagation();setGallery({images:p.images,title:p.title});}} style={{display:"flex",gap:6,marginBottom:14,overflowX:"auto",paddingBottom:4}}>
+                  {p.images.slice(0,4).map((img,i)=>{
+                    return(<div key={i} style={{width:72,height:52,borderRadius:8,background:`url(${img.src}) center/cover no-repeat,${t.bgAlt}`,border:`1px solid ${t.border}`,flexShrink:0,cursor:"pointer",position:"relative",transition:"all 0.2s"}}
+                      onMouseEnter={e=>e.currentTarget.style.transform="scale(1.05)"}
+                      onMouseLeave={e=>e.currentTarget.style.transform="none"}>
+                      {i===3&&p.images.length>4&&<div style={{position:"absolute",inset:0,background:"rgba(0,0,0,0.55)",borderRadius:8,display:"flex",alignItems:"center",justifyContent:"center",color:"#fff",fontSize:11,fontWeight:700}}>+{p.images.length-4}</div>}
+                    </div>);})}
+                  <span style={{fontSize:11,color:t.accent,fontWeight:700,display:"flex",alignItems:"center",cursor:"pointer"}}>View Gallery ({p.images.length}) ↗</span>
+                </div>
+              )}
+              <div style={{display:"flex",flexWrap:"wrap",gap:7}}>{p.tags.map(tag=><Chip key={tag} label={tag} t={t}/>)}</div>
+            </button>
+          </div>);})}
 
         {/* Other projects */}
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(265px,1fr))",gap:14}}>
-          {PROJECTS.filter(p=>!p.featured).map(p=>(
-            <button key={p.id} onClick={()=>open(p)} style={{background:t.card,border:`1px solid ${t.border}`,borderRadius:14,padding:"1.5rem",cursor:"pointer",textAlign:"left",transition:"all 0.25s",display:"flex",flexDirection:"column",position:"relative"}}
-              onMouseEnter={e=>{e.currentTarget.style.borderColor=t.accent;e.currentTarget.style.transform="translateY(-4px)";e.currentTarget.style.boxShadow=t.shadow;}}
-              onMouseLeave={e=>{e.currentTarget.style.borderColor=t.border;e.currentTarget.style.transform="none";e.currentTarget.style.boxShadow="none";}}>
-              <span style={{fontSize:28,marginBottom:12}}>{p.icon}</span>
-              <h3 style={{fontWeight:800,fontSize:15,margin:"0 0 4px",color:t.text}}>{p.title}</h3>
-              <p style={{fontSize:12,color:t.muted,margin:"0 0 10px"}}>{p.subtitle} · {p.period}</p>
-              <p style={{fontSize:13,color:t.muted,lineHeight:1.7,margin:"0 0 14px",flex:1}}>{p.summary}</p>
-              <div style={{display:"flex",flexWrap:"wrap",gap:6,marginBottom:10}}>{p.tags.slice(0,3).map(tag=><Chip key={tag} label={tag} t={t}/>)}</div>
-              <ClickHint t={t}/>
-            </button>))}
+          {PROJECTS.filter(p=>!p.featured).map(p=>{
+            return(<div key={p.id}>
+              <button onClick={()=>open(p)} style={{background:t.card,border:`1px solid ${t.border}`,borderRadius:14,padding:"1.5rem",cursor:"pointer",textAlign:"left",transition:"all 0.25s",display:"flex",flexDirection:"column",width:"100%",position:"relative"}}
+                onMouseEnter={e=>{e.currentTarget.style.borderColor=t.accent;e.currentTarget.style.transform="translateY(-4px)";e.currentTarget.style.boxShadow=t.shadow;}}
+                onMouseLeave={e=>{e.currentTarget.style.borderColor=t.border;e.currentTarget.style.transform="none";e.currentTarget.style.boxShadow="none";}}>
+                <span style={{fontSize:28,marginBottom:12}}>{p.icon}</span>
+                <h3 style={{fontWeight:800,fontSize:15,margin:"0 0 4px",color:t.text}}>{p.title}</h3>
+                <p style={{fontSize:12,color:t.muted,margin:"0 0 10px"}}>{p.subtitle} · {p.period}</p>
+                <p style={{fontSize:13,color:t.muted,lineHeight:1.7,margin:"0 0 14px",flex:1}}>{p.summary}</p>
+                {/* Gallery preview for non-featured */}
+                {p.images&&p.images.length>0&&(
+                  <div onClick={e=>{e.stopPropagation();setGallery({images:p.images,title:p.title});}} style={{display:"flex",gap:4,marginBottom:10,overflowX:"auto"}}>
+                    {p.images.slice(0,3).map((img,i)=>{
+                      return(<div key={i} style={{width:50,height:36,borderRadius:6,background:`url(${img.src}) center/cover no-repeat,${t.bgAlt}`,border:`1px solid ${t.border}`,flexShrink:0,cursor:"pointer"}}/>);})}
+                    <span style={{fontSize:10,color:t.accent,fontWeight:700,display:"flex",alignItems:"center"}}>Gallery ↗</span>
+                  </div>
+                )}
+                <div style={{display:"flex",flexWrap:"wrap",gap:6,marginBottom:10}}>{p.tags.slice(0,3).map(tag=><Chip key={tag} label={tag} t={t}/>)}</div>
+                <ClickHint t={t}/>
+              </button>
+            </div>);})}
         </div>
       </div>
     </section>
@@ -615,8 +794,8 @@ function Experience({open,t}){
         <STitle title="Experience" sub="Click any entry for full details" skey="experience" open={open} t={t}/>
         <div style={{position:"relative",paddingLeft:28}}>
           <div style={{position:"absolute",left:4,top:8,bottom:8,width:2,background:`linear-gradient(to bottom,${t.accent},${t.border})`,borderRadius:2}}/>
-          {EXPERIENCE.map(ex=>(
-            <button key={ex.id} onClick={()=>open(ex)} onMouseEnter={()=>setHov(ex.id)} onMouseLeave={()=>setHov(null)}
+          {EXPERIENCE.map(ex=>{
+            return(<button key={ex.id} onClick={()=>open(ex)} onMouseEnter={()=>setHov(ex.id)} onMouseLeave={()=>setHov(null)}
               style={{display:"block",width:"100%",background:"none",border:"none",cursor:"pointer",textAlign:"left",marginBottom:16,position:"relative"}}>
               <div style={{position:"absolute",left:-24,top:18,width:10,height:10,borderRadius:"50%",background:t.accent,border:`2px solid ${t.bg}`,zIndex:1,transition:"transform 0.2s",transform:hov===ex.id?"scale(1.5)":"scale(1)"}}/>
               <div style={{background:t.card,border:`1px solid ${hov===ex.id?t.accent:t.border}`,borderRadius:12,padding:"1rem 1.25rem",transition:"all 0.2s",transform:hov===ex.id?"translateX(6px)":"none",boxShadow:hov===ex.id?t.shadow:"none"}}>
@@ -628,7 +807,7 @@ function Experience({open,t}){
                 <p style={{margin:"0 0 6px",fontSize:12,color:t.muted}}>{ex.org} · {ex.loc}</p>
                 <ClickHint t={t}/>
               </div>
-            </button>))}
+            </button>);})}
         </div>
       </div>
     </section>
@@ -644,8 +823,8 @@ function Education({open,t}){
       <div ref={ref} style={{maxWidth:700,margin:"0 auto",opacity:vis?1:0,transform:vis?"none":"translateY(32px)",transition:"all 0.7s ease"}}>
         <STitle title="Education" sub="Click any entry for full details" skey="education" open={open} t={t}/>
         <div style={{display:"flex",flexDirection:"column",gap:14}}>
-          {EDUCATION.map(e=>(
-            <button key={e.id} onClick={()=>open(e)} onMouseEnter={()=>setHov(e.id)} onMouseLeave={()=>setHov(null)}
+          {EDUCATION.map(e=>{
+            return(<button key={e.id} onClick={()=>open(e)} onMouseEnter={()=>setHov(e.id)} onMouseLeave={()=>setHov(null)}
               style={{background:t.card,border:`1px solid ${hov===e.id?t.accent:t.border}`,borderRadius:14,padding:"1.25rem 1.5rem",cursor:"pointer",textAlign:"left",display:"flex",alignItems:"center",gap:16,transition:"all 0.25s",transform:hov===e.id?"translateX(6px) scale(1.01)":"none",boxShadow:hov===e.id?t.shadow:"none"}}>
               <span style={{fontSize:30,flexShrink:0}}>{e.icon}</span>
               <div style={{flex:1}}>
@@ -655,7 +834,7 @@ function Education({open,t}){
                 <ClickHint t={t}/>
               </div>
               <span style={{background:t.aLight,color:t.accent,padding:"5px 14px",borderRadius:10,fontSize:12,fontWeight:800,flexShrink:0,whiteSpace:"nowrap"}}>{e.badge}</span>
-            </button>))}
+            </button>);})}
         </div>
       </div>
     </section>
@@ -722,7 +901,7 @@ function Awards({open,t}){
 }
 
 /* ═══════ EVENTS ═══════ */
-function Events({open,t}){
+function Events({open,t,setGallery}){
   const [hov,setHov]=useState(null);
   const [ref,vis]=useReveal();
   return(
@@ -732,22 +911,27 @@ function Events({open,t}){
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(240px,1fr))",gap:16}}>
           {EVENTS.map(ev=>{
             const ph=ev.status==="placeholder",upcoming=ev.type==="upcoming",isHov=hov===ev.id;
+            const coverImg=ev.image||(ev.images&&ev.images[0]?.src)||null;
             return(
-              <button key={ev.id} onClick={()=>open(ev)} onMouseEnter={()=>setHov(ev.id)} onMouseLeave={()=>setHov(null)}
-                style={{background:t.card,border:`${ph?"2px dashed":"1px solid"} ${isHov?t.accent:t.border}`,borderRadius:14,overflow:"hidden",cursor:"pointer",textAlign:"left",transition:"all 0.25s",display:"flex",flexDirection:"column",transform:isHov?"translateY(-5px)":"none",boxShadow:isHov?t.shadow:"none"}}>
-                <div style={{height:150,background:ev.image?`url(${ev.image}) center/cover no-repeat`:`linear-gradient(135deg,${t.aLight} 0%,${t.border}40 100%)`,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,position:"relative"}}>
-                  {!ev.image&&<div style={{textAlign:"center",color:t.muted}}><div style={{fontSize:30}}>{upcoming?"📅":"📸"}</div><div style={{fontSize:11,marginTop:4}}>{upcoming?"Upcoming":"Add Photo"}</div></div>}
-                  {upcoming&&<span style={{position:"absolute",top:8,right:8,background:"#16a34a",color:"#fff",fontSize:10,fontWeight:800,padding:"2px 8px",borderRadius:999}}>UPCOMING</span>}
-                </div>
-                <div style={{padding:"1rem",flex:1,display:"flex",flexDirection:"column",gap:3}}>
-                  <h3 style={{margin:0,fontSize:13,fontWeight:800,color:ph?t.muted:t.text}}>{ev.title}</h3>
-                  <p style={{margin:0,fontSize:12,color:t.accent,fontWeight:700}}>{ev.org}</p>
-                  <p style={{margin:0,fontSize:11,color:t.muted}}>{ev.date} · {ev.loc}</p>
-                  {!ph&&<p style={{margin:"4px 0 0",fontSize:12,color:t.muted,lineHeight:1.5,flex:1}}>{ev.desc}</p>}
-                  {ph?<p style={{margin:"6px 0 0",fontSize:11,color:t.muted,fontStyle:"italic"}}>Placeholder — add event details</p>
-                    :<div style={{marginTop:8}}><ClickHint t={t}/></div>}
-                </div>
-              </button>);})}
+              <div key={ev.id}>
+                <button onClick={()=>open(ev)} onMouseEnter={()=>setHov(ev.id)} onMouseLeave={()=>setHov(null)}
+                  style={{background:t.card,border:`${ph?"2px dashed":"1px solid"} ${isHov?t.accent:t.border}`,borderRadius:14,overflow:"hidden",cursor:"pointer",textAlign:"left",transition:"all 0.25s",display:"flex",flexDirection:"column",width:"100%",transform:isHov?"translateY(-5px)":"none",boxShadow:isHov?t.shadow:"none"}}>
+                  {/* Cover image - clickable to gallery */}
+                  <div onClick={e=>{if(ev.images&&ev.images.length>0){e.stopPropagation();setGallery({images:ev.images,title:ev.title});}}} style={{height:150,background:coverImg?`url(${coverImg}) center/cover no-repeat`:`linear-gradient(135deg,${t.aLight} 0%,${t.border}40 100%)`,display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,position:"relative",cursor:ev.images&&ev.images.length>0?"pointer":"default"}}>
+                    {!coverImg&&<div style={{textAlign:"center",color:t.muted}}><div style={{fontSize:30}}>{upcoming?"📅":"📸"}</div><div style={{fontSize:11,marginTop:4}}>{upcoming?"Upcoming":"Add Photo"}</div></div>}
+                    {upcoming&&<span style={{position:"absolute",top:8,right:8,background:"#16a34a",color:"#fff",fontSize:10,fontWeight:800,padding:"2px 8px",borderRadius:999}}>UPCOMING</span>}
+                    {ev.images&&ev.images.length>1&&<span style={{position:"absolute",bottom:8,right:8,background:"rgba(0,0,0,0.6)",color:"#fff",fontSize:10,fontWeight:700,padding:"2px 8px",borderRadius:999,backdropFilter:"blur(4px)"}}>{ev.images.length} 📷</span>}
+                  </div>
+                  <div style={{padding:"1rem",flex:1,display:"flex",flexDirection:"column",gap:3}}>
+                    <h3 style={{margin:0,fontSize:13,fontWeight:800,color:ph?t.muted:t.text}}>{ev.title}</h3>
+                    <p style={{margin:0,fontSize:12,color:t.accent,fontWeight:700}}>{ev.org}</p>
+                    <p style={{margin:0,fontSize:11,color:t.muted}}>{ev.date} · {ev.loc}</p>
+                    {!ph&&<p style={{margin:"4px 0 0",fontSize:12,color:t.muted,lineHeight:1.5,flex:1}}>{ev.desc}</p>}
+                    {ph?<p style={{margin:"6px 0 0",fontSize:11,color:t.muted,fontStyle:"italic"}}>Placeholder — add event details</p>
+                      :<div style={{marginTop:8}}><ClickHint t={t}/></div>}
+                  </div>
+                </button>
+              </div>);})}
         </div>
       </div>
     </section>
@@ -767,8 +951,8 @@ function useReveal(){
   return [ref,vis];
 }
 
-/* ═══════ CONTACT ═══════ */
-function Contact({t}){
+/* ═══════ CONTACT SECTION (with single CTA) ═══════ */
+function Contact({t,openContact}){
   return(
     <section style={{padding:"80px 1.5rem",background:t.accent,textAlign:"center"}}>
       <div style={{maxWidth:600,margin:"0 auto"}}>
@@ -777,28 +961,24 @@ function Contact({t}){
           Seeking Mechanical Engineering SIWES/internships (Nigeria &amp; abroad) in manufacturing, production, or mechanical systems — and AI workflow roles where I help organizations build efficiency at scale.
         </p>
 
-        {/* Dual email buttons */}
-        <div style={{display:"flex",gap:12,justifyContent:"center",flexWrap:"wrap",marginBottom:16}}>
-          <a href={`mailto:${P.emailAcademic}`} style={{background:"#fff",color:t.accent,padding:"12px 22px",borderRadius:10,fontWeight:800,fontSize:13,textDecoration:"none",display:"flex",alignItems:"center",gap:8}}>
-            📚 Academic / Internship Contact
-          </a>
-          <a href={`mailto:${P.emailPersonal}`} style={{background:"rgba(255,255,255,0.15)",color:"#fff",padding:"12px 22px",borderRadius:10,fontWeight:700,fontSize:13,textDecoration:"none",border:"2px solid rgba(255,255,255,0.3)",display:"flex",alignItems:"center",gap:8}}>
-            👤 Personal Contact
-          </a>
-        </div>
-        <p style={{color:"rgba(255,255,255,0.6)",fontSize:11,marginBottom:24}}>
-          Academic/Internship: {P.emailAcademic} &nbsp;·&nbsp; Personal: {P.emailPersonal}
-        </p>
+        {/* Single Get in Touch CTA */}
+        <button onClick={openContact} style={{background:"#fff",color:t.accent,padding:"14px 36px",borderRadius:12,fontWeight:800,fontSize:15,border:"none",cursor:"pointer",boxShadow:"0 8px 32px rgba(0,0,0,0.2)",transition:"all 0.25s",marginBottom:28}}
+          onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-2px)";e.currentTarget.style.boxShadow="0 12px 40px rgba(0,0,0,0.3)";}}
+          onMouseLeave={e=>{e.currentTarget.style.transform="none";e.currentTarget.style.boxShadow="0 8px 32px rgba(0,0,0,0.2)";}}>
+          Get in Touch
+        </button>
 
-        <div style={{display:"flex",gap:12,justifyContent:"center",flexWrap:"wrap",marginBottom:24}}>
-          <a href={P.whatsapp} target="_blank" rel="noreferrer" style={{background:"rgba(255,255,255,0.15)",color:"#fff",padding:"10px 20px",borderRadius:10,fontWeight:700,fontSize:13,textDecoration:"none",border:"2px solid rgba(255,255,255,0.3)"}}>💬 WhatsApp</a>
+        {/* Small footer icons that also open contact modal */}
+        <div style={{display:"flex",gap:20,justifyContent:"center",flexWrap:"wrap",marginBottom:20}}>
+          {[{icon:"📧",label:"Email"},{icon:"💬",label:"WhatsApp"},{icon:"🔗",label:"LinkedIn"},{icon:"🐙",label:"GitHub"}].map(item=>(
+            <button key={item.label} onClick={openContact} style={{background:"rgba(255,255,255,0.12)",border:"none",borderRadius:999,padding:"8px 16px",cursor:"pointer",color:"rgba(255,255,255,0.8)",fontSize:12,fontWeight:600,transition:"all 0.2s"}}
+              onMouseEnter={e=>e.currentTarget.style.background="rgba(255,255,255,0.2)"}
+              onMouseLeave={e=>e.currentTarget.style.background="rgba(255,255,255,0.12)"}>
+              {item.icon} {item.label}
+            </button>
+          ))}
         </div>
-
-        <div style={{display:"flex",gap:20,justifyContent:"center",flexWrap:"wrap"}}>
-          {[{label:"LinkedIn",url:P.linkedin},{label:"GitHub",url:P.github},{label:"Download Résumé",url:P.resume}].map(l=>(
-            <a key={l.label} href={l.url} target="_blank" rel="noreferrer" style={{color:"rgba(255,255,255,0.8)",fontSize:13,fontWeight:700,textDecoration:"none"}}>{l.label} ↗</a>))}
-        </div>
-        <p style={{marginTop:40,color:"rgba(255,255,255,0.4)",fontSize:12}}>© 2026 Ibukunoluwa J. Oluwafemi · IBK &amp; Co. · Built in React.</p>
+        <p style={{color:"rgba(255,255,255,0.4)",fontSize:12}}>© 2026 Ibukunoluwa J. Oluwafemi · IBK &amp; Co. · Built in React.</p>
       </div>
     </section>
   );
@@ -810,9 +990,13 @@ export default function App(){
     typeof window!=="undefined"&&window.matchMedia?.("(prefers-color-scheme: dark)").matches
   );
   const [modal,setModal]=useState(null);
+  const [contactOpen,setContactOpen]=useState(false);
+  const [gallery,setGallery]=useState(null);
   const t=mkT(dark);
   const open=useCallback((data)=>setModal(data),[]);
   const close=useCallback(()=>setModal(null),[]);
+  const openContact=useCallback(()=>setContactOpen(true),[]);
+  const closeContact=useCallback(()=>setContactOpen(false),[]);
 
   useEffect(()=>{
     const style=document.createElement("style");
@@ -835,8 +1019,10 @@ export default function App(){
       ::selection{background:rgba(13,148,136,0.25);color:inherit;}
       a,button{-webkit-tap-highlight-color:transparent;}
       button:focus-visible,a:focus-visible{outline:2px solid rgba(13,148,136,0.6);outline-offset:2px;}
+      .click-hint{transition:opacity 0.2s;}
+      button:hover .click-hint{opacity:1;}
       @media(hover:none){
-        button[data-clickable]:after{content:"Tap to expand";font-size:9px;display:block;color:rgba(13,148,136,0.7);margin-top:4px;font-weight:700;text-transform:uppercase;letter-spacing:0.3px;}
+        .click-hint{opacity:0.85;}
       }
     `;
     if(!document.getElementById("ibk-animations")) document.head.appendChild(style);
@@ -847,18 +1033,91 @@ export default function App(){
     <div style={{minHeight:"100vh",background:t.bg,color:t.text,fontFamily:"-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif",lineHeight:1.6}}>
       <Nav dark={dark} toggle={()=>setDark(d=>!d)} t={t} open={open}/>
       <main>
-        <Hero open={open} t={t} dark={dark}/>
+        <Hero open={open} t={t} dark={dark} openContact={openContact}/>
         <About t={t}/>
+        <SectionSep t={t}/>
         <Skills open={open} t={t}/>
-        <Projects open={open} t={t}/>
+        <SectionSep t={t}/>
+        <Projects open={open} t={t} setGallery={setGallery}/>
+        <SectionSep t={t}/>
         <Experience open={open} t={t}/>
+        <SectionSep t={t}/>
         <Education open={open} t={t}/>
+        <SectionSep t={t}/>
         <Awards open={open} t={t}/>
+        <SectionSep t={t}/>
         <Certificates open={open} t={t}/>
-        <Events open={open} t={t}/>
-        <Contact t={t}/>
+        <SectionSep t={t}/>
+        <Events open={open} t={t} setGallery={setGallery}/>
+        <Contact t={t} openContact={openContact}/>
       </main>
-      {modal&&<Modal data={modal} onClose={close} t={t}/>}
+      {modal&&<Modal data={modal} onClose={close} t={t} openGallery={modal.images&&modal.images.length>0?()=>setGallery({images:modal.images,title:modal.modal?.title||modal.title}):null}/>}
+      {contactOpen&&<ContactModal onClose={closeContact} t={t}/>}
+      {gallery&&<GalleryModal images={gallery.images} title={gallery.title} onClose={()=>setGallery(null)} t={t}/>}
     </div>
   );
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   AI_OPINION — Engineering Feedback & Risk Assessment
+   ═══════════════════════════════════════════════════════════════════
+
+1. GALLERY IMAGES ARE PLACEHOLDERS
+   All project and event image paths (e.g., /projects/maize-sheller.jpg)
+   are placeholder paths. You MUST add actual images to your public/
+   folder or hosting CDN. Without real images, gallery buttons will
+   show fallback states. This is the #1 priority for credibility.
+
+2. MISSING /Resumé.pdf PATH
+   The résumé download link points to "/Resumé.pdf". Ensure this file
+   exists in your public folder. Consider generating a PDF from the
+   ATS-optimized HTML résumé provided alongside this file.
+
+3. NAVBAR WIDTH ON VERY SMALL SCREENS
+   The pill navbar uses max-width: calc(100vw - 32px) which is safe,
+   but at widths below ~360px, the "IBK&Co." brand + hamburger may
+   still feel tight. Test on iPhone SE (375px width). If needed,
+   reduce brand font-size to 15px and hamburger padding further.
+
+4. PERFORMANCE: LAZY IMAGE LOADING
+   The gallery loads images only when opened (good), but the cover
+   thumbnails in project cards load immediately. If you add many
+   high-res images, use loading="lazy" on thumbnail <img> tags and
+   consider compressing to WebP format.
+
+5. ACCESSIBILITY: GALLERY ALT TEXT
+   Every gallery image should have descriptive alt text. The data
+   structure supports this — fill in the "alt" field for each image.
+   This matters for screen readers and SEO.
+
+6. CONTACT MODAL: CLIPBOARD API
+   The copy-to-clipboard uses navigator.clipboard which requires
+   HTTPS in production. If hosting on HTTP (unlikely in 2026), the
+   copy buttons will silently fail. Add a try/catch fallback using
+   document.execCommand('copy') if needed.
+
+7. SEO / META TAGS MISSING
+   Add <meta> tags for description, Open Graph, and Twitter Cards
+   in your index.html. Include keywords: "Mechanical Engineering",
+   "SIWES Internship", "Fabrication", "Manufacturing", your name.
+
+8. GOOGLE ANALYTICS / PLAUSIBLE
+   Consider adding lightweight analytics to track which sections
+   recruiters engage with most. This data helps you iterate.
+
+9. RÉSUMÉ DELIVERABLE
+   The résumé has been output as an ATS-optimized HTML file
+   (resume_ats.html). Open it in a browser, verify formatting, then
+   print-to-PDF (Chrome: Ctrl+P → Save as PDF → Margins: Default).
+   Test the PDF in an ATS parser like Jobscan or Resume Worded.
+
+10. STRENGTH OF CURRENT POSITIONING
+    Your portfolio now correctly positions Mechanical Engineering as
+    primary and AI as a force-multiplier. The SIWES badge, 4.32 CGPA
+    prominence, and fabrication storytelling through the gallery
+    system give you a strong differentiation vs. typical student
+    portfolios. The biggest remaining variable is image quality.
+
+RISK LEVEL: LOW (pending real images and PDF résumé upload)
+   ═══════════════════════════════════════════════════════════════════
+*/
