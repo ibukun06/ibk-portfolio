@@ -58,6 +58,12 @@ const SKILLS=[
   {id:"networking",icon:"🌐",cat:"Technical",title:"Ethernet Cabling (RJ45/Cat6)",level:"Practiced",
     modal:{tag:"Technical",title:"Ethernet Cabling (RJ45 Cat6)",
       pts:["RJ45 Cat6 crimping and cable assembly","Straight-through and crossover configurations","Cable testing with network verifiers","Structured cabling and troubleshooting fundamentals"]}},
+  {id:"proj-management",icon:"📋",cat:"Professional Competencies",title:"Project Management & Coordination",level:"Applied",
+    modal:{tag:"Professional",title:"Project Management & Coordination",subtitle:"Applied across multiple campus initiatives",
+      pts:["Supervised committee operations as RUNSA Chief Whip","Managed structured workflows as a Main Teams Officer for the Protocol Team (RPT)","Maintained strict time management and adaptability in fast-paced student governance environments"]}},
+  {id:"communication",icon:"🗣️",cat:"Professional Competencies",title:"Analytical & Communication Skills",level:"Endorsed",
+    modal:{tag:"Professional",title:"Analytical & Interpersonal Communication",subtitle:"Backed by LinkedIn endorsements and practical application",
+      pts:["Demonstrated cognitive flexibility and problem-solving in high-stakes environments","Leveraged research skills for academic and committee work","Applied effective teamwork and interpersonal skills across SPE, RPT, and RUNSA leadership"]}},
 ];
 
 // Projects with scalable image gallery support
@@ -146,6 +152,18 @@ const EXPERIENCE=[
     period:"2024 – Present",loc:"Ede, Osun State",
     modal:{tag:"SPE · Active",title:"Environmental & Climate Impact Committee",subtitle:"Society of Petroleum Engineers — RU Chapter · 2024 – Present",
       pts:["Study environmental impact assessment frameworks for oil & gas operations","Engage with climate policy, carbon capture concepts, and ESG standards","Participate in discussions on Nigeria's environmental regulation and the just energy transition"]}},
+  {id:"rpt",icon:"🛡️",tag:"Operations",title:"Main Teams & Probation Officer",org:"Redeemer's University Protocol Team (RPT)",
+    period:"Jan 2026 – Present",loc:"Hybrid / On-site",
+    modal:{tag:"Operations & Coordination",title:"Protocol Team Officer",subtitle:"Redeemer's University Protocol Team (RPT) · Jan 2026 – Present",
+      pts:["Promoted to Main Teams Officer in May 2026 after successful 5-month probation","Demonstrated high adaptability and communication in managing university protocols","Coordinated structural logistics and team operations"]}},
+  {id:"campor",icon:"🏕️",tag:"Outreach",title:"Campus Ambassador",org:"Campor",
+    period:"Dec 2025 – Present",loc:"Redeemer's University",
+    modal:{tag:"Outreach",title:"Campus Ambassador — Campor",subtitle:"Dec 2025 – Present",
+      pts:["Act as a primary liaison between the student body and the Campor platform","Drive engagement and peer-to-peer marketing initiatives"]}},
+  {id:"haayaa",icon:"👔",tag:"Outreach",title:"Student Ambassador",org:"Haayaa",
+    period:"Feb 2026 – Present",loc:"Nigeria",
+    modal:{tag:"Outreach",title:"Student Ambassador — Haayaa",subtitle:"Feb 2026 – Present",
+      pts:["Represent the brand on campus, facilitating student adoption and engagement","Leverage communication skills to build platform awareness"]}},
   {id:"sales",icon:"🛍️",tag:"Business",title:"Sales Representative",org:"Family Business",
     period:"2022 – 2024",loc:"Lagos, Nigeria",
     modal:{tag:"Business",title:"Sales Representative",subtitle:"Family Business · 2022 – 2024 · Lagos, Nigeria",
@@ -174,12 +192,14 @@ const CERTIFICATES=[
     credentialId:null,verifyUrl:null,
     topics:["Data Structures","Algorithms","Conditionals"],
     skills:["Problem-solving","Algorithmic thinking","Basic coding"],
+    images:[{src:"/certificates/programming-hero.jpg",caption:"Fundamentals of Programming Certificate",alt:"Programming Hero Certificate"}],
     modal:{tag:"Earned · 2020",title:"Fundamentals of Programming",subtitle:"Programming Hero · 2020",
       pts:["Data Structures & memory management","Algorithms and computational complexity basics","Loops, conditionals, and control flow","Foundational programming concepts and problem-solving methodology"]}},
   {id:"hp-leadership",status:"earned",icon:"🏆",title:"Effective Leadership",issuer:"HP LIFE (HP Foundation)",year:"2026",
     credentialId:"626c9fdd-0691-4f57-9eb2-1ec155cdb095",verifyUrl:"https://www.life-global.org",
     topics:["Leadership Strategies","Ethics in Leadership","Team Management"],
     skills:["Leadership","Ethical decision-making","Team coordination"],
+    images:[{src:"/certificates/hp-leadership.jpg",caption:"HP LIFE Effective Leadership Certificate",alt:"Effective Leadership Certificate"}],
     modal:{tag:"Earned · May 2026",title:"Effective Leadership",subtitle:"HP LIFE · HP Foundation · Presented 20 May 2026",
       desc:"Completed HP LIFE's Effective Leadership course, covering leadership theory, strategy selection, and ethical decision-making in professional environments.",
       pts:["Effective leadership frameworks and their strategic application","Adapting leadership style to team and situational context","Ethics and integrity as core pillars of leadership","Credential ID: 626c9fdd-0691-4f57-9eb2-1ec155cdb095"]}},
@@ -187,6 +207,7 @@ const CERTIFICATES=[
     credentialId:"e820d6c9-2919-4911-b9f4-1f737434fd89",verifyUrl:"https://www.life-global.org",
     topics:["Social Enterprise","Stakeholder Analysis","Impact Measurement"],
     skills:["Entrepreneurial thinking","Stakeholder analysis","Business impact assessment"],
+    images:[{src:"/certificates/hp-entrepreneurship.jpg",caption:"HP LIFE Social Entrepreneurship Certificate",alt:"Social Entrepreneurship Certificate"}],
     modal:{tag:"Earned · May 2026",title:"Social Entrepreneurship",subtitle:"HP LIFE · HP Foundation · Presented 20 May 2026",
       desc:"Completed HP LIFE's Social Entrepreneurship course covering sustainable social enterprise development and impact measurement.",
       pts:["Assessing the sustainability and viability of social enterprise ideas","Using stakeholder analysis to evaluate business need and community fit","Measuring and communicating business impact","Credential ID: e820d6c9-2919-4911-b9f4-1f737434fd89"]}},
@@ -194,6 +215,7 @@ const CERTIFICATES=[
     credentialId:"044c5743-5e9b-4393-923f-885fb9bc5f72",verifyUrl:"https://www.life-global.org",
     topics:["Problem Definition","Customer Feedback","Solution Design"],
     skills:["Design thinking","Problem framing","Human-centred design"],
+    images:[{src:"/certificates/hp-design-thinking.jpg",caption:"HP LIFE Design Thinking Certificate",alt:"Design Thinking Certificate"}],
     modal:{tag:"Earned · May 2026",title:"Design Thinking",subtitle:"HP LIFE · HP Foundation · Presented 20 May 2026",
       desc:"Completed HP LIFE's Design Thinking course, covering the full design thinking process from problem definition to solution iteration.",
       pts:["Applying the design thinking process to real-world challenges","Defining problem statements with precision and user-centricity","Using customer feedback to iterate and improve solutions","Credential ID: 044c5743-5e9b-4393-923f-885fb9bc5f72"]}},
@@ -201,6 +223,7 @@ const CERTIFICATES=[
     credentialId:"c7c8bf97-70d4-4f88-b3b9-1fbe2836b824",verifyUrl:"https://www.life-global.org",
     topics:["AI in Business","Prompt Crafting","Ethical AI Use"],
     skills:["AI tools","Prompt engineering","AI ethics"],
+    images:[{src:"/certificates/hp-ai-business.jpg",caption:"HP LIFE AI for Business Professionals Certificate",alt:"AI for Business Professionals Certificate"}],
     modal:{tag:"Earned · May 2026",title:"AI for Business Professionals",subtitle:"HP LIFE · HP Foundation · Presented 19 May 2026",
       desc:"Completed HP LIFE's AI for Business Professionals course, covering practical AI tool use, prompt engineering, and ethical considerations for professionals.",
       pts:["AI's role in modern business operations and decision-making","Difference between standalone AI tools and integrated AI features","Crafting effective prompts for professional outputs","Ethical use of AI and managing bias in AI-generated content","Credential ID: c7c8bf97-70d4-4f88-b3b9-1fbe2836b824"]}},
@@ -208,12 +231,14 @@ const CERTIFICATES=[
     credentialId:"a060a394-306f-4d35-82a8-d1448a4a389a",verifyUrl:"https://www.life-global.org",
     topics:["Email Structure","Professional Writing","Business Communication"],
     skills:["Professional writing","Business communication","Email etiquette"],
+    images:[{src:"/certificates/hp-business-email.jpg",caption:"HP LIFE Business Email Certificate",alt:"Business Email Certificate"}],
     modal:{tag:"Earned · May 2026",title:"Business Email",subtitle:"HP LIFE · HP Foundation · Presented 20 May 2026",
       pts:["Structural elements of effective business emails","Developing clear, concise, and action-oriented professional emails","Applying email communication across different professional scenarios","Credential ID: a060a394-306f-4d35-82a8-d1448a4a389a"]}},
   {id:"hp-critical",status:"earned",icon:"🧠",title:"Critical Thinking in the AI Era",issuer:"HP LIFE (HP Foundation)",year:"2026",
     credentialId:"6c8953d2-459f-43e0-be87-297f09838df6",verifyUrl:"https://www.life-global.org",
     topics:["Critical Thinking","AI Bias","Fact-Checking"],
     skills:["Critical thinking","Bias mitigation","Information verification"],
+    images:[{src:"/certificates/hp-critical-thinking.jpg",caption:"HP LIFE Critical Thinking in the AI Era Certificate",alt:"Critical Thinking Certificate"}],
     modal:{tag:"Earned · May 2026",title:"Critical Thinking in the AI Era",subtitle:"HP LIFE · HP Foundation · Presented 20 May 2026",
       desc:"Completed HP LIFE's Critical Thinking in the AI Era course, covering decision-making frameworks and tools for navigating AI-generated information.",
       pts:["Applying critical thinking frameworks to improve professional decisions","Understanding how AI-generated content can distort or misrepresent information","Strategies to counteract cognitive biases in decision-making","Practical tools and workflows for fact-checking AI-generated content","Credential ID: 6c8953d2-459f-43e0-be87-297f09838df6"]}},
@@ -221,6 +246,7 @@ const CERTIFICATES=[
     credentialId:"8487641051OI",verifyUrl:null,
     topics:["AI Foundations","Machine Learning","AI Ethics"],
     skills:["AI fundamentals","Machine learning concepts","Responsible AI"],
+    images:[{src:"/certificates/purpose-driven-ai.jpg",caption:"Purpose-Driven AI Certificate",alt:"Purpose-Driven AI Certificate"}],
     modal:{tag:"Earned · May 2026",title:"Purpose-Driven AI: Introduction to Artificial Intelligence",subtitle:"Faith Leads University · Grow with Google Partner · 28 May 2026",
       pts:["Foundational concepts of artificial intelligence and machine learning","AI applications across industries and professional contexts","Ethical considerations and responsible use of AI systems","Certificate Number: 8487641051OI"]}},
   {id:"ph1",status:"placeholder",icon:"📜",title:"Add Certificate",issuer:"Issuing Body",year:"—",topics:["Topic 1","Topic 2"],skills:[],
@@ -541,6 +567,7 @@ function Nav({dark,toggle,t,open}){
     padding:"0 6px",
     height:52,
     display:"flex",alignItems:"center",
+    width:"max-content", // <-- ADD THIS LINE
     maxWidth:"calc(100vw - 32px)",
   };
   return(
@@ -616,13 +643,6 @@ function Hero({open,t,dark,openContact}){
         <div style={{display:"inline-flex",alignItems:"center",gap:8,background:"rgba(22,163,74,0.12)",border:"1px solid rgba(22,163,74,0.35)",borderRadius:999,padding:"5px 18px",marginBottom:12,fontSize:12,fontWeight:800,color:"#16a34a",animation:"fadeUp 0.6s ease both"}}>
           <span style={{width:7,height:7,borderRadius:"50%",background:"#4ade80",display:"inline-block",flexShrink:0,animation:"pulseDot 2s ease infinite"}}/>
           Available for SIWES / Engineering Internship
-        </div>
-
-        {/* Open to roles badge */}
-        <div style={{display:"flex",justifyContent:"center",marginBottom:28,animation:"fadeUp 0.6s 0.1s ease both"}}>
-          <div style={{display:"inline-flex",alignItems:"center",gap:8,background:t.aLight,border:`1px solid rgba(13,148,136,0.3)`,borderRadius:999,padding:"4px 16px",fontSize:11,fontWeight:700,color:t.accent}}>
-            Open to Engineering Internships · Nigeria & Abroad
-          </div>
         </div>
 
         {/* Avatar */}
