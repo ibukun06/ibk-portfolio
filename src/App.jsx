@@ -225,7 +225,7 @@ const CERTIFICATES=[
       pts:["Foundational concepts of artificial intelligence and machine learning","AI applications across industries and professional contexts","Ethical considerations and responsible use of AI systems","Certificate Number: 8487641051OI"]}},
   {id:"ph1",status:"placeholder",icon:"📜",title:"Add Certificate",issuer:"Issuing Body",year:"—",topics:["Topic 1","Topic 2"],skills:[],
     modal:{tag:"Placeholder",title:"Add a Certificate Here",subtitle:"App.jsx → CERTIFICATES array → duplicate an earned entry",
-      desc:"Set status:'earned' and fill in: id, title, issuer, year, credentialId, verifyUrl, topics, skills, and modal details."}}},
+      desc:"Set status:'earned' and fill in: id, title, issuer, year, credentialId, verifyUrl, topics, skills, and modal details."}},
 ];
 
 // ── AWARDS — dedicated section ───────────────────────────────────
@@ -240,7 +240,7 @@ const AWARDS=[
     category:"Competition / Leadership",
     desc:"Placeholder — fill in your award details.",
     modal:{tag:"Placeholder",title:"Add an Award Here",subtitle:"App.jsx → AWARDS array → duplicate an 'awarded' entry",
-      desc:"Set status:'awarded' and fill in: id, title, org, year, category, desc, and modal details."}}},
+      desc:"Set status:'awarded' and fill in: id, title, org, year, category, desc, and modal details."}},
 ];
 
 // ── EVENTS — with gallery support ────────────────────────────────
