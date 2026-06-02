@@ -1,25 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ibukunoluwa J. Oluwafemi — Mechanical Engineering Student, AI Workflow Optimizer. Open to SIWES internships and AI efficiency roles." />
-    <meta name="keywords" content="Mechanical Engineering, AI Workflow, SIWES, Internship, Lagos, Nigeria, IBK" />
-    <meta property="og:title" content="IBK & Co. — Ibukunoluwa Oluwafemi Portfolio" />
-    <meta property="og:description" content="Mechanical Engineering student & AI Workflow Optimizer. CGPA 4.37. SAT 1360. Built production apps for 611 delegates using AI tools." />
+
+    <!-- SEO Meta Tags -->
+    <title>IBK — Ibukunoluwa Oluwafemi | Mechanical Engineering Student</title>
+    <meta name="description" content="Mechanical Engineering student at Redeemer's University (CGPA 4.32/5.00). Hands-on fabrication, AutoCAD, Python, AI workflow optimization. Seeking SIWES internship in manufacturing, oil & gas, or AI workflow roles." />
+    <meta name="author" content="Ibukunoluwa Oluwafemi" />
+    <meta name="keywords" content="mechanical engineering, SIWES, internship, Nigeria, AutoCAD, Python, SMAW welding, AI workflow, Redeemer's University" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="IBK — Mechanical Engineering Student & AI Workflow Optimizer" />
+    <meta property="og:description" content="CGPA 4.32/5.00 · SMAW Welding · AutoCAD · Python · 611 delegates served · Chief Whip RUNSA. Seeking SIWES placement July 2026." />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ibk-portfolio-one.vercel.app" />
+    <meta property="og:image" content="/profile.jpg" />
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <title>IBK & Co. — Ibukunoluwa Oluwafemi</title>
+    <meta name="twitter:title" content="IBK — Mechanical Engineering Student" />
+    <meta name="twitter:description" content="Mechanical Engineering at Redeemer's University · CGPA 4.32 · Fabrication · AutoCAD · Python · AI Workflow" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>" />
+
+    <!-- Font preloads for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ── FOUC Prevention ─────────────────────────────────────────
+         This blocking script runs before React hydrates to apply
+         the correct theme without any flash. Reads localStorage
+         and falls back to system preference.
+    ────────────────────────────────────────────────────────────── -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("ibk-theme");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var dark = stored ? stored === "dark" : prefersDark;
+          document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+          document.documentElement.style.background = dark ? "#050508" : "#fafafa";
+        } catch (e) {}
+      })();
+    </script>
+
     <style>
-      body { margin: 0; padding: 0; }
-      #root { min-height: 100vh; }
+      /* Prevent any layout shift during load */
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      body[data-theme="dark"] { background: #050508; }
+      body[data-theme="light"] { background: #fafafa; }
+
+      /* Loading state */
+      #root:empty::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: #050508;
+        z-index: 99999;
+      }
     </style>
   </head>
   <body>
+    <a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:99999" class="skip-link">
+      Skip to main content
+    </a>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
