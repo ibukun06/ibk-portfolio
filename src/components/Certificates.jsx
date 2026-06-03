@@ -71,7 +71,7 @@ function CertCard({ cert, open, t }) {
         {cert.title}
       </div>
       <div style={{ fontSize: 11.5, color: t.muted, marginBottom: 4, fontFamily: "'DM Sans', sans-serif" }}>{cert.issuer}</div>
-      <div style={{ fontSize: 11, color: t.muted, marginBottom: 12, fontFamily: "'DM Sans', sans-serif', opacity: 0.8" }}>{cert.year}</div>
+      <div style={{ fontSize: 11, color: t.muted, marginBottom: 12, fontFamily: "'DM Sans', sans-serif", opacity: 0.8 }}>{cert.year}</div>
 
       <div style={{ display: "flex", flexWrap: "wrap", gap: 4, marginBottom: 10 }}>
         {(cert.topics || []).slice(0, 2).map(topic => (
