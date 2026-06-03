@@ -92,13 +92,13 @@ export default function Nav({ dark, toggle, t, openContact }) {
               boxShadow: `0 4px 16px rgba(99,179,237,0.4)`,
               fontFamily: "'Syne', sans-serif",
               flexShrink: 0,
-            }}>I</div>
+            }}>{P.nick.charAt(0)}</div>
             <span style={{
               fontWeight: 800, fontSize: 15,
               color: t.text, letterSpacing: "-0.3px",
               fontFamily: "'Syne', sans-serif",
             }}>
-              IBK
+              {P.nick}
               <span style={{ color: t.muted, fontWeight: 500 }}>.co</span>
             </span>
           </button>
@@ -145,6 +145,19 @@ export default function Nav({ dark, toggle, t, openContact }) {
             >
               {dark ? "☀️" : "🌙"}
             </button>
+
+            {/* Resume Link */}
+            {!mobile && P.resume && (
+              <a href={P.resume} target="_blank" rel="noopener noreferrer" style={{
+                color: t.text, fontSize: 13, fontWeight: 700, textDecoration: "none",
+                marginRight: 12, fontFamily: "'DM Sans', sans-serif", transition: "color 0.2s"
+              }}
+              onMouseEnter={e => e.currentTarget.style.color = t.accent}
+              onMouseLeave={e => e.currentTarget.style.color = t.text}
+              >
+                Resume
+              </a>
+            )}
 
             {/* Contact CTA */}
             {!mobile && (
