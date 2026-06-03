@@ -156,7 +156,7 @@ function ProjectCard({ project, open, setGallery, t }) {
           <span style={{ fontSize: 11, fontWeight: 700, color: t.muted, textTransform: "uppercase", letterSpacing: "1px" }}>{project.period}</span>
         </div>
 
-        <h3 style={{ fontSize: 16, fontWeight: 800, color: t.text, marginBottom: 5, letterSpacing: "-0.3px", fontFamily: "'Syne', sans-serif' " }}>{project.title}</h3>
+        <h3 style={{ fontSize: 16, fontWeight: 800, color: t.text, marginBottom: 5, letterSpacing: "-0.3px", fontFamily: "'Syne', sans-serif" }}>{project.title}</h3>
         <p style={{ fontSize: 12, color: t.muted, marginBottom: 12, fontWeight: 600 }}>{project.subtitle}</p>
 
         {/* Problem/solution mini */}
