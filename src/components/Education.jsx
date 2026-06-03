@@ -1,6 +1,7 @@
 import { RevealSection, SectionHeader, ClickHint } from "./primitives";
 import { EDUCATION } from "../data/portfolio";
 import { useMobile } from "../hooks";
+import { t } from '../styles/tokens';
 
 export default function Education({ open, t }) {
   const mobile = useMobile();
