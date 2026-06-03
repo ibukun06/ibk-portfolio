@@ -88,10 +88,18 @@ function HexPortrait({ t }) {
         border: "none",
         boxShadow: `0 0 0 2px ${t.accent}40`,
       }}>
-        <img
-          src={P.photo}
-          alt="IBK — Ibukunoluwa Oluwafemi"
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        <img 
+          src={P.photo} 
+          alt="Profile"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            // 1. Shift the focus to the top portion of the image (pushes the image down)
+            objectPosition: "center 15%", 
+            // 2. Zoom out slightly to ensure hair clears the top hexagon point
+            transform: "scale(0.92)",
+          }}
           onError={e => {
             e.target.style.display = "none";
             e.target.parentElement.innerHTML = `
