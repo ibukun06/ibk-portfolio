@@ -1,7 +1,6 @@
 import { RevealSection, SectionHeader } from "./primitives";
 import { PROFILE as P } from "../data/portfolio";
 import { useMobile } from "../hooks";
-import { t } from '../styles/tokens';
 
 export default function About({ t }) {
   const mobile = useMobile();
