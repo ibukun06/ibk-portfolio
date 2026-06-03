@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { RevealSection } from "./primitives";
 import { PROFILE as P } from "../data/portfolio";
 import { useMobile } from "../hooks";
+import { t } from '../styles/tokens';
 
 /* ── Main Contact Section ──────────────────────────────────────── */
 export function Contact({ t, openContact }) {
