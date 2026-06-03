@@ -95,10 +95,8 @@ function HexPortrait({ t }) {
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            // 1. Shift the focus to the top portion of the image (pushes the image down)
-            objectPosition: "center", 
-            // 2. Zoom out slightly to ensure hair clears the top hexagon point
-            transform: "scale(0.92)",
+            // 1. Scale UP to kill black edges, translate DOWN to save your hair
+            transform: "scale(1.25) translateY(8%)"
           }}
           onError={e => {
             e.target.style.display = "none";
