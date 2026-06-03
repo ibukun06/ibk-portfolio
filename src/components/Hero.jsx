@@ -84,19 +84,23 @@ function HexPortrait({ t }) {
         position: "absolute", inset: 18,
         clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
         overflow: "hidden",
-        background: t.bgCard,
+        
+        /* YOUR gradient applied as the intentional background */
+        background: "linear-gradient(135deg, #0f0f17, #1a1a2e)", 
+        
         border: "none",
         boxShadow: `0 0 0 2px ${t.accent}40`,
-      }}>
-        <img 
-          src={P.photo} 
-          alt="Profile"
-          style={{
-            width: "100%",
-            height: "100%",
+    }}>
+        <img
+          src={P.photo}
+          alt="Ibukunoluwa Oluwafemi"
+          style={{ 
+            width: "100%", 
+            height: "100%", 
             objectFit: "cover",
-            // 1. Scale UP to kill black edges, translate DOWN to save your hair
-            transform: "scale(1.25) translateY(8%)"
+            objectPosition: "center 10%", /* Keeps your hair in frame */
+            transform: "scale(0.92)",     /* Zooms out safely */
+            opacity: 0.95                 /* Blends the photo slightly into the gradient */
           }}
           onError={e => {
             e.target.style.display = "none";
