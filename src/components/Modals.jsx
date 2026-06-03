@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Chip } from "./primitives";
 import { PROFILE as P } from "../data/portfolio";
+import { t } from '../styles/tokens';
 
 /* ═══ Detail Modal ═══════════════════════════════════════════════ */
 export function Modal({ data, onClose, t, openGallery }) {
