@@ -84,23 +84,28 @@ function HexPortrait({ t }) {
         position: "absolute", inset: 18,
         clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
         overflow: "hidden",
-        
-        /* YOUR gradient applied as the intentional background */
-        background: "linear-gradient(135deg, #0f0f17, #1a1a2e)", 
-        
+        // 1. Make the container background the image itself, heavily blurred
+        backgroundImage: `url(${P.photo})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        filter: "blur(0px)", // Container filter
         border: "none",
         boxShadow: `0 0 0 2px ${t.accent}40`,
-    }}>
+      }}>
+        {/* 2. Add a backdrop blur element to soften the background */}
+        <div style={{ position: "absolute", inset: -20, backdropFilter: "blur(15px)", background: "rgba(0,0,0,0.2)" }} />
+        
+        {/* 3. Render your actual photo on top */}
         <img
           src={P.photo}
           alt="Ibukunoluwa Oluwafemi"
           style={{ 
+            position: "relative",
+            zIndex: 1,
             width: "100%", 
             height: "100%", 
-            objectFit: "cover",
-            objectPosition: "center 10%", /* Keeps your hair in frame */
-            transform: "scale(0.92)",     /* Zooms out safely */
-            opacity: 0.95                 /* Blends the photo slightly into the gradient */
+            objectFit: "contain", 
+            transform: "scale(1.05)" // Tweak this so your head is perfect
           }}
           onError={e => {
             e.target.style.display = "none";
