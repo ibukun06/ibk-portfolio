@@ -1,6 +1,7 @@
 import { RevealSection, SectionHeader, StatusBadge, ClickHint } from "./primitives";
 import { CERTIFICATES } from "../data/portfolio";
 import { useMobile } from "../hooks";
+import { t } from '../styles/tokens';
 
 export default function Certificates({ open, t }) {
   const mobile = useMobile();
