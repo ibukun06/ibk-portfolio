@@ -1,7 +1,6 @@
 import { RevealSection, SectionHeader, ClickHint } from "./primitives";
 import { EVENTS } from "../data/portfolio";
 import { useMobile } from "../hooks";
-import { t } from '../styles/tokens';
 
 export default function Events({ open, t, setGallery }) {
   const mobile = useMobile();
