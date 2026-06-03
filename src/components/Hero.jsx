@@ -193,9 +193,9 @@ export default function Hero({ open, t, dark, openContact }) {
 
             {/* Main headline */}
             <h1 style={{
-              fontSize: "clamp(2.2rem, 5.5vw, 3.8rem)",
+              fontSize: "clamp(1.8rem, 4.5vw, 3rem)",
               fontWeight: 800, lineHeight: 1.08,
-              letterSpacing: "-2px", color: t.text,
+              letterSpacing: "-1px", color: t.text,
               margin: "0 0 12px",
               fontFamily: "'Syne', sans-serif",
               animation: "fadeUp 0.7s 0.2s ease both",
