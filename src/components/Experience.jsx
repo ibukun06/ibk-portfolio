@@ -2,6 +2,7 @@ import { RevealSection, SectionHeader, ClickHint } from "./primitives";
 import { EXPERIENCE } from "../data/portfolio";
 import { TAG_COLORS } from "../styles/tokens";
 import { useMobile } from "../hooks";
+import { t } from '../styles/tokens';
 
 export default function Experience({ open, t, dark }) {
   const mobile = useMobile(640);
