@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useMobile, useActiveSection, useScrollProgress } from "../hooks";
 import { PROFILE as P } from "../data/portfolio";
+import { t } from '../styles/tokens';
 
 const NAV_LINKS = [
   { id: "about",        label: "About" },
