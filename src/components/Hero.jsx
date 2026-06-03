@@ -97,7 +97,7 @@ function HexPortrait({ t }) {
             e.target.parentElement.innerHTML = `
               <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#0f0f17,#1a1a2e);gap:8px">
                 <div style="font-size:64px;line-height:1">👷</div>
-                <div style="font-size:11px;color:#63b3ed;font-weight:700;letter-spacing:2px;text-transform:uppercase">IBK</div>
+                <div style="font-size:11px;color:#63b3ed;font-weight:700;letter-spacing:2px;text-transform:uppercase">Ibukunoluwa Oluwafemi</div>
               </div>`;
           }}
         />
