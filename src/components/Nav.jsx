@@ -83,22 +83,21 @@ export default function Nav({ dark, toggle, t, openContact }) {
               padding: 0, flexShrink: 0,
             }}
           >
-            <div style={{
-              width: 34, height: 34, borderRadius: 10,
-              background: t.gradAccent,
-              display: "flex", alignItems: "center", justifyContent: "center",
-              fontSize: 15, fontWeight: 800, color: "#fff",
-              boxShadow: `0 4px 16px rgba(99,179,237,0.4)`,
-              fontFamily: "'Syne', sans-serif",
-              flexShrink: 0,
-            }}>{P.nick.charAt(0)}</div>
+            <img 
+              src="/logo.png" 
+              alt="Cross Star Logo" 
+              style={{
+                width: 34, height: 34, 
+                objectFit: "contain",
+                flexShrink: 0,
+              }} 
+            />
             <span style={{
               fontWeight: 800, fontSize: 15,
               color: t.text, letterSpacing: "-0.3px",
               fontFamily: "'Syne', sans-serif",
             }}>
               {P.nick}
-              <span style={{ color: t.muted, fontWeight: 500 }}>.co</span>
             </span>
           </button>
 
