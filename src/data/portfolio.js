@@ -35,7 +35,6 @@ export const PROFILE = {
     {
       value: "4.32",
       label: "CGPA / 5.00",
-      sub: "Top of Class",
       detail:
         "B.Eng. Mechanical Engineering · Redeemer's University · Oct 2023 – Present",
     },
