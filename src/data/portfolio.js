@@ -705,6 +705,26 @@ export const CERTIFICATES = [
       ],
     },
   },
+   {
+      id: "social-entrepreneurship",
+      status: "earned",
+      icon: "💼",
+      title: "Social Entrepreneurship",
+      issuer: "HP LIFE / HP Foundation",
+      year: "2026",
+      images: [{ src: "/certificates/social-entrepreneurship.jpg", caption: "HP LIFE Certificate of Completion", alt: "HP Social Entrepreneurship Certificate" }],
+      modal: {
+         tag: "Earned · May 2026",
+         title: "Social Entrepreneurship",
+         subtitle: "HP LIFE / HP Foundation · 20 May 2026",
+         pts: [
+            "Assessing the sustainability of social enterprise ideas",
+            "Stakeholder analysis and evaluating business needs",
+            "Measuring social and business impact",
+            "Credential serial number: [Insert Serial Number if applicable]"
+         ],
+      },
+   },
   {
     id: "hp-leadership",
     status: "earned",
@@ -872,9 +892,7 @@ export const CERTIFICATES = [
       ],
     },
   },
-];
-
-export const AWARDS = [
+   
   {
     id: "chiefwhip-award",
     status: "awarded",
@@ -896,60 +914,197 @@ export const AWARDS = [
         { l: "Year", v: "2025–2026 Academic Session" },
       ],
     },
+     images: [{ src: "/awards/award-chief-whip.jpg", caption: "Chief Whip Award", alt: "Chief Whip Award Certificate" }]
   },
+   {
+      id: "spe-dedicated-service",
+      status: "awarded",
+      icon: "🛢⚙",
+      title: "Dedicated Service Award",
+      org: "SPE Student Chapter",
+      year: "2026",
+      category: "Leadership & Service",
+      desc: "Certificate of Appreciation for dedicated service and operational support.",
+      modal: {
+         tag: "Award",
+         title: "Certificate of Appreciation for Dedicated Service",
+         subtitle: "2026 · SPE Student Chapter",
+         desc: "Awarded for rendering invaluable selfless service, providing critical operational support, and ensuring the success of chapter initiatives.",
+         specs: [
+            { l: "Category", v: "Service Award" },
+            { l: "Issuer", v: "SPE Redeemer's University" },
+            { l: "Year", v: "2026" }
+         ],
+      },
+      images: [{ src: "/awards/spe-service-award.jpg", caption: "Certificate of Appreciation", alt: "SPE Award" }]
+   }
 ];
 
 export const EVENTS = [
-  {
-    id: "ev1",
-    status: "placeholder",
-    type: "past",
-    title: "Event Name",
-    org: "Organizing Body",
-    date: "Month Year",
-    loc: "City, Country",
-    role: "Your Role",
-    desc: "What happened and what you gained or contributed.",
-    image: null,
-    images: [
-      { src: "/events/event1-photo1.jpg", caption: "Event photo 1", alt: "Event photo" },
-      { src: "/events/event1-photo2.jpg", caption: "Event photo 2", alt: "Event photo" },
-    ],
-    modal: {
-      tag: "Past Event",
-      title: "Event Name",
-      subtitle: "Month Year · City, Country",
-      desc: "What happened and what you gained or contributed.",
-      specs: [
-        { l: "Organizer", v: "Organizing Body" },
-        { l: "Role", v: "Your Role" },
-        { l: "Date", v: "Month Year" },
-        { l: "Location", v: "City, Country" },
+   {
+      id: "legislative-summit",
+      status: "completed",
+      type: "past",
+      title: "Legislative Parliamentary Summit",
+      org: "RUNSA Legislative Council",
+      date: "April 2026",
+      loc: "Redeemer's University",
+      role: "Organizer",
+      desc: "Organized and planned the summit themed 'The Catalyst of Transformation: Legislating the Future for Democratic Leadership.'",
+      image: null,
+      images: [
+         { src: "/events/event1-photo1.jpg", caption: "Event photo 1", alt: "Event photo" },
+         { src: "/events/legislative-summit.jpg", caption: "Certificate of Appreciation", alt: "Legislative Summit Certificate" }
       ],
-    },
-  },
-  {
-    id: "ev2",
-    status: "placeholder",
-    type: "upcoming",
-    title: "Upcoming Event",
-    org: "Organizing Body",
-    date: "Coming Soon",
-    loc: "TBD",
-    role: "Attendee / Participant",
-    desc: "Event you are registered for or planning to attend.",
-    image: null,
-    images: [],
-    modal: {
-      tag: "Upcoming",
+      modal: {
+         tag: "Past Event",
+         title: "Legislative Parliamentary Summit",
+         subtitle: "April 2026 · Redeemer's University",
+         desc: "Managed logistics and delegate attendance for the summit, facilitating dialogue on future leadership.",
+         specs: [
+            { l: "Organizer", v: "RUNSA Legislative Council" },
+            { l: "Role", v: "Organizer" },
+            { l: "Date", v: "April 2026" },
+            { l: "Location", v: "Redeemer's University" }
+         ],
+      },
+   },
+   {
+      id: "protocol-conference",
+      status: "completed",
+      type: "past",
+      title: "Protocol, Security and Leadership Conference",
+      org: "RPT / RUN Wing",
+      date: "May 2026",
+      loc: "SEAP Holdings Hall",
+      role: "Participant",
+      desc: "Active participation in the 'Building Peaceful Nations' Conference focusing on leadership and professional growth.",
+      image: null,
+      images: [
+         { src: "/events/event1-photo1.jpg", caption: "Event photo 1", alt: "Event photo" },
+         { src: "/events/protocol-security.jpg", caption: "Certificate of Participation", alt: "Protocol and Security Certificate" }
+      ],
+      modal: {
+         tag: "Past Event",
+         title: "Protocol, Security and Leadership Conference",
+         subtitle: "May 2026 · SEAP Holdings Hall",
+         desc: "Gained insights into professional leadership, protocol standards, and national security initiatives.",
+         specs: [
+            { l: "Organizer", v: "RPT / RUN Wing" },
+            { l: "Role", v: "Participant" },
+            { l: "Date", v: "May 2026" },
+            { l: "Location", v: "SEAP Holdings Hall" }
+         ],
+      },
+   },
+   {
+      id: "health-conference",
+      status: "completed",
+       type: "past",
+       title: "Redefining Excellence Conference",
+       org: "Redeemer's University Students' Association",
+       date: "April 2026",
+       loc: "Redeemer's University",
+       role: "Participant",
+       desc: "Participated in the conference themed 'Health as a Core Driver of Academic Achievement'.",
+       image: null,
+       images: [
+          { src: "/events/event1-photo1.jpg", caption: "Event photo 1", alt: "Event photo" },
+          { src: "/events/health-excellence-conf.jpg", caption: "Certificate of Participation", alt: "Health Conference Certificate" }
+       ],
+       modal: {
+          tag: "Past Event",
+          title: "Redefining Excellence Conference",
+          subtitle: "April 2026 · Redeemer's University",
+          desc: "Engaged in dialogue regarding the intersection of student wellness and academic performance.",
+          specs: [
+             { l: "Organizer", v: "RUNSA" },
+             { l: "Role", v: "Participant" },
+             { l: "Date", v: "April 2026" },
+             { l: "Location", v: "Redeemer's University" }
+          ],
+       },
+   },
+   {
+      id: "secretariat-workshop",
+      status: "completed",
+      type: "past",
+      title: "Secretariat Workshop 3.0",
+      org: "RUNSA & SPE Student Chapter",
+      date: "April 2026",
+      loc: "Seap Holdings",
+      role: "Participant",
+      desc: "Active participation and engagement during the Secretariat Workshop 3.0.",
+      image: null,
+      images: [
+         { src: "/events/event1-photo1.jpg", caption: "Event photo 1", alt: "Event photo" },
+         { src: "/events/secretariat-workshop.jpg", caption: "Certificate of Participation", alt: "Secretariat Workshop Certificate" }
+      ],
+      modal: {
+         tag: "Past Event",
+         title: "Secretariat Workshop 3.0",
+         subtitle: "April 2026 · Seap Holdings",
+         desc: "Developed skills in administrative coordination and active engagement for student leadership.",
+         specs: [
+            { l: "Organizer", v: "RUNSA & SPE" },
+            { l: "Role", v: "Participant" },
+            { l: "Date", v: "April 2026" },
+            { l: "Location", v: "Seap Holdings" },
+         ],
+      },
+   },
+   {
+      id: "creative-hangout",
+      status: "completed",
+      type: "past",
+      title: "Creative Hangout 1.0",
+      org: "RUNSA",
+      date: "June 2026",
+      loc: "Redeemer's University",
+      role: "Participant",
+      desc: "Active participation in the maiden edition of the Creative Hangout event.",
+      image: null,
+      images: [
+         { src: "/events/event1-photo1.jpg", caption: "Event photo 1", alt: "Event photo" },
+         { src: "/events/creative-hangout.jpg", caption: "Certificate of Participation", alt: "Creative Hangout Certificate" }
+      ],
+      modal: {
+         tag: "Past Event",
+         title: "Creative Hangout 1.0",
+         subtitle: "June 2026 · Redeemer's University",
+         desc: "Involvement in community and creative development initiatives hosted during RUNSA Week 2026.",
+         specs: [
+            { l: "Organizer", v: "RUNSA" },
+           { l: "Role", v: "Participant" },
+           { l: "Date", v: "June 2026" },
+           { l: "Location", v: "Redeemer's University" }
+         ],
+      },
+   },
+   {
+      id: "ev2",
+      status: "placeholder",
+      type: "upcoming",
       title: "Upcoming Event",
-      subtitle: "Coming Soon",
+      org: "Organizing Body",
+      date: "Coming Soon",
+      loc: "TBD",
+      role: "Attendee / Participant",
       desc: "Event you are registered for or planning to attend.",
-      specs: [
-        { l: "Status", v: "Registered / Planning" },
-        { l: "Date", v: "TBD" },
-        { l: "Location", v: "TBD" },
+      image: null,
+      images: [
+         { src: "/events/event1-photo1.jpg", caption: "Event photo 1", alt: "Event photo" },
       ],
-    },
-  },
+      modal: {
+         tag: "Upcoming",
+         title: "Upcoming Event",
+        subtitle: "Coming Soon",
+        desc: "Event you are registered for or planning to attend.",
+        specs: [
+           { l: "Status", v: "Registered / Planning" },
+           { l: "Date", v: "TBD" },
+           { l: "Location", v: "TBD" },
+        ],
+      },
+   }
 ];
