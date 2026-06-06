@@ -96,8 +96,9 @@ export default function Nav({ dark, toggle, t, openContact }) {
               fontWeight: 800, fontSize: 15,
               color: t.text, letterSpacing: "-0.3px",
               fontFamily: "'Syne', sans-serif",
+              textTransform: "uppercase", // Ensures it stays fully capitalized
             }}>
-              {P.nick}
+              IBUKUNOLUWA
             </span>
           </button>
 
