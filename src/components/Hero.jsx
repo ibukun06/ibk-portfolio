@@ -26,6 +26,8 @@ function TitleRotator({ titles, t }) {
       transform: visible ? "translateY(0)" : "translateY(8px)",
       transition: "opacity 0.35s ease, transform 0.35s ease",
       display: "inline-block", minWidth: 320,
+      userSelect: "none", WebkitUserSelect: "none",
+      MozUserSelect: "none", msUserSelect: "none",
     }}>
       {titles[idx]}
     </span>
