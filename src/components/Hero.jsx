@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+Simport { useState, useEffect, useRef } from "react";
 import { useMobile, useReveal, useCounter } from "../hooks";
 import { GlowButton, GhostButton, RevealSection } from "./primitives";
 import { PROFILE as P } from "../data/portfolio";
@@ -86,7 +86,7 @@ function HexPortrait({ t }) {
         position: "absolute", inset: 18,
         clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
         overflow: "hidden",
-        backgroundColor: "#B37044", /* <--- 1. INSERT YOUR HEX COLOR HERE */
+        backgroundColor: "#C4894F", /* <--- 1. INSERT YOUR HEX COLOR HERE */
         boxShadow: `0 0 0 2px ${t.accent}40`, /* <--- 2. OUTLINE BORDER (Optional to change) */
     }}>
         {/* 2. Add a backdrop blur element to soften the background */}
