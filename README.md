@@ -31,11 +31,19 @@ ibk-portfolio/
 │   │   └── tunnel-final.jpg
 │   ├── certificates/
 │   │   ├── purpose-driven-ai.jpg
+│   │   ├── social-entrepreneurship.jpg
 │   │   ├── hp-leadership.jpg
 │   │   └── hp-ai-business.jpg
+│   ├── awards/
+│   │   ├── award-chief-whip.jpg
+│   │   ├── spe-service-award.jpg
+│   │   └── protocol-leadership-award.jpg
 │   └── events/
-│       ├── event1-photo1.jpg
-│       └── event2-photo1.jpg
+│       ├── legislative-summit.jpg
+│       ├── legislative-summit-1.jpg
+│       ├── health-excellence-conf.jpg
+│       ├── secretariat-workshop.jpg
+│       └── creative-hangout.jpg
 │
 └── src/
     ├── main.jsx                  # React entry point
