@@ -308,17 +308,17 @@ export const PROJECTS = [
     summary:
       "Three independent production web apps built solo in under 10 weeks. 611 delegates. Zero data loss.",
     tags: ["React.js", "Firebase", "Firestore", "Realtime DB", "Vercel", "JavaScript"],
-    image: "/projects/runsa-registration.jpg",
+    image: "/projects/runsa-registration.png",
     images: [
-      { src: "/projects/runsa-registration.jpg", caption: "Main Registration Portal — Landing Interface", alt: "RUNSA Registration Portal Landing" },
-      { src: "/projects/runsa-agenda.jpg", caption: "Live Agenda Platform — Landing View", alt: "Agenda Landing" },
-      { src: "/projects/runsa-view-1.jpg", caption: "Live Agenda — Order of Events", alt: "Agenda View 1" },
-      { src: "/projects/runsa-view-2.jpg", caption: "Live Agenda — Session Details", alt: "Agenda View 2" },
-      { src: "/projects/runsa-view-3.jpg", caption: "Live Agenda — Schedule Interface", alt: "Agenda View 3" },
-      { src: "/projects/runsa-view-4.jpg", caption: "Live Agenda — Mobile Responsive UI", alt: "Agenda View 4" },
-      { src: "/projects/runsa-view-5.jpg", caption: "Live Agenda — Interactive Menu", alt: "Agenda View 5" },
-      { src: "/projects/runsa-idcard.jpg", caption: "Automated Delegate ID Card Generator", alt: "RUNSA ID Card Output" },
-      { src: "/projects/runsa-dashboard.jpg", caption: "Admin Accreditation Dashboard", alt: "RUNSA Admin Dashboard" }
+      { src: "/projects/runsa-registration.png", caption: "Main Registration Portal — Landing Interface", alt: "RUNSA Registration Portal Landing" },
+      { src: "/projects/runsa-agenda.png", caption: "Live Agenda Platform — Landing View", alt: "Agenda Landing" },
+      { src: "/projects/runsa-view-1.png", caption: "Live Agenda — Order of Events", alt: "Agenda View 1" },
+      { src: "/projects/runsa-view-2.png", caption: "Live Agenda — Session Details", alt: "Agenda View 2" },
+      { src: "/projects/runsa-view-3.png", caption: "Live Agenda — Schedule Interface", alt: "Agenda View 3" },
+      { src: "/projects/runsa-view-4.png", caption: "Live Agenda — Mobile Responsive UI", alt: "Agenda View 4" },
+      { src: "/projects/runsa-view-5.png", caption: "Live Agenda — Interactive Menu", alt: "Agenda View 5" },
+      { src: "/projects/runsa-idcard.png", caption: "Automated Delegate ID Card Generator", alt: "RUNSA ID Card Output" },
+      { src: "/projects/runsa-dashboard.png", caption: "Admin Accreditation Dashboard", alt: "RUNSA Admin Dashboard" }
     ],
     problem: "The RUNSA Legislative Summit 2026 needed complete digital infrastructure — delegate registration, live session management, and ID card generation — for 611 attendees from multiple institutions, with zero margin for error.",
     solution: "Designed and deployed 3 independent production web apps in under 10 weeks using AI-assisted development, with real-time sync, automated ID generation, and an admin accreditation dashboard.",
