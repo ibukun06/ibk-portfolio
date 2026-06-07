@@ -767,6 +767,7 @@ export const CERTIFICATES = [
       verifyUrl: "https://www.life-global.org",
       topics: ["Social Enterprise", "Stakeholder Analysis", "Impact Measurement"],
       skills: ["Entrepreneurial thinking", "Stakeholder analysis", "Business impact assessment"],
+      images: [{ src: "/certificates/hp-entrepreneurship.jpg", caption: "HP LIFE Social Entrepreneurship Certificate", alt: "Social Entrepreneurship Certificate" }],
       modal: {
          tag: "Earned · May 2026",
          title: "Social Entrepreneurship",
@@ -790,6 +791,7 @@ export const CERTIFICATES = [
       verifyUrl: "https://www.life-global.org",
       topics: ["Problem Definition", "Customer Feedback", "Solution Design"],
       skills: ["Design thinking", "Problem framing", "Human-centred design"],
+      images: [{ src: "/certificates/hp-design.jpg", caption: "HP LIFE Design Thinking Certificate", alt: "Design Thinking Certificate" }],
       modal: {
          tag: "Earned · May 2026",
          title: "Design Thinking",
@@ -813,6 +815,7 @@ export const CERTIFICATES = [
       verifyUrl: "https://www.life-global.org",
       topics: ["Critical Thinking", "AI Bias", "Fact-Checking"],
       skills: ["Critical thinking", "Bias mitigation", "Information verification"],
+      images: [{ src: "/certificates/hp-critical.jpg", caption: "HP LIFE Critical Thinking in the AI Era Certificate", alt: "Critical Thinking in the AI Era Certificate" }],
       modal: {
          tag: "Earned · May 2026",
          title: "Critical Thinking in the AI Era",
@@ -837,6 +840,7 @@ export const CERTIFICATES = [
       verifyUrl: "https://www.life-global.org",
       topics: ["Email Structure", "Professional Writing", "Business Communication"],
       skills: ["Professional writing", "Business communication", "Email etiquette"],
+      images: [{ src: "/certificates/hp-email.jpg", caption: "HP LIFE Business Email Certificate", alt: "Business Email Certificate" }],
       modal: {
          tag: "Earned · May 2026",
          title: "Business Email",
@@ -860,6 +864,7 @@ export const CERTIFICATES = [
       verifyUrl: null,
       topics: ["Data Structures", "Algorithms", "Conditionals"],
       skills: ["Problem-solving", "Algorithmic thinking", "Basic coding"],
+      images: [{ src: "/certificates/hp-dyesign.jpg", caption: "Programming Hero Fundamentals of Programming Certificate", alt: "Fundamentals of Programming Certificate" }],
       modal: {
          tag: "Earned · 2020",
          title: "Fundamentals of Programming",
@@ -896,7 +901,7 @@ export const AWARDS = [
             { l: "Year", v: "2025–2026 Academic Session" },
          ],
       },
-      images: [{ src: "/awards/award-chief-whip.jpg", caption: "Chief Whip Award", alt: "Chief Whip Award Certificate" }]
+      images: [{ src: "/awards/chief-whip.jpg", caption: "Chief Whip Award", alt: "Chief Whip Award Certificate" }]
    },
    {
       id: "spe-dedicated-service",
@@ -918,7 +923,7 @@ export const AWARDS = [
             { l: "Year", v: "2026" }
          ],
       },
-      images: [{ src: "/awards/spe-service-award.jpg", caption: "Certificate of Appreciation", alt: "SPE Award" }]
+      images: [{ src: "/awards/spe-outreach-service.jpg", caption: "Certificate of Appreciation", alt: "SPE Award" }]
    }
 ];
 
@@ -992,7 +997,7 @@ export const EVENTS = [
        image: null,
        images: [
           { src: "/events/event1-photo1.jpg", caption: "Event photo 1", alt: "Event photo" },
-          { src: "/events/health-excellence-conf.jpg", caption: "Certificate of Participation", alt: "Health Conference Certificate" }
+          { src: "/events/health-academic.jpg", caption: "Certificate of Participation", alt: "Health Conference Certificate" }
        ],
        modal: {
           tag: "Past Event",
