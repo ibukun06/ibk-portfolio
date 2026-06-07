@@ -104,7 +104,7 @@ export default function Nav({ dark, toggle, t, openContact }) {
 
           {/* Desktop nav links */}
           {!mobile && (
-            <div style={{ display: "flex", alignItems: "center", gap: 2 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "clamp(2px, 1vw, 16px)", overflow: "hidden" }}> 
               {NAV_LINKS.map(link => (
                 <button
                   key={link.id}
@@ -129,7 +129,7 @@ export default function Nav({ dark, toggle, t, openContact }) {
           )}
 
           {/* Right controls */}
-          <div style={{ display: "flex", alignItems: "center", gap: 8, flexShrink: 0 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 16, flexShrink: 0 }}>
             {/* Theme toggle */}
             <button
               onClick={toggle} aria-label={`Switch to ${dark ? "light" : "dark"} mode`}
