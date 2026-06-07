@@ -84,14 +84,9 @@ function HexPortrait({ t }) {
         position: "absolute", inset: 18,
         clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
         overflow: "hidden",
-        // 1. Make the container background the image itself, heavily blurred
-        backgroundImage: `url(${P.photo})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        filter: "blur(0px)", // Container filter
-        border: "none",
-        boxShadow: `0 0 0 2px ${t.accent}40`,
-      }}>
+        backgroundColor: "#B37044", /* <--- 1. INSERT YOUR HEX COLOR HERE */
+        boxShadow: `0 0 0 2px ${t.accent}40`, /* <--- 2. OUTLINE BORDER (Optional to change) */
+    }}>
         {/* 2. Add a backdrop blur element to soften the background */}
         <div style={{ position: "absolute", inset: -20, backdropFilter: "blur(15px)", background: "rgba(0,0,0,0.2)" }} />
         
