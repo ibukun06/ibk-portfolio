@@ -26,6 +26,7 @@ export default function Awards({ open, t }) {
 
 // Update this part to match your new styling preferences
 function AwardCard({ award, open, t }) {
+   const isPlaceholder = award.status === "placeholder";
   return (
     <div className="bg-[#111113] border border-gray-800 p-6 rounded-xl transition-all hover:border-gray-600">
       <div className="text-3xl mb-4">{award.icon}</div>
@@ -35,11 +36,7 @@ function AwardCard({ award, open, t }) {
       <p className="text-gray-500 text-sm leading-relaxed">{award.description}</p>
     </div>
   );
-}
-
-function AwardCard({ award, open, t }) {
-  const isPlaceholder = award.status === "placeholder";
-
+  
   return (
     <button
       onClick={() => !isPlaceholder && open(award)}
