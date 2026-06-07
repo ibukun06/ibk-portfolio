@@ -128,12 +128,27 @@ export function Modal({ data, onClose, t, openGallery }) {
         {/* Links */}
         {m.links && (
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap", paddingTop: 14, borderTop: `1px solid ${t.border}` }}>
-            {m.links.map((l, i) => (
-              <a key={i} href={l.url} target="_blank" rel="noreferrer"
-                style={{ color: t.accent, fontSize: 13, fontWeight: 700, textDecoration: "none", display: "flex", alignItems: "center", gap: 4 }}>
-                {l.label} <span style={{ fontSize: 11 }}>↗</span>
-              </a>
-            ))}
+            {m.links.map((l, i) => {
+              const isSameSite = l.url && (l.url.startsWith("/") || l.url.startsWith(window.location.origin));
+              return (
+                <a key={i} href={l.url}
+                  target={isSameSite ? "_self" : "_blank"}
+                  rel={isSameSite ? undefined : "noreferrer"}
+                  style={{
+                    color: "#fff", fontSize: 13, fontWeight: 700, textDecoration: "none",
+                    display: "inline-flex", alignItems: "center", gap: 6,
+                    background: t.gradAccent,
+                    padding: "8px 18px", borderRadius: 10,
+                    boxShadow: "0 3px 12px rgba(99,179,237,0.3)",
+                    transition: "all 0.2s",
+                  }}
+                  onMouseEnter={e => e.currentTarget.style.boxShadow = "0 6px 20px rgba(99,179,237,0.5)"}
+                  onMouseLeave={e => e.currentTarget.style.boxShadow = "0 3px 12px rgba(99,179,237,0.3)"}
+                >
+                  {l.label}
+                </a>
+              );
+            })}
           </div>
         )}
 
@@ -204,15 +219,57 @@ export function GalleryModal({ images, title, onClose, t }) {
         </div>
 
         <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", width: "100%", padding: "60px 20px 20px" }}>
-          <img
-            src={cur.src} alt={cur.alt || cur.caption || title}
-            style={{ maxWidth: "100%", maxHeight: "calc(100vh - 140px)", objectFit: "contain", borderRadius: 10, boxShadow: "0 8px 48px rgba(0,0,0,0.7)", animation: "fadeIn 0.3s ease both" }}
-            onError={e => { e.target.style.display = "none"; e.target.nextSibling && (e.target.nextSibling.style.display = "flex"); }}
-          />
-          <div style={{ display: "none", flexDirection: "column", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.35)", fontSize: 13 }}>
-            <div style={{ fontSize: 40, marginBottom: 8 }}>🖼️</div>
-            <div>Add photo: {cur.src}</div>
-          </div>
+          {cur.placeholder ? (
+            /* Engineering placeholder slide */
+            <div style={{
+              maxWidth: 520, width: "100%",
+              background: "rgba(15,15,23,0.9)",
+              border: "1px dashed rgba(99,179,237,0.35)",
+              borderRadius: 16, padding: "48px 36px",
+              display: "flex", flexDirection: "column", alignItems: "center", gap: 18,
+              animation: "fadeIn 0.3s ease both",
+              boxShadow: "0 8px 48px rgba(0,0,0,0.5)",
+            }}>
+              {/* Mini graph paper grid SVG */}
+              <svg width="200" height="120" viewBox="0 0 200 120" style={{ opacity: 0.2 }}>
+                {[20,40,60,80,100].map(y => <line key={y} x1="0" y1={y} x2="200" y2={y} stroke="#63b3ed" strokeWidth="0.6"/>)}
+                {[25,50,75,100,125,150,175].map(x => <line key={x} x1={x} y1="0" x2={x} y2="120" stroke="#63b3ed" strokeWidth="0.6"/>)}
+                <line x1="30" y1="30" x2="170" y2="30" stroke="#63b3ed" strokeWidth="2"/>
+                <line x1="30" y1="30" x2="30" y2="90" stroke="#63b3ed" strokeWidth="2"/>
+                <line x1="30" y1="90" x2="170" y2="90" stroke="#63b3ed" strokeWidth="2"/>
+                <line x1="170" y1="30" x2="170" y2="90" stroke="#63b3ed" strokeWidth="2"/>
+                <line x1="60" y1="30" x2="60" y2="90" stroke="#63b3ed" strokeWidth="1" strokeDasharray="4 3"/>
+                <line x1="100" y1="30" x2="100" y2="90" stroke="#63b3ed" strokeWidth="1" strokeDasharray="4 3"/>
+                <line x1="140" y1="30" x2="140" y2="90" stroke="#63b3ed" strokeWidth="1" strokeDasharray="4 3"/>
+              </svg>
+              <div style={{ textAlign: "center" }}>
+                <div style={{ fontSize: 13, fontWeight: 800, color: "#63b3ed", marginBottom: 8, letterSpacing: "0.5px", fontFamily: "'Syne', sans-serif" }}>
+                  {cur.alt || "Technical Drawing"}
+                </div>
+                <div style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", marginBottom: 6, fontFamily: "'DM Sans', sans-serif" }}>
+                  {cur.caption}
+                </div>
+                <div style={{ display: "inline-block", background: "rgba(99,179,237,0.12)", border: "1px solid rgba(99,179,237,0.3)", color: "#63b3ed", borderRadius: 999, padding: "4px 16px", fontSize: 10.5, fontWeight: 800, letterSpacing: "1px", textTransform: "uppercase", fontFamily: "'DM Sans', sans-serif" }}>
+                  Will be added
+                </div>
+              </div>
+            </div>
+          ) : (
+            <>
+              <img
+                src={cur.src} alt={cur.alt || cur.caption || title}
+                style={{ maxWidth: "100%", maxHeight: "calc(100vh - 140px)", objectFit: "contain", borderRadius: 10, boxShadow: "0 8px 48px rgba(0,0,0,0.7)", animation: "fadeIn 0.3s ease both" }}
+                onError={e => {
+                  e.target.style.display = "none";
+                  if (e.target.nextSibling) e.target.nextSibling.style.display = "flex";
+                }}
+              />
+              <div style={{ display: "none", flexDirection: "column", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.35)", fontSize: 13, gap: 8 }}>
+                <div style={{ fontSize: 36, opacity: 0.3 }}>🖼️</div>
+                <div>Image pending: drop into public/{cur.src?.replace("/", "")}</div>
+              </div>
+            </>
+          )}
         </div>
 
         {cur.caption && (
