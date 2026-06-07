@@ -220,7 +220,7 @@ export const SKILLS = [
       pts: [
         "React.js apps: components, state management, and UI built via AI iteration",
         "Firebase Firestore: real-time database, dashboards, and accreditation tools",
-        "Firebase RTDB: cross-device live sync for the Order of Events platform",
+        "Firebase RTDB: cross-device live sync for the Order of  platform",
         "Vercel: successful deployment of all three apps",
       ],
     },
@@ -310,7 +310,7 @@ export const PROJECTS = [
     tags: ["React.js", "Firebase", "Firestore", "Realtime DB", "Vercel", "JavaScript"],
     images: [
       { src: "/projects/runsa-registration.jpg", caption: "Registration Portal — 611 delegates registered", alt: "RUNSA Registration Portal" },
-      { src: "/projects/runsa-agenda.jpg", caption: "Live Order of Events Platform", alt: "RUNSA Agenda Platform" },
+      { src: "/projects/runsa-agenda.jpg", caption: "Live Order of  Platform", alt: "RUNSA Agenda Platform" },
       { src: "/projects/runsa-idcard.jpg", caption: "ID Card Generator output", alt: "RUNSA ID Card Generator" },
       { src: "/projects/runsa-dashboard.jpg", caption: "Admin accreditation dashboard", alt: "RUNSA Admin Dashboard" },
     ],
@@ -324,7 +324,7 @@ export const PROJECTS = [
       desc: "Used AI-assisted development to design, build, and deploy three independent production web applications in under 10 weeks — with no formal software training. 611 delegates served across all three platforms with zero data loss on summit day.",
       pts: [
         "Delegate Registration & Admin Portal — Firestore backend, real-time dashboard, accreditation tools, bulk CSV export. 611 delegates. Zero data loss.",
-        "Live Order of Events (Agenda) — Firebase Realtime DB for cross-device session sync; admin authentication mode; Vercel-deployed.",
+        "Live Order of  (Agenda) — Firebase Realtime DB for cross-device session sync; admin authentication mode; Vercel-deployed.",
         "Delegate Card Generator — Automated branded ID card generation with face-centering crop logic and print layout for all registered institutions.",
       ],
       tags: ["React.js", "Firebase Firestore", "Firebase RTDB", "Vercel", "JavaScript", "CSS"],
@@ -938,9 +938,9 @@ export const EVENTS = [
       loc: "Redeemer's University",
       role: "Organizer",
       desc: "Organized and planned the summit themed 'The Catalyst of Transformation: Legislating the Future for Democratic Leadership.'",
-      image: null,
+      image:  "/events/placeholder.png",
       images: [
-         { src: "/events/event1-photo1.jpg", caption: "Event photo 1", alt: "Event photo" },
+         { src: "/events/placeholder.png", caption: "Event photo 1", alt: "Event photo" },
          { src: "/events/legislative-summit.jpg", caption: "Certificate of Appreciation", alt: "Legislative Summit Certificate" }
       ],
       modal: {
@@ -966,9 +966,9 @@ export const EVENTS = [
       loc: "SEAP Holdings Hall",
       role: "Participant",
       desc: "Active participation in the 'Building Peaceful Nations' Conference focusing on leadership and professional growth.",
-      image: null,
+      image: "/events/placeholder.png",
       images: [
-         { src: "/events/event1-photo1.jpg", caption: "Event photo 1", alt: "Event photo" },
+         { src: "/events/placeholder.png", caption: "Event photo 1", alt: "Event photo" },
          { src: "/events/protocol-security.jpg", caption: "Certificate of Participation", alt: "Protocol and Security Certificate" }
       ],
       modal: {
@@ -994,9 +994,9 @@ export const EVENTS = [
        loc: "Redeemer's University",
        role: "Participant",
        desc: "Participated in the conference themed 'Health as a Core Driver of Academic Achievement'.",
-       image: null,
+       image: "/events/placeholder.png",
        images: [
-          { src: "/events/event1-photo1.jpg", caption: "Event photo 1", alt: "Event photo" },
+          { src: "/events/placeholder.png", caption: "Event photo 1", alt: "Event photo" },
           { src: "/events/health-academic.jpg", caption: "Certificate of Participation", alt: "Health Conference Certificate" }
        ],
        modal: {
@@ -1022,9 +1022,9 @@ export const EVENTS = [
       loc: "Seap Holdings",
       role: "Participant",
       desc: "Active participation and engagement during the Secretariat Workshop 3.0.",
-      image: null,
+      image: "/events/placeholder.png",
       images: [
-         { src: "/events/event1-photo1.jpg", caption: "Event photo 1", alt: "Event photo" },
+         { src: "/events/placeholder.png", caption: "Event photo 1", alt: "Event photo" },
          { src: "/events/secretariat-workshop.jpg", caption: "Certificate of Participation", alt: "Secretariat Workshop Certificate" }
       ],
       modal: {
@@ -1050,9 +1050,9 @@ export const EVENTS = [
       loc: "Redeemer's University",
       role: "Participant",
       desc: "Active participation in the maiden edition of the Creative Hangout event.",
-      image: null,
+      image: "/events/placeholder.png",
       images: [
-         { src: "/events/event1-photo1.jpg", caption: "Event photo 1", alt: "Event photo" },
+         { src: "/events/placeholder.png", caption: "Event photo 1", alt: "Event photo" },
          { src: "/events/creative-hangout.jpg", caption: "Certificate of Participation", alt: "Creative Hangout Certificate" }
       ],
       modal: {
@@ -1078,9 +1078,9 @@ export const EVENTS = [
       loc: "TBD",
       role: "Attendee / Participant",
       desc: "Event you are registered for or planning to attend.",
-      image: null,
+      image: "/events/placeholder.png",
       images: [
-         { src: "/events/event1-photo1.jpg", caption: "Event photo 1", alt: "Event photo" },
+         { src: "/events/placeholder.png", caption: "Event photo 1", alt: "Event photo" },
       ],
       modal: {
          tag: "Upcoming",
