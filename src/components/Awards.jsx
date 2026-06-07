@@ -2,17 +2,17 @@ import { RevealSection, SectionHeader, ClickHint } from "./primitives";
 import { AWARDS } from "../data/portfolio";
 import { useMobile } from "../hooks";
 
+// Keep your top Awards function mostly as is, but ensure it points to your data
 export default function Awards({ open, t }) {
   const mobile = useMobile();
-
   return (
-    <section id="awards" aria-label="Awards and Honors" style={{ padding: "88px 1.5rem", background: t.bgAlt, fontFamily: "'DM Sans', sans-serif" }}>
+    <section id="awards" aria-label="Awards and Honors" style={{ padding: "88px 1.5rem", background: t.bgAlt }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <RevealSection>
           <SectionHeader tag="Recognition" title="Awards & Honors" t={t} />
         </RevealSection>
-
-        <div style={{ display: "grid", gridTemplateColumns: mobile ? "1fr" : "repeat(auto-fill, minmax(300px, 1fr))", gap: 16 }}>
+        {/* Your existing grid logic */}
+        <div style={{ display: "grid", gridTemplateColumns: mobile ? "1fr" : "repeat(auto-fill, minmax(350px, 1fr))", gap: 16 }}>
           {AWARDS.map((award, i) => (
             <RevealSection key={award.id} delay={i * 0.08}>
               <AwardCard award={award} open={open} t={t} />
@@ -21,6 +21,19 @@ export default function Awards({ open, t }) {
         </div>
       </div>
     </section>
+  );
+}
+
+// Update this part to match your new styling preferences
+function AwardCard({ award, open, t }) {
+  return (
+    <div className="bg-[#111113] border border-gray-800 p-6 rounded-xl transition-all hover:border-gray-600">
+      <div className="text-3xl mb-4">{award.icon}</div>
+      <span className="text-yellow-500 text-xs font-bold uppercase tracking-wider">{award.category}</span>
+      <h3 className="text-lg font-bold text-white mt-1 mb-1">{award.title}</h3>
+      <p className="text-gray-400 text-sm mb-3">{award.issuer} • {award.year}</p>
+      <p className="text-gray-500 text-sm leading-relaxed">{award.description}</p>
+    </div>
   );
 }
 
