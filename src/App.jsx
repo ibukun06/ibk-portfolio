@@ -19,8 +19,18 @@ import Certificates from "./components/Certificates";
 import Events from "./components/Events";
 import { Contact, FloatingContact } from "./components/Contact";
 
+// Tool page
+import BeamDeflector from "./components/BeamDeflector";
+
+/* ── Simple client-side router ─────────────────────────────────── */
+function useRoute() {
+  const path = window.location.pathname;
+  return path;
+}
+
 export default function App() {
   const { dark, toggle, t } = useTheme();
+  const route = useRoute();
 
   // Modal state
   const [modal, setModal] = useState(null);
@@ -32,6 +42,17 @@ export default function App() {
   const openContact = useCallback(() => setContactOpen(true), []);
   const closeContact = useCallback(() => setContactOpen(false), []);
 
+  // ── Route: /beam-deflector ──────────────────────────────────────
+  if (route === "/beam-deflector") {
+    return (
+      <div style={{ minHeight: "100vh", background: t.bg, color: t.text }}>
+        <GlobalStyles dark={dark} />
+        <BeamDeflector t={t} dark={dark} />
+      </div>
+    );
+  }
+
+  // ── Route: / (portfolio) ────────────────────────────────────────
   return (
     <div style={{
       minHeight: "100vh",
