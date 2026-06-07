@@ -308,15 +308,12 @@ export const PROJECTS = [
     summary:
       "Three independent production web apps built solo in under 10 weeks. 611 delegates. Zero data loss.",
     tags: ["React.js", "Firebase", "Firestore", "Realtime DB", "Vercel", "JavaScript"],
-    image: "/projects/runsa-registration.png",
     images: [
       { src: "/projects/runsa-registration.png", caption: "Main Registration Portal — Landing Interface", alt: "RUNSA Registration Portal Landing" },
-      { src: "/projects/runsa-agenda.png", caption: "Live Agenda Platform — Landing View", alt: "Agenda Landing" },
-      { src: "/projects/runsa-view-1.png", caption: "Live Agenda — Order of Events", alt: "Agenda View 1" },
+      { src: "/projects/runsa-checkin.png", caption: "Delegate Check-In & Accreditation System", alt: "Check-In Interface" }, // <--- Fixed line{ src: "/projects/runsa-view-1.png", caption: "Live Agenda — Order of Events", alt: "Agenda View 1" },
       { src: "/projects/runsa-view-2.png", caption: "Live Agenda — Session Details", alt: "Agenda View 2" },
       { src: "/projects/runsa-view-3.png", caption: "Live Agenda — Schedule Interface", alt: "Agenda View 3" },
       { src: "/projects/runsa-view-4.png", caption: "Live Agenda — Mobile Responsive UI", alt: "Agenda View 4" },
-      { src: "/projects/runsa-view-5.png", caption: "Live Agenda — Interactive Menu", alt: "Agenda View 5" },
       { src: "/projects/runsa-idcard.png", caption: "Automated Delegate ID Card Generator", alt: "RUNSA ID Card Output" },
       { src: "/projects/runsa-dashboard.png", caption: "Admin Accreditation Dashboard", alt: "RUNSA Admin Dashboard" }
     ],
