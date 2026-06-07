@@ -309,10 +309,14 @@ export const PROJECTS = [
       "Three independent production web apps built solo in under 10 weeks. 611 delegates. Zero data loss.",
     tags: ["React.js", "Firebase", "Firestore", "Realtime DB", "Vercel", "JavaScript"],
     images: [
-      { src: "/projects/runsa-registration.jpg", caption: "Registration Portal — 611 delegates registered", alt: "RUNSA Registration Portal" },
-      { src: "/projects/runsa-agenda.jpg", caption: "Live Order of  Platform", alt: "RUNSA Agenda Platform" },
-      { src: "/projects/runsa-idcard.jpg", caption: "ID Card Generator output", alt: "RUNSA ID Card Generator" },
-      { src: "/projects/runsa-dashboard.jpg", caption: "Admin accreditation dashboard", alt: "RUNSA Admin Dashboard" },
+      { src: "/projects/runsa-registration.jpg", caption: "Main Registration Portal — Landing Interface", alt: "RUNSA Registration Portal Landing" },
+      { src: "/projects/runsa-view-1.jpg", caption: "Delegate Registration Form & Validation", alt: "Registration Form View" },
+      { src: "/projects/runsa-view-2.jpg", caption: "Responsive Mobile UI Experience", alt: "Mobile UI View" },
+      { src: "/projects/runsa-agenda.jpg", caption: "Live Order of Events & Session Platform", alt: "RUNSA Agenda Platform" },
+      { src: "/projects/runsa-idcard.jpg", caption: "Automated Delegate ID Card Generator", alt: "RUNSA ID Card Output" },
+      { src: "/projects/runsa-dashboard.jpg", caption: "Admin Accreditation Dashboard", alt: "RUNSA Admin Dashboard" },
+      { src: "/projects/runsa-view-3.jpg", caption: "Database Overview & Attendee Management", alt: "Database Management View" },
+      { src: "/projects/runsa-view-4.jpg", caption: "System Metrics & Live Status", alt: "System Metrics View" }
     ],
     problem: "The RUNSA Legislative Summit 2026 needed complete digital infrastructure — delegate registration, live session management, and ID card generation — for 611 attendees from multiple institutions, with zero margin for error.",
     solution: "Designed and deployed 3 independent production web apps in under 10 weeks using AI-assisted development, with real-time sync, automated ID generation, and an admin accreditation dashboard.",
