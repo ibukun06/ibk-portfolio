@@ -70,6 +70,20 @@ function FeaturedCard({ project, open, setGallery, t, mobile }) {
           borderBottom: mobile ? `1px solid ${t.border}` : "none",
         }}>
           <span style={{ opacity: 0.15, fontSize: 120 }}>🚀</span>
+          {project.images && project.images[0] && (
+      <img
+        src={project.images[0].src}
+        alt={project.images[0].alt}
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          opacity: 0.9,
+        }}
+        />
+    )}
           {project.images && project.images.length > 0 && (
             <button onClick={() => setGallery({ images: project.images, title: project.title })}
               style={{ position: "absolute", bottom: 12, left: 12, background: "rgba(0,0,0,0.6)", border: "none", borderRadius: 8, padding: "6px 12px", cursor: "pointer", color: "#fff", fontSize: 11, fontWeight: 700, backdropFilter: "blur(4px)" }}>
