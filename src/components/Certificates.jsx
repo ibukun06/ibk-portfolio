@@ -48,39 +48,44 @@ function CertCard({ cert, open, t }) {
       className="card-lift"
       aria-label={`${cert.title} by ${cert.issuer} — click for details`}
       style={{
-        background: t.bgCard, border: `1px solid ${t.border}`,
-        borderRadius: 16, padding: "18px 16px 14px",
-        cursor: "pointer", textAlign: "left", width: "100%",
-        display: "flex", flexDirection: "column", gap: 0,
-        position: "relative", overflow: "hidden",
+        background: t.bgCard, 
+        border: `1px solid ${t.border}`,
+        borderRadius: 16, 
+        padding: "18px 16px 14px",
+        cursor: "pointer", 
+        textAlign: "left", 
+        width: "100%",
+        display: "flex", 
+        flexDirection: "column", 
+        position: "relative", 
+        overflow: "hidden",
         transition: "all 0.3s ease",
       }}
       onMouseEnter={e => { e.currentTarget.style.borderColor = t.borderHov; e.currentTarget.style.background = t.cardHover; }}
       onMouseLeave={e => { e.currentTarget.style.borderColor = t.border; e.currentTarget.style.background = t.bgCard; }}
     >
-      {/* Top accent */}
-      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: t.accentC, opacity: 0.6 }} />
+      {/* Top Emerald Accent */}
+      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "#10b981", opacity: 0.8 }} />
 
-      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 10 }}>
+      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 12 }}>
         <span style={{ fontSize: 24 }}>{cert.icon}</span>
+        {/* Using your existing StatusBadge logic */}
         <StatusBadge status={cert.status} t={t} />
       </div>
 
-      <div style={{ fontSize: 13.5, fontWeight: 700, color: t.text, marginBottom: 4, lineHeight: 1.35, fontFamily: "'Syne', sans-serif" }}>
+      <div style={{ fontSize: 14, fontWeight: 800, color: t.text, marginBottom: 4, lineHeight: 1.35, fontFamily: "'Syne', sans-serif" }}>
         {cert.title}
       </div>
-      <div style={{ fontSize: 11.5, color: t.muted, marginBottom: 4, fontFamily: "'DM Sans', sans-serif" }}>{cert.issuer}</div>
-      <div style={{ fontSize: 11, color: t.muted, marginBottom: 12, fontFamily: "'DM Sans', sans-serif", opacity: 0.8 }}>{cert.year}</div>
+      <div style={{ fontSize: 12, color: t.muted, marginBottom: 12, fontFamily: "'DM Sans', sans-serif" }}>{cert.issuer}</div>
 
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 4, marginBottom: 10 }}>
+      {/* Topics Tags */}
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 'auto' }}>
         {(cert.topics || []).slice(0, 2).map(topic => (
-          <span key={topic} style={{ background: t.aCLight, color: t.accentC, padding: "2px 8px", borderRadius: 999, fontSize: 9.5, fontWeight: 700, fontFamily: "'DM Sans', sans-serif" }}>
+          <span key={topic} style={{ background: t.aCLight, color: t.accentC, padding: "2px 8px", borderRadius: 6, fontSize: 10, fontWeight: 700 }}>
             {topic}
           </span>
         ))}
       </div>
-
-      <ClickHint t={t} />
     </button>
   );
 }
