@@ -28,16 +28,6 @@ export default function Awards({ open, t }) {
 function AwardCard({ award, open, t }) {
    const isPlaceholder = award.status === "placeholder";
   return (
-    <div className="bg-[#111113] border border-gray-800 p-6 rounded-xl transition-all hover:border-gray-600">
-      <div className="text-3xl mb-4">{award.icon}</div>
-      <span className="text-yellow-500 text-xs font-bold uppercase tracking-wider">{award.category}</span>
-      <h3 className="text-lg font-bold text-white mt-1 mb-1">{award.title}</h3>
-      <p className="text-gray-400 text-sm mb-3">{award.issuer} • {award.year}</p>
-      <p className="text-gray-500 text-sm leading-relaxed">{award.description}</p>
-    </div>
-  );
-  
-  return (
     <button
       onClick={() => !isPlaceholder && open(award)}
       className={!isPlaceholder ? "card-lift" : ""}
