@@ -706,26 +706,6 @@ export const CERTIFICATES = [
       },
    },
    {
-      id: "social-entrepreneurship",
-      status: "earned",
-      icon: "💼",
-      title: "Social Entrepreneurship",
-      issuer: "HP LIFE / HP Foundation",
-      year: "2026",
-      images: [{ src: "/certificates/social-entrepreneurship.jpg", caption: "HP LIFE Certificate of Completion", alt: "HP Social Entrepreneurship Certificate" }],
-      modal: {
-         tag: "Earned · May 2026",
-         title: "Social Entrepreneurship",
-         subtitle: "HP LIFE / HP Foundation · 20 May 2026",
-         pts: [
-            "Assessing the sustainability of social enterprise ideas",
-            "Stakeholder analysis and evaluating business needs",
-            "Measuring social and business impact",
-            "Credential serial number: [Insert Serial Number if applicable]"
-         ],
-      },
-   },
-   {
       id: "hp-leadership",
       status: "earned",
       icon: "🏆",
