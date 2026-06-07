@@ -1,4 +1,4 @@
-Simport { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useMobile, useReveal, useCounter } from "../hooks";
 import { GlowButton, GhostButton, RevealSection } from "./primitives";
 import { PROFILE as P } from "../data/portfolio";
