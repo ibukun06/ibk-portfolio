@@ -864,7 +864,7 @@ export const CERTIFICATES = [
       verifyUrl: null,
       topics: ["Data Structures", "Algorithms", "Conditionals"],
       skills: ["Problem-solving", "Algorithmic thinking", "Basic coding"],
-      images: [{ src: "/certificates/hp-dyesign.jpg", caption: "Programming Hero Fundamentals of Programming Certificate", alt: "Fundamentals of Programming Certificate" }],
+      images: [{ src: "/certificates/fundamentals-programming.jpg", caption: "Programming Hero Fundamentals of Programming Certificate", alt: "Fundamentals of Programming Certificate" }],
       modal: {
          tag: "Earned · 2020",
          title: "Fundamentals of Programming",
