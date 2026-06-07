@@ -970,9 +970,9 @@ export const AWARDS = [
             { l: "Category", v: "Upcoming Award" },
             { l: "Issuer", v: "Organizing Body" },
             { l: "Year", v: "" }
-        ],
+         ],
       },
-      images: [{ src: "/awards/placeholder.jpg", caption: "Award", alt: "Award" }]}
+      images: [{ src: "/awards/placeholder.jpg", caption: "Award", alt: "Award" }]
    },
 ];
 
