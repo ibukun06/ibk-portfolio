@@ -32,7 +32,9 @@ function AwardCard({ award, open, t }) {
       onClick={() => !isPlaceholder && open(award)}
       aria-label={isPlaceholder ? "Add award placeholder" : `${award.title} — click for details`}
       className={`relative w-full text-left rounded-[18px] p-6 transition-all duration-300 overflow-hidden ${
-        !isPlaceholder ? "card-lift bg-[#111113] border border-gray-800 hover:border-amber-500/50 hover:bg-[#1a1a1f]" : "bg-transparent border border-dashed border-gray-700 opacity-45"
+        !isPlaceholder 
+          ? "card-lift bg-[#111113] border border-gray-800 hover:border-amber-500/50 hover:bg-[#1a1a1f]" 
+          : "bg-transparent border border-dashed border-gray-700 opacity-45"
       }`}
     >
       {/* Gold top strip for real awards */}
