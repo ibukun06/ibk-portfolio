@@ -880,6 +880,30 @@ export const CERTIFICATES = [
          ],
       },
    },
+   {
+      id: "certifcate2",
+      status: "placeholder",
+      icon: "upcoming",
+      title: "Upcoming Event",
+      issuer: "Organizing Body",
+      year: "Coming Soon",
+      credentialId: null,
+      verifyUrl: null,
+      topics: ["Data Structures", "Algorithms", "Conditionals"],
+      skills: ["Problem-solving", "Algorithmic thinking", "Basic coding"],
+      images: [
+         { src: "/events/placeholder.png", caption: "certificate photo 1", alt: "certificate photo" },
+      ],
+      modal: {
+         tag: "Upcoming",
+         title: "Upcoming Event",
+         subtitle: "Coming Soon",
+         desc: "Event you are registered for or planning to attend.",
+         pts: [
+            "",
+         ],
+      },
+   }
 ];
 
 export const AWARDS = [
@@ -927,7 +951,29 @@ export const AWARDS = [
          ],
       },
       images: [{ src: "/awards/spe-outreach-service.jpg", caption: "Certificate of Appreciation", alt: "SPE Award" }]
-   }
+   },
+   {
+      id: "award2",
+      status: "placeholder",
+      icon: "🛢⚙",
+      title: "Upcoming Award",
+      org: "Organizing Body",
+      year: "Coming Soon",
+      category: "Upcoming",
+      desc: "Event you are registered for or planning to attend.",
+      modal: {
+         tag: "Award",
+         title: "Upcoming Event",
+         subtitle: "Coming Soon",
+         desc: "Event you are registered for or planning to attend.",
+         specs: [
+            { l: "Category", v: "Upcoming Award" },
+            { l: "Issuer", v: "Organizing Body" },
+            { l: "Year", v: "" }
+        ],
+      },
+      images: [{ src: "/awards/placeholder.jpg", caption: "Award", alt: "Award" }]}
+   },
 ];
 
 export const EVENTS = [
