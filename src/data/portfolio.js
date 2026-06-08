@@ -14,7 +14,7 @@ export const PROFILE = {
   tagline:
     "I weld steel frames, design in AutoCAD, and use AI to build production tools — a mechanical engineer who ships at the speed of software.",
   summary:
-    "Mechanical Engineering student at Redeemer's University (CGPA 4.32/5.00) with hands-on fabrication experience: SMAW welding, lathe, milling, drilling, and machine operations through Student Work Experience Program. Used AI-assisted development to design and ship three live web applications for the RUNSA Legislative Summit 2026 — serving 611 registered delegates with zero data loss. SAT 1360/1600 (90th percentile, Math 710). Seeking SIWES/engineering internships in manufacturing, production, or mechanical systems — and AI workflow roles where I help organizations identify and implement tools that cut costs and increase efficiency.",
+    "Mechanical Engineering student at Redeemer's University (CGPA 4.32/5.00) with hands-on fabrication experience: SMAW welding, lathe, milling, drilling, and machine operations through Student Workshop Experience Program. Used AI-assisted development to design and ship three live web applications for the RUNSA Legislative Summit 2026 — serving 611 registered delegates with zero data loss. SAT 1360/1600 (90th percentile, Math 710). Seeking SIWES/engineering internships in manufacturing, production, or mechanical systems — and AI workflow roles where I help organizations identify and implement tools that cut costs and increase efficiency.",
   location: "Lagos, Nigeria",
   emailAcademic: "oluwafemi14634@run.edu.ng",
   emailPersonal: "oluwafemiibk@gmail.com",
@@ -48,7 +48,7 @@ export const PROFILE = {
     {
       value: "611",
       label: "Delegates",
-      sub: "RUNSA 2026",
+      sub: "RUNSA Legislative Council 2026",
       detail:
         "611 delegates processed across three solo-built production apps. Zero data loss.",
     },
@@ -105,7 +105,7 @@ export const SKILLS = [
       tag: "Manufacturing",
       title: "SMAW Welding",
       subtitle: "Shielded Metal Arc Welding · Mild Steel",
-      desc: "Hands-on SMAW welding from Student Work Experience Program. Applied in Maize Sheller chassis fabrication.",
+      desc: "Hands-on SMAW welding from Student Workshop Experience Program. Applied in Maize Sheller chassis fabrication.",
       pts: [
         "Joint preparation, electrode selection, and current setting",
         "Mild steel angle iron structural welding",
@@ -237,7 +237,7 @@ export const SKILLS = [
       subtitle: "Student Govt · Legislative Council · Chief Whip",
       pts: [
         "RUNSA Chief Whip: enforces parliamentary procedure, supervises all In-House Committees",
-        "RUNSA Summit 2026: sole developer of full event digital infrastructure — 611 delegates",
+        "RUNSA Legislative Summit 2026: sole developer of full event digital infrastructure — 611 delegates",
         "SWEP Fabrication: led Maize Sheller chassis team to functional prototype delivery",
         "Cowrywise Campus Ambassador: grew student platform registrations by 15%",
       ],
@@ -298,7 +298,7 @@ export const SKILLS = [
 
 export const PROJECTS = [
   {
-    id: "runsa",
+    id: "Redeemer's University Student Association",
     featured: true,
     icon: "🚀",
     title: "RUNSA Legislative Summit 2026",
@@ -309,13 +309,13 @@ export const PROJECTS = [
       "Three independent production web apps built solo in under 10 weeks. 611 delegates. Zero data loss.",
     tags: ["React.js", "Firebase", "Firestore", "Realtime DB", "Vercel", "JavaScript"],
     images: [
-      { src: "/projects/runsa-registration.png", caption: "Main Registration Portal — Landing Interface", alt: "RUNSA Registration Portal Landing" },
+      { src: "/projects/runsa-registration.png", caption: "Main Registration Portal — Landing Interface", alt: "RUNSA Legislative Summit Registration Portal Landing" },
       { src: "/projects/runsa-checkin.png", caption: "Delegate Check-In & Accreditation System", alt: "Check-In Interface" }, // <--- Fixed line{ src: "/projects/runsa-checkin.png", caption: "Live Agenda — Order of Events", alt: "Agenda View 1" },
       { src: "/projects/runsa-view-1.png", caption: "Live Agenda — Session Details", alt: "Agenda View 2" },
       { src: "/projects/runsa-view-3.png", caption: "Live Agenda — Schedule Interface", alt: "Agenda View 3" },
       { src: "/projects/runsa-view-4.png", caption: "Live Agenda — Mobile Responsive UI", alt: "Agenda View 4" },
-      { src: "/projects/runsa-idcard.png", caption: "Automated Delegate ID Card Generator", alt: "RUNSA ID Card Output" },
-      { src: "/projects/runsa-dashboard.png", caption: "Admin Accreditation Dashboard", alt: "RUNSA Admin Dashboard" }
+      { src: "/projects/runsa-idcard.png", caption: "Automated Delegate ID Card Generator", alt: "RUNSA Legislative Summit ID Card Output" },
+      { src: "/projects/runsa-dashboard.png", caption: "Admin Accreditation Dashboard", alt: "RUNSA Legislative Summit Admin Dashboard" }
     ],
     problem: "The RUNSA Legislative Summit 2026 needed complete digital infrastructure — delegate registration, live session management, and ID card generation — for 611 attendees from multiple institutions, with zero margin for error.",
     solution: "Designed and deployed 3 independent production web apps in under 10 weeks using AI-assisted development, with real-time sync, automated ID generation, and an admin accreditation dashboard.",
@@ -370,7 +370,7 @@ export const PROJECTS = [
     featured: false,
     icon: "⚙️",
     title: "Maize Sheller Machine",
-    period: "SWEP 2025",
+    period: "Student Workshop Experience Program 2025",
     subtitle: "Fabrication · Lead Role · Petrol-Powered",
     summary: "Led chassis fabrication. SMAW welded mild steel angle iron frame. Aligned petrol engine drive system. Throughput: 50 kg/hr.",
     tags: ["SMAW Welding", "Metal Fabrication", "Mechanical Design"],
@@ -386,9 +386,9 @@ export const PROJECTS = [
     solution: "Led the chassis fabrication team: interpreted engineering drawings, SMAW-welded the structural frame from mild steel angle iron, and configured the pulley-belt power transmission system.",
     outcome: "Functional agricultural prototype delivered at 50 kg/hr throughput.",
     modal: {
-      tag: "Student Work Experience Program 2025",
+      tag: "Student Workshop Experience Program 2025",
       title: "Maize Sheller Machine",
-      subtitle: "Lead Fabricator · Student Work Experience Program",
+      subtitle: "Lead Fabricator · Student Workshop Experience Program",
       specs: [
         { l: "Role", v: "Lead Fabricator — Chassis Team" },
         { l: "Chassis", v: "Mild steel angle iron (SMAW welded)" },
@@ -404,7 +404,7 @@ export const PROJECTS = [
     featured: false,
     icon: "💨",
     title: "Wind Tunnel Apparatus",
-    period: "Student Work Experience Program 2025",
+    period: "Student Workshop Experience Program 2025",
     subtitle: "Fluid Mechanics · Fabrication",
     summary: "Low-speed open-circuit wind tunnel for aerodynamic flow visualization. Contraction cone ratio calculated analytically.",
     tags: ["Fluid Mechanics", "Fabrication", "Aerodynamics"],
@@ -418,9 +418,9 @@ export const PROJECTS = [
     solution: "Applied Bernoulli's principle and continuity equations to analytically calculate contraction cone ratios, assembled a transparent acrylic test section, and integrated fan assembly with instrumentation.",
     outcome: "Functional open-circuit wind tunnel apparatus used for aerodynamic research and flow visualization.",
     modal: {
-      tag: "Student Work Experience Program 2025",
+      tag: "Student Workshop Experience Program 2025",
       title: "Wind Tunnel Apparatus",
-      subtitle: "Builder & Designer · Student Work Experience Program",
+      subtitle: "Builder & Designer · Student Workshop Experience Program",
       specs: [
         { l: "Type", v: "Low-speed open-circuit wind tunnel" },
         { l: "Test Section", v: "Transparent acrylic for flow visualization" },
@@ -434,17 +434,17 @@ export const PROJECTS = [
 
 export const EXPERIENCE = [
   {
-    id: "Student Work Experience Program",
+    id: "Student Workshop Experience Program",
     icon: "🔩",
     tag: "Engineering",
     year: "2025",
-    title: "Student Work Experience Program Participant — Workshop & Fabrication",
+    title: "Student Workshop Experience Program Participant — Workshop & Fabrication",
     org: "Redeemer's University",
     period: "200 Level, 2025",
     loc: "Ede, Osun State",
     modal: {
       tag: "Practical Engineering · 2025",
-      title: "Student Work Experience Program (SWEP)",
+      title: "Student Workshop Experience Program (SWEP)",
       subtitle: "Redeemer's University · 200 Level · 2025",
       pts: [
         "Operated lathe machines for cylindrical turning and threading on metal workpieces",
@@ -458,12 +458,12 @@ export const EXPERIENCE = [
     },
   },
   {
-    id: "runsa-gov",
+    id: "Redeemer's University Student Association-gov",
     icon: "⚖️",
     tag: "Student Govt",
     year: "2025–Present",
     title: "Chief Whip & In-House Committees Supervisor",
-    org: "RUNSA Legislative Council",
+    org: "Redeemer's University Student Association Legislative Council",
     period: "Oct 2025 – Present",
     loc: "Redeemer's University, Ede",
     modal: {
@@ -519,9 +519,9 @@ export const EXPERIENCE = [
     },
   },
   {
-    id: "spe-e",
+    id: "Society of Petroleum Engineers-e",
     icon: "🛢️",
-    tag: "SPE",
+    tag: "Society of Petroleum Engineers",
     year: "2025–Present",
     title: "Energy & Fossil Fuel Committee Member",
     org: "SPE — Redeemer's University Chapter",
@@ -539,9 +539,9 @@ export const EXPERIENCE = [
     },
   },
   {
-    id: "spe-env",
+    id: "Society of Petroleum Engineers-env",
     icon: "🌍",
-    tag: "SPE",
+    tag: "Society of Petroleum Engineers",
     year: "2025–Present",
     title: "Environmental & Climate Impact Committee Member",
     org: "SPE — Redeemer's University Chapter",
@@ -638,7 +638,7 @@ export const EDUCATION = [
         "Engineering Materials",
         "Fluid Mechanics",
         "Engineering Mathematics",
-        "Workshop Practice (Student Work Experience Program)",
+        "Workshop Practice (Student Workshop Experience Program)",
         "Introduction to Python Programming",
         "Engineering Drawing & CAD",
       ],
@@ -912,7 +912,7 @@ export const AWARDS = [
       status: "awarded",
       icon: "🏅",
       title: "Chief Whip Award",
-      org: "RUNSA Legislative Council",
+      org: "Redeemer's University Student Association Legislative Council",
       year: "2025–2026",
       category: "Leadership",
       desc: "Awarded for outstanding service as Chief Whip of the RUNSA Legislative Council, demonstrating exemplary parliamentary leadership, procedural discipline, and committee oversight.",
@@ -923,7 +923,7 @@ export const AWARDS = [
          desc: "Awarded for outstanding service as Chief Whip of the RUNSA Legislative Council. Recognized for maintaining parliamentary order, supervising all In-House Committees, and demonstrating exemplary leadership throughout the legislative session.",
          specs: [
             { l: "Category", v: "Leadership Award" },
-            { l: "Issuer", v: "RUNSA Legislative Council" },
+            { l: "Issuer", v: "Redeemer's University Student Association Legislative Council" },
             { l: "Role", v: "Chief Whip & In-House Committees Supervisor" },
             { l: "Year", v: "2025–2026 Academic Session" },
          ],
@@ -931,18 +931,18 @@ export const AWARDS = [
       images: [{ src: "/awards/chief-whip.jpg", caption: "Chief Whip Award", alt: "Chief Whip Award Certificate" }]
    },
    {
-      id: "spe-dedicated-service",
+      id: "Society of Petroleum Engineers-dedicated-service",
       status: "awarded",
       icon: "🛢⚙",
       title: "Dedicated Service Award",
-      org: "SPE Student Chapter",
+      org: "Society of Petroleum Engineers Redeemer's University Chapter",
       year: "2026",
       category: "Leadership & Service",
       desc: "Certificate of Appreciation for dedicated service and operational support.",
       modal: {
          tag: "Award",
          title: "Certificate of Appreciation for Dedicated Service",
-         subtitle: "2026 · SPE Student Chapter",
+         subtitle: "2026 · Society of Petroleum Engineers Student Chapter",
          desc: "Awarded for rendering invaluable selfless service, providing critical operational support, and ensuring the success of chapter initiatives.",
          specs: [
             { l: "Category", v: "Service Award" },
@@ -982,7 +982,7 @@ export const EVENTS = [
       status: "completed",
       type: "past",
       title: "Legislative Parliamentary Summit",
-      org: "RUNSA Legislative Council",
+      org: "Redeemer's University Student Association Legislative Council",
       date: "April 2026",
       loc: "Redeemer's University",
       role: "Organizer",
@@ -998,7 +998,7 @@ export const EVENTS = [
          subtitle: "April 2026 · Redeemer's University",
          desc: "Managed logistics and delegate attendance for the summit, facilitating dialogue on future leadership.",
          specs: [
-            { l: "Organizer", v: "RUNSA Legislative Council" },
+            { l: "Organizer", v: "Redeemer's University Student Association Legislative Council" },
             { l: "Role", v: "Organizer" },
             { l: "Date", v: "April 2026" },
             { l: "Location", v: "Redeemer's University" }
@@ -1054,7 +1054,7 @@ export const EVENTS = [
           subtitle: "April 2026 · Redeemer's University",
           desc: "Engaged in dialogue regarding the intersection of student wellness and academic performance.",
           specs: [
-             { l: "Organizer", v: "RUNSA" },
+             { l: "Organizer", v: "Redeemer's University Student Association" },
              { l: "Role", v: "Participant" },
              { l: "Date", v: "April 2026" },
              { l: "Location", v: "Redeemer's University" }
@@ -1066,7 +1066,7 @@ export const EVENTS = [
       status: "completed",
       type: "past",
       title: "Secretariat Workshop 3.0",
-      org: "RUNSA & SPE Student Chapter",
+      org: "Redeemer's University Student Association & Society of Petroleum Engineers Redeemer's University Chapter",
       date: "April 2026",
       loc: "Seap Holdings",
       role: "Participant",
@@ -1094,7 +1094,7 @@ export const EVENTS = [
       status: "completed",
       type: "past",
       title: "Creative Hangout 1.0",
-      org: "RUNSA",
+      org: "Redeemer's University Student Association",
       date: "June 2026",
       loc: "Redeemer's University",
       role: "Participant",
@@ -1110,7 +1110,7 @@ export const EVENTS = [
          subtitle: "June 2026 · Redeemer's University",
          desc: "Involvement in community and creative development initiatives hosted during RUNSA Week 2026.",
          specs: [
-            { l: "Organizer", v: "RUNSA" },
+            { l: "Organizer", v: "Redeemer's University Student Association" },
            { l: "Role", v: "Participant" },
            { l: "Date", v: "June 2026" },
            { l: "Location", v: "Redeemer's University" }
