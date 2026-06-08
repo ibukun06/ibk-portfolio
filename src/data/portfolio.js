@@ -14,7 +14,7 @@ export const PROFILE = {
   tagline:
     "I weld steel frames, design in AutoCAD, and use AI to build production tools — a mechanical engineer who ships at the speed of software.",
   summary:
-    "Mechanical Engineering student at Redeemer's University (CGPA 4.32/5.00) with hands-on fabrication experience: SMAW welding, lathe, milling, drilling, and machine operations through SWEP. Used AI-assisted development to design and ship three live web applications for the RUNSA Legislative Summit 2026 — serving 611 registered delegates with zero data loss. SAT 1360/1600 (90th percentile, Math 710). Seeking SIWES/engineering internships in manufacturing, production, or mechanical systems — and AI workflow roles where I help organizations identify and implement tools that cut costs and increase efficiency.",
+    "Mechanical Engineering student at Redeemer's University (CGPA 4.32/5.00) with hands-on fabrication experience: SMAW welding, lathe, milling, drilling, and machine operations through Student Work Experience Program. Used AI-assisted development to design and ship three live web applications for the RUNSA Legislative Summit 2026 — serving 611 registered delegates with zero data loss. SAT 1360/1600 (90th percentile, Math 710). Seeking SIWES/engineering internships in manufacturing, production, or mechanical systems — and AI workflow roles where I help organizations identify and implement tools that cut costs and increase efficiency.",
   location: "Lagos, Nigeria",
   emailAcademic: "oluwafemi14634@run.edu.ng",
   emailPersonal: "oluwafemiibk@gmail.com",
@@ -339,7 +339,7 @@ export const PROJECTS = [
     featured: false,
     icon: "📊",
     title: "Beam Deflection Automator",
-    period: "2024",
+    period: "2025",
     subtitle: "Python · Engineering Calculation Tool",
     summary: "Automates the Double Integration Method for structural beam analysis. Cuts lab calculation time by 90%+.",
     tags: ["Python", "NumPy", "Structural Analysis"],
@@ -354,7 +354,7 @@ export const PROJECTS = [
     modal: {
       tag: "Engineering Tool",
       title: "Beam Deflection Automator",
-      subtitle: "2024 · Personal Project · Python + NumPy",
+      subtitle: "2025 · Personal Project · Python + NumPy",
       desc: "Built a Python script that automates the Double Integration Method for structural beam analysis — eliminating propagation errors and dramatically cutting lab report preparation time.",
       pts: [
         "Reduced lab report calculation time by over 90%",
@@ -370,7 +370,7 @@ export const PROJECTS = [
     featured: false,
     icon: "⚙️",
     title: "Maize Sheller Machine",
-    period: "SWEP 2024",
+    period: "SWEP 2025",
     subtitle: "Fabrication · Lead Role · Petrol-Powered",
     summary: "Led chassis fabrication. SMAW welded mild steel angle iron frame. Aligned petrol engine drive system. Throughput: 50 kg/hr.",
     tags: ["SMAW Welding", "Metal Fabrication", "Mechanical Design"],
@@ -386,7 +386,7 @@ export const PROJECTS = [
     solution: "Led the chassis fabrication team: interpreted engineering drawings, SMAW-welded the structural frame from mild steel angle iron, and configured the pulley-belt power transmission system.",
     outcome: "Functional agricultural prototype delivered at 50 kg/hr throughput.",
     modal: {
-      tag: "SWEP 2024",
+      tag: "Student Work Experience Program 2025",
       title: "Maize Sheller Machine",
       subtitle: "Lead Fabricator · Student Work Experience Program",
       specs: [
@@ -404,7 +404,7 @@ export const PROJECTS = [
     featured: false,
     icon: "💨",
     title: "Wind Tunnel Apparatus",
-    period: "SWEP 2024",
+    period: "Student Work Experience Program 2025",
     subtitle: "Fluid Mechanics · Fabrication",
     summary: "Low-speed open-circuit wind tunnel for aerodynamic flow visualization. Contraction cone ratio calculated analytically.",
     tags: ["Fluid Mechanics", "Fabrication", "Aerodynamics"],
@@ -418,7 +418,7 @@ export const PROJECTS = [
     solution: "Applied Bernoulli's principle and continuity equations to analytically calculate contraction cone ratios, assembled a transparent acrylic test section, and integrated fan assembly with instrumentation.",
     outcome: "Functional open-circuit wind tunnel apparatus used for aerodynamic research and flow visualization.",
     modal: {
-      tag: "SWEP 2024",
+      tag: "Student Work Experience Program 2025",
       title: "Wind Tunnel Apparatus",
       subtitle: "Builder & Designer · Student Work Experience Program",
       specs: [
@@ -434,18 +434,18 @@ export const PROJECTS = [
 
 export const EXPERIENCE = [
   {
-    id: "swep",
+    id: "Student Work Experience Program",
     icon: "🔩",
     tag: "Engineering",
-    year: "2024",
-    title: "SWEP Participant — Workshop & Fabrication",
+    year: "2025",
+    title: "Student Work Experience Program Participant — Workshop & Fabrication",
     org: "Redeemer's University",
-    period: "200 Level, 2024",
+    period: "200 Level, 2025",
     loc: "Ede, Osun State",
     modal: {
-      tag: "Practical Engineering · 2024",
+      tag: "Practical Engineering · 2025",
       title: "Student Work Experience Program (SWEP)",
-      subtitle: "Redeemer's University · 200 Level · 2024",
+      subtitle: "Redeemer's University · 200 Level · 2025",
       pts: [
         "Operated lathe machines for cylindrical turning and threading on metal workpieces",
         "Performed milling operations: surface finishing, shoulder milling, keyway cutting",
@@ -461,15 +461,15 @@ export const EXPERIENCE = [
     id: "runsa-gov",
     icon: "⚖️",
     tag: "Student Govt",
-    year: "2024–Present",
+    year: "2025–Present",
     title: "Chief Whip & In-House Committees Supervisor",
     org: "RUNSA Legislative Council",
-    period: "Oct 2024 – Present",
+    period: "Oct 2025 – Present",
     loc: "Redeemer's University, Ede",
     modal: {
       tag: "Student Government · Active",
       title: "Chief Whip & In-House Committees Supervisor",
-      subtitle: "RUNSA Legislative Council · Oct 2024 – Present",
+      subtitle: "RUNSA Legislative Council · Oct 2025 – Present",
       pts: [
         "Enforce parliamentary procedures and maintain legislative order during high-stakes sessions",
         "Supervise all In-House Committees — procedural compliance, reporting, and coordinated operations",
@@ -502,15 +502,15 @@ export const EXPERIENCE = [
     id: "cowrywise",
     icon: "💰",
     tag: "Fintech",
-    year: "2024–Present",
+    year: "2025–Present",
     title: "Campus Ambassador",
     org: "Cowrywise Fintech",
-    period: "Dec 2024 – Present",
+    period: "Dec 2025 – Present",
     loc: "Redeemer's University, Ede",
     modal: {
       tag: "Fintech · Active",
       title: "Campus Ambassador — Cowrywise",
-      subtitle: "Dec 2024 – Present · Redeemer's University, Ede",
+      subtitle: "Dec 2025 – Present · Redeemer's University, Ede",
       pts: [
         "Lead financial literacy campaigns on personal finance and investment fundamentals",
         "Organised 'Club60' masterclasses on savings, budgeting, and investing",
@@ -522,10 +522,10 @@ export const EXPERIENCE = [
     id: "spe-e",
     icon: "🛢️",
     tag: "SPE",
-    year: "2024–Present",
+    year: "2025–Present",
     title: "Energy & Fossil Fuel Committee Member",
     org: "SPE — Redeemer's University Chapter",
-    period: "2024 – Present",
+    period: "2025 – Present",
     loc: "Ede, Osun State",
     modal: {
       tag: "SPE · Active",
@@ -542,10 +542,10 @@ export const EXPERIENCE = [
     id: "spe-env",
     icon: "🌍",
     tag: "SPE",
-    year: "2024–Present",
+    year: "2025–Present",
     title: "Environmental & Climate Impact Committee Member",
     org: "SPE — Redeemer's University Chapter",
-    period: "2024 – Present",
+    period: "2025 – Present",
     loc: "Ede, Osun State",
     modal: {
       tag: "SPE · Active",
@@ -638,7 +638,7 @@ export const EDUCATION = [
         "Engineering Materials",
         "Fluid Mechanics",
         "Engineering Mathematics",
-        "Workshop Practice (SWEP)",
+        "Workshop Practice (Student Work Experience Program)",
         "Introduction to Python Programming",
         "Engineering Drawing & CAD",
       ],
