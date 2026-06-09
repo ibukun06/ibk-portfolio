@@ -334,102 +334,231 @@ export const PROJECTS = [
       links: [{ label: "Live Registration Site", url: "https://legislative-summit-registration.vercel.app" }],
     },
   },
-  {
-    id: "beam",
-    featured: false,
-    icon: "📊",
-    title: "Beam Deflection Automator",
-    period: "2025",
-    subtitle: "Python · Engineering Calculation Tool",
-    summary: "Automates the Double Integration Method for structural beam analysis. Cuts lab calculation time by 90%+.",
-    tags: ["Python", "NumPy", "Structural Analysis"],
-    images: [
-      { src: "/projects/beam-code.jpg", caption: "Python implementation of Double Integration Method", alt: "Beam Deflection code" },
-      { src: "/projects/beam-output.jpg", caption: "Terminal output showing deflection results", alt: "Beam Deflection output" },
-      { src: "/projects/beam-calculations.jpg", caption: "Sample engineering calculations", alt: "Beam calculations" },
-    ],
-    problem: "Manual Double Integration Method calculations for structural beams were time-consuming, error-prone, and slowed lab report preparation for Strength of Materials coursework.",
-    solution: "Built a Python + NumPy script that automates beam deflection and slope calculations — eliminating propagation errors and reducing computation time by over 90%.",
-    outcome: "Adopted by coursemates. Over 90% reduction in lab calculation time.",
-    modal: {
-      tag: "Engineering Tool",
-      title: "Beam Deflection Automator",
-      subtitle: "2025 · Personal Project · Python + NumPy",
-      desc: "Built a Python script that automates the Double Integration Method for structural beam analysis — eliminating propagation errors and dramatically cutting lab report preparation time.",
-      pts: [
-        "Reduced lab report calculation time by over 90%",
-        "Eliminated propagation errors common in manual double integration",
-        "Used by coursemates for Strength of Materials coursework",
-        "Demonstrates engineering analysis + programming integration",
+   {
+      id: "beam",
+      featured: false,
+      icon: "📊",
+      title: "Beam Deflection Analysis Tool",
+      period: "2024",
+      subtitle: "Computational Engineering · Structural Analysis",
+      summary: "Automates the Double Integration Method for structural beam analysis, eliminating propagation errors in complex loading scenarios.",
+      tags: ["Structural Analysis", "Computational Tool", "Strength of Materials"],
+      images: [
+         { 
+            src: "/projects/beam-diagram.png", 
+            caption: "Structural Beam Diagram — Load distribution and physical support reactions", 
+            alt: "Beam Load Diagram" 
+         },
+         { 
+            src: "/projects/beam-calculations.png", 
+            caption: "Double Integration Method — Analytical calculation models for slope and deflection", 
+            alt: "Analytical Engineering Calculations"
+         },
+         { 
+            src: "/projects/beam-results.png", 
+            caption: "Computational Output — Automated calculation of critical structural values and maximum deflection points", 
+            alt: "Deflection Results"
+         }
       ],
-      code: `import numpy as np\n\ndef double_integration(load, length, E, I):\n    M = (load * length) / 2\n    theta = M / (E * I)\n    delta = (load * length**3) / (48 * E * I)\n    return {"slope": theta, "deflection": delta}`,
-    },
-  },
-  {
-    id: "maize",
-    featured: false,
-    icon: "⚙️",
-    title: "Maize Sheller Machine",
-    period: "Student Workshop Experience Program 2025",
-    subtitle: "Fabrication · Lead Role · Petrol-Powered",
-    summary: "Led chassis fabrication. SMAW welded mild steel angle iron frame. Aligned petrol engine drive system. Throughput: 50 kg/hr.",
-    tags: ["SMAW Welding", "Metal Fabrication", "Mechanical Design"],
-    images: [
-      { src: "/projects/maize-sketch.jpg", caption: "Design sketch of Maize Sheller chassis", alt: "Maize Sheller design" },
-      { src: "/projects/maize-materials.jpg", caption: "Material preparation — angle iron cutting", alt: "Material preparation" },
-      { src: "/projects/maize-welding.jpg", caption: "SMAW welding process on mild steel frame", alt: "SMAW welding" },
-      { src: "/projects/maize-chassis.jpg", caption: "Chassis fabrication and assembly", alt: "Chassis fabrication" },
-      { src: "/projects/maize-assembly.jpg", caption: "Final assembly with petrol engine", alt: "Final assembly" },
-      { src: "/projects/maize-final.jpg", caption: "Final machine — 50 kg/hr throughput", alt: "Final Maize Sheller" },
-    ],
-    problem: "Design and fabricate a functional petrol-powered maize shelling machine capable of meaningful agricultural throughput, working with mild steel and standard workshop equipment.",
-    solution: "Led the chassis fabrication team: interpreted engineering drawings, SMAW-welded the structural frame from mild steel angle iron, and configured the pulley-belt power transmission system.",
-    outcome: "Functional agricultural prototype delivered at 50 kg/hr throughput.",
-    modal: {
-      tag: "Student Workshop Experience Program 2025",
+      problem: "Manual Double Integration Method calculations for structural beams in Strength of Materials coursework were highly susceptible to propagation errors, especially under complex loading conditions.",
+      solution: "Developed a computational engineering tool to automate the calculation of bending moments, slope, and deflection, ensuring mathematical precision and significantly reducing analytical time.",
+      outcome: "Eliminated manual calculation errors and reduced lab report preparation time by over 90% for engineering peers.",
+      modal: {
+         tag: "Engineering Analysis Tool",
+         title: "Beam Deflection Analysis Tool",
+         subtitle: "2024 · Strength of Materials · Computational Engineering",
+         desc: "Engineered a computational script to automate the Double Integration Method for structural analysis. The tool calculates bending moments, slope equations, and precise deflection values across various beam spans, validating theoretical coursework with computational accuracy.",
+         pts: [
+            "Applied principles of Strength of Materials to model physical beam deformation under load.",
+            "Automated complex calculus-based derivations to prevent manual propagation errors.",
+            "Calculates critical structural values including maximum deflection and exact slope at support nodes.",
+            "Reduced analytical calculation time for structural lab reports by over 90%."
+         ],
+         code: `def calculate_deflection(load, length, E, I):\n    # Core engineering formula for max deflection in a simply supported beam\n    max_deflection = (5 * load * length**4) / (384 * E * I)\n    return max_deflection`,
+      },
+   },
+   {
+      id: "maize",
+      featured: false,
+      icon: "⚙️",
       title: "Maize Sheller Machine",
-      subtitle: "Lead Fabricator · Student Workshop Experience Program",
-      specs: [
-        { l: "Role", v: "Lead Fabricator — Chassis Team" },
-        { l: "Chassis", v: "Mild steel angle iron (SMAW welded)" },
-        { l: "Power Source", v: "Petrol Engine" },
-        { l: "Drive", v: "Pulley & Belt Transmission" },
-        { l: "Throughput", v: "50 kg/hr" },
-        { l: "Outcome", v: "Functional agricultural prototype delivered" },
-      ],
-    },
-  },
-  {
-    id: "tunnel",
-    featured: false,
-    icon: "💨",
-    title: "Wind Tunnel Apparatus",
-    period: "Student Workshop Experience Program 2025",
-    subtitle: "Fluid Mechanics · Fabrication",
-    summary: "Low-speed open-circuit wind tunnel for aerodynamic flow visualization. Contraction cone ratio calculated analytically.",
-    tags: ["Fluid Mechanics", "Fabrication", "Aerodynamics"],
-    images: [
-      { src: "/projects/tunnel-design.jpg", caption: "Design phase — contraction cone calculations", alt: "Wind Tunnel design" },
-      { src: "/projects/tunnel-construction.jpg", caption: "Construction phase — acrylic assembly", alt: "Wind Tunnel construction" },
-      { src: "/projects/tunnel-testing.jpg", caption: "Testing phase — flow visualization", alt: "Wind Tunnel testing" },
-      { src: "/projects/tunnel-final.jpg", caption: "Final wind tunnel apparatus", alt: "Final Wind Tunnel" },
-    ],
-    problem: "Design and construct a low-speed wind tunnel apparatus capable of demonstrating Bernoulli's principle and aerodynamic flow visualization for educational use.",
-    solution: "Applied Bernoulli's principle and continuity equations to analytically calculate contraction cone ratios, assembled a transparent acrylic test section, and integrated fan assembly with instrumentation.",
-    outcome: "Functional open-circuit wind tunnel apparatus used for aerodynamic research and flow visualization.",
-    modal: {
-      tag: "Student Workshop Experience Program 2025",
+      period: "Student Workshop Experience Program 2025",
+      subtitle: "Fabrication · Lead Role · Petrol-Powered",
+      summary: "Led chassis fabrication team for a petrol-powered agricultural shelling machine. SMAW-welded mild steel angle iron structural frame, configured pulley-belt power transmission, and verified mechanical integrity — delivering a functional prototype at 50 kg/hr throughput.",
+      tags: ["SMAW Welding", "Metal Fabrication", "Mechanical Design", "Power Transmission"],
+      images: [
+         {
+            src: "/projects/maize-cad-iso.jpg",
+            caption: "CAD isometric render — fully assembled Maize Sheller showing hopper, chassis frame, shelling drum, and collection tray",
+            alt: "Maize Sheller CAD isometric render"
+         },
+         {
+            src: "/projects/maize-drawing.jpg",
+            caption: "Engineering drawing sheet — orthographic projections with dimensions for chassis members and key structural components",
+            alt: "Maize Sheller engineering drawing"
+         },
+         {
+            src: "/projects/maize-cad-exploded.jpg",
+            caption: "Exploded CAD view — individual components separated to show part relationships, assembly sequence, and spatial layout",
+            alt: "Maize Sheller exploded CAD view"
+         },
+         {
+            src: "/projects/maize-frame-1.jpg",
+            caption: "Bare steel chassis — mild steel angle iron frame before painting, showing SMAW-welded joints and structural geometry",
+            alt: "Maize Sheller bare steel frame"
+         },
+         {
+            src: "/projects/maize-frame-2.jpg",
+            caption: "Chassis alternate angle — structural bracing and corner weld joints visible before surface finishing",
+            alt: "Maize Sheller frame alternate angle"
+         },
+         {
+            src: "/projects/maize-pins.jpg",
+            caption: "Shelling pins — rows of hardened pins on the drum that strip kernels from the cob during operation",
+            alt: "Maize Sheller drum pins"
+         },
+         {
+            src: "/projects/maize-mechanism.jpg",
+            caption: "Drum mechanism — top-down view of the internal shelling drum and stripping arrangement inside the housing",
+            alt: "Maize Sheller internal mechanism"
+         },
+         {
+            src: "/projects/maize-painted-1.jpg",
+            caption: "Painted machine — chassis and body finished in blue, engine mounted and drive system configured",
+            alt: "Painted Maize Sheller"
+         },
+         {
+            src: "/projects/maize-painted-2.jpg",
+            caption: "Side profile — painted machine showing hopper inlet, chassis structure, and lateral bracing",
+            alt: "Maize Sheller painted side profile"
+         },
+         {
+            src: "/projects/maize-painted-3.jpg",
+            caption: "Front-facing view — completed machine ready for throughput testing, achieving 50 kg/hr on dry maize cobs",
+            alt: "Maize Sheller completed front view"
+         },
+         {
+            src: "/projects/maize-complete-1.jpg",
+            caption: "Final prototype — clean side view of the fully assembled and tested Maize Sheller",
+            alt: "Final Maize Sheller prototype"
+         },
+         {
+            src: "/projects/maize-complete-2.jpg",
+            caption: "Final prototype alternate angle — rear chassis detail and drive system layout on the completed machine",
+            alt: "Final Maize Sheller rear detail"
+         },
+],
+      problem: "Design and fabricate a functional petrol-powered maize shelling machine capable of meaningful agricultural throughput, working with mild steel and standard workshop equipment within a student training environment.",
+      engineeringChallenge: "Key constraints: structural rigidity of the chassis under engine vibration, correct power transmission ratio through the pulley-belt system, and ensuring consistent throughput without jamming.",
+      solution: "Led the chassis fabrication team. Interpreted engineering drawings, prepared and cut mild steel angle iron, SMAW-welded the load-bearing structural frame, and aligned the petrol engine with the shelling drum via a pulley-belt transmission system.",
+      outcome: "Functional agricultural prototype delivered at 50 kg/hr throughput with verified structural integrity.",
+      modal: {
+         tag: "Student Workshop Experience Program 2025 · Fabrication",
+         title: "Maize Sheller Machine",
+         subtitle: "Lead Fabricator · Student Work Experience Program · Redeemer's University",
+         desc: "Led the chassis fabrication team for a petrol-powered agricultural maize shelling machine. Responsible for structural design interpretation, SMAW welding of the mild steel frame, drive system configuration, and final throughput verification.",
+         ptsLabel: "Fabrication Process:",
+         pts: [
+            "Interpreted engineering drawings and prepared angle iron bill of materials",
+            "Cut and prepared mild steel angle iron members using angle grinder and hacksaw",
+            "SMAW-welded structural frame — butt, lap, and fillet joints using E6013 electrodes at 3.2mm",
+            "Performed post-weld inspection: slag removal, visual checks, hammer tests on all joints",
+            "Aligned petrol engine mounting pad perpendicular to shelling drum shaft",
+            "Calculated pulley-belt transmission ratio to achieve target RPM at the shelling drum",
+            "Installed and tensioned belt drive; verified alignment under no-load and loaded conditions",
+            "Conducted throughput testing — achieved and verified 50 kg/hr on dry maize cobs",
+            "Maintained HSE compliance: PPE, fire suppression, and grinding safety protocols throughout",
+         ],
+         specs: [
+            { l: "Role", v: "Lead Fabricator — Chassis Team" },
+            { l: "Frame Material", v: "Mild steel angle iron (MS A36)" },
+            { l: "Welding Process", v: "SMAW · E6013 electrode · 3.2mm" },
+            { l: "Power Source", v: "Petrol Engine (internal combustion)" },
+            { l: "Drive System", v: "Pulley & Belt Transmission" },
+            { l: "Throughput", v: "50 kg/hr (measured, dry maize cobs)" },
+            { l: "Measurement Tools", v: "Vernier callipers, steel rule, angle square" },
+            { l: "Outcome", v: "Functional agricultural prototype delivered" },
+         ],
+      },
+   },
+   {
+      id: "tunnel",
+      featured: false,
+      icon: "💨",
       title: "Wind Tunnel Apparatus",
-      subtitle: "Builder & Designer · Student Workshop Experience Program",
-      specs: [
-        { l: "Type", v: "Low-speed open-circuit wind tunnel" },
-        { l: "Test Section", v: "Transparent acrylic for flow visualization" },
-        { l: "Physics", v: "Bernoulli's Principle & continuity equation" },
-        { l: "Design", v: "Contraction cone ratio calculated analytically" },
-        { l: "Purpose", v: "Aerodynamic flow visualization and experimental testing" },
+      period: "Student Workshop Experience Program 2025",
+      subtitle: "Fluid Mechanics · Design & Fabrication",
+      summary: "Co-designed and constructed a low-speed open-circuit wind tunnel for aerodynamic flow visualization. Calculated contraction cone ratios analytically using Bernoulli's principle and the continuity equation. Assembled transparent acrylic test section with integrated instrumentation.",
+      tags: ["Fluid Mechanics", "Fabrication", "Aerodynamics", "Instrumentation", "Bernoulli"],
+      images: [
+         {
+            src: "/projects/tunnel-final.jpg",
+            caption: "Completed wind tunnel apparatus — full external view of the assembled open-circuit tunnel in the workshop",
+            alt: "Completed wind tunnel exterior"
+         },
+         {
+            src: "/projects/tunnel-interior.jpg",
+            caption: "Test section interior — looking through the transparent acrylic walls toward the contraction cone and fan inlet end",
+            alt: "Wind tunnel interior view"
+         },
+         {
+            src: "/projects/tunnel-section.png",
+            caption: "Test section entry — transition from the settling chamber into the working section where velocity measurements are taken",
+            alt: "Wind tunnel test section entry"
+         },
+         {
+            src: null,
+            placeholder: true,
+            placeholderType: "airflow",
+            caption: "Internal airflow schematic — technical drawing pending",
+            alt: "Airflow Schematic Placeholder"
+         },
+         {
+            src: null,
+            placeholder: true,
+            placeholderType: "crosssection",
+            caption: "Tunnel cross-section drawing — technical drawing pending",
+            alt: "Cross-Section Drawing Placeholder"
+         },
+         {
+            src: null,
+            placeholder: true,
+            placeholderType: "sensor",
+            caption: "Sensor placement diagram — technical drawing pending",
+            alt: "Sensor Placement Placeholder"
+         },
       ],
-    },
-  },
+      problem: "Design and construct a low-speed open-circuit wind tunnel capable of demonstrating Bernoulli's principle and producing measurable aerodynamic flow data for student experimental use.",
+      solution: "Applied the continuity equation and Bernoulli's principle to analytically calculate the contraction cone area ratio. Fabricated a transparent acrylic test section with precision cutting and solvent bonding, then integrated fan assembly and pitot tube instrumentation.",
+      outcome: "Functional open-circuit wind tunnel producing demonstrable Bernoulli's principle results with measurable velocity profiles across the test section.",
+      modal: {
+         tag: "Student Workshop Experience Program 2025 · Fluid Mechanics",
+         title: "Wind Tunnel Apparatus",
+         subtitle: "Builder & Designer · Student Work Experience Program · Redeemer's University",
+         desc: "Co-designed and built a low-speed open-circuit wind tunnel for aerodynamic research and Bernoulli's principle demonstration. Responsible for analytical design of the contraction cone, acrylic test section fabrication, and instrumentation integration.",
+       ptsLabel: "Design & Construction Process:",
+       pts: [
+          "Calculated contraction cone area ratio using the continuity equation: A₁V₁ = A₂V₂",
+          "Applied Bernoulli's principle (P + ½ρV² = const) to predict pressure distribution across contraction",
+          "Fabricated transparent acrylic test section — precision cutting, edge preparation, solvent cement bonding",
+          "Mounted axial fan unit with adequate settling chamber length to reduce inlet turbulence",
+          "Installed pitot tube at test section centreline connected to inclined manometer for velocity readings",
+          "Conducted flow visualization tests using smoke injection and thread tufts at varying fan speeds",
+          "Measured cross-sectional velocity profiles and compared against Bernoulli predictions",
+          "Results confirmed flow uniformity within acceptable tolerance for educational demonstration",
+       ],
+         specs: [
+            { l: "Type", v: "Low-speed open-circuit wind tunnel" },
+            { l: "Velocity Range", v: "Estimated 2–15 m/s (fan-speed dependent)" },
+            { l: "Test Section", v: "Transparent acrylic — direct flow observation" },
+            { l: "Design Basis", v: "Continuity equation + Bernoulli's principle" },
+            { l: "Contraction", v: "Analytically calculated inlet-to-outlet area ratio" },
+            { l: "Instrumentation", v: "Pitot tube + inclined manometer" },
+            { l: "Flow Visualization", v: "Smoke injection and thread tufts" },
+            { l: "Purpose", v: "Aerodynamic research and Bernoulli demonstration" },
+         ],
+      },
+   },
 ];
 
 export const EXPERIENCE = [
