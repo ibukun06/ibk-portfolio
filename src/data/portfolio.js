@@ -364,7 +364,8 @@ export const PROJECTS = [
     tags: ["React.js", "Firebase", "Firestore", "Realtime DB", "Vercel", "JavaScript"],
     images: [
       { src: "/projects/runsa-registration.png", caption: "Main Registration Portal — Landing Interface", alt: "RUNSA Legislative Summit Registration Portal Landing" },
-      { src: "/projects/runsa-checkin.png", caption: "Delegate Check-In & Accreditation System", alt: "Check-In Interface" }, // <--- Fixed line{ src: "/projects/runsa-checkin.png", caption: "Live Agenda — Order of Events", alt: "Agenda View 1" },
+      { src: "/projects/runsa-checkin.png", caption: "Delegate Check-In & Accreditation System", alt: "Check-In Interface" },
+      { src: "/projects/runsa-checkin.png", caption: "Live Agenda — Order of Events", alt: "Agenda View 1" },
       { src: "/projects/runsa-view-1.png", caption: "Live Agenda — Session Details", alt: "Agenda View 2" },
       { src: "/projects/runsa-view-3.png", caption: "Live Agenda — Schedule Interface", alt: "Agenda View 3" },
       { src: "/projects/runsa-view-4.png", caption: "Live Agenda — Mobile Responsive UI", alt: "Agenda View 4" },
