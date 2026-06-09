@@ -341,6 +341,7 @@ export const PROJECTS = [
       title: "Beam Deflection Analysis Tool",
       period: "2024",
       subtitle: "Computational Engineering · Structural Analysis",
+      interactiveTool: "/beam-deflector",
       summary: "Automates the Double Integration Method for structural beam analysis, eliminating propagation errors in complex loading scenarios.",
       tags: ["Structural Analysis", "Computational Tool", "Strength of Materials"],
       images: [
@@ -375,6 +376,7 @@ export const PROJECTS = [
             "Reduced analytical calculation time for structural lab reports by over 90%."
          ],
          code: `def calculate_deflection(load, length, E, I):\n    # Core engineering formula for max deflection in a simply supported beam\n    max_deflection = (5 * load * length**4) / (384 * E * I)\n    return max_deflection`,
+         links: [{ label: "🚀 Launch Interactive Tool", url: "/beam-deflector" }],
       },
    },
    {
