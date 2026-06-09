@@ -299,6 +299,8 @@ export const SKILLS = [
       ],
     },
   },
+  {
+    id: "networking",
     icon: "🌐",
     cat: "Technical",
     title: "Ethernet Cabling (RJ45/Cat6)",
