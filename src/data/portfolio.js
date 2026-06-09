@@ -9,12 +9,13 @@ export const PROFILE = {
   titles: [
     "Mechanical Engineering Student",
     "Fabrication & Workshop Trained",
+    "Speaker-Elect, RUNSA Legislative Council",
     "AI Workflow Optimizer",
   ],
   tagline:
-    "I weld steel frames, design in AutoCAD, and use AI to build production tools — a mechanical engineer who ships at the speed of software.",
+    "I weld steel frames to ±0.05 mm tolerance, design in AutoCAD, and build production systems — a mechanical engineer who ships at the speed of software.",
   summary:
-    "Mechanical Engineering student at Redeemer's University (CGPA 4.32/5.00) with hands-on fabrication experience: SMAW welding, lathe, milling, drilling, and machine operations through Student Workshop Experience Program. Used AI-assisted development to design and ship three live web applications for the RUNSA Legislative Summit 2026 — serving 611 registered delegates with zero data loss. SAT 1360/1600 (90th percentile, Math 710). Seeking SIWES/engineering internships in manufacturing, production, or mechanical systems — and AI workflow roles where I help organizations identify and implement tools that cut costs and increase efficiency.",
+    "Mechanical Engineering student at Redeemer's University (CGPA 4.32/5.00) with hands-on fabrication experience: SMAW welding, lathe operations (turning, facing, threading to ±0.05 mm tolerance), milling, drive system alignment, and precision measurement through the Student Workshop Experience Program. Led chassis fabrication of a petrol-powered Maize Sheller achieving 50 kg/hr design throughput. Built and deployed 3 production web applications serving 611 registered delegates across 10+ institutions at the RUNSA Legislative Summit 2026 — zero data loss. SAT 1360/1600 (90th percentile, Math 710). Speaker-Elect, RUNSA Legislative Council 2026/2027. Seeking SIWES/engineering internships in oil & gas, manufacturing, or mechanical systems — available July–August 2026.",
   location: "Lagos, Nigeria",
   emailAcademic: "oluwafemi14634@run.edu.ng",
   emailPersonal: "oluwafemiibk@gmail.com",
@@ -27,8 +28,8 @@ export const PROFILE = {
   photo: "/profile.jpg",
   seeking: [
     "⚙️ SIWES / Engineering Internship",
-    "🔧 Manufacturing & Fabrication",
-    "🤖 AI Workflow Role",
+    "🔧 Oil & Gas · Manufacturing · Energy",
+    "🏛️ Speaker-Elect, RUNSA 2026/2027",
     "🌍 Nigeria & Abroad",
   ],
   stats: [
@@ -48,9 +49,9 @@ export const PROFILE = {
     {
       value: "611",
       label: "Delegates",
-      sub: "RUNSA Legislative Council 2026",
+      sub: "RUNSA Legislative Summit 2026",
       detail:
-        "611 delegates processed across three solo-built production apps. Zero data loss.",
+        "611 delegates across 10+ institutions — processed through three solo-built production apps on summit day (29 Apr 2026). Zero data loss.",
     },
     {
       value: "3",
@@ -79,7 +80,7 @@ export const PROFILE = {
     {
       icon: "⚖️",
       title: "Proven Leadership",
-      body: "RUNSA Chief Whip: enforces parliamentary procedure, supervises all In-House Committees, coordinated the largest RU student summit of 2026.",
+      body: "Speaker-Elect, RUNSA Legislative Council 2026/2027 — the highest student legislative office at Redeemer's University. As Chief Whip, enforced parliamentary procedure across 15+ sessions representing ~1,200+ students, supervised all four In-House Committees, and delivered the largest RU student summit of 2026.",
     },
     {
       icon: "🤖",
@@ -125,7 +126,7 @@ export const SKILLS = [
       title: "Lathe, Milling & Drilling",
       subtitle: "Machine Operations · SWEP",
       pts: [
-        "Lathe: turning, facing, threading on mild steel workpieces",
+        "Lathe: turning, facing, threading on mild steel — dimensional tolerances to ±0.05 mm",
         "Milling: surface finishing, shoulder milling, keyway cutting",
         "Drilling: precision drilling, reaming, countersinking",
         "Angle grinding: deburring, edge preparation, surface finishing",
@@ -181,7 +182,7 @@ export const SKILLS = [
       desc: "Engineering-first Python: solving real structural problems, not just software tasks.",
       pts: [
         "NumPy for numerical computation and matrix operations",
-        "Beam Deflection Automator — reduced lab calculation time by 90%+",
+        "Beam Deflection Automator — cut per-beam calculation time from ~40 min to under 4 min; adopted by 15+ coursemates",
         "Automation scripting for repetitive engineering calculations",
         "Growing into: Pandas, Matplotlib, SciPy for engineering data analysis",
       ],
@@ -236,15 +237,68 @@ export const SKILLS = [
       title: "Leadership & Parliamentary Governance",
       subtitle: "Student Govt · Legislative Council · Chief Whip",
       pts: [
-        "RUNSA Chief Whip: enforces parliamentary procedure, supervises all In-House Committees",
-        "RUNSA Legislative Summit 2026: sole developer of full event digital infrastructure — 611 delegates",
-        "SWEP Fabrication: led Maize Sheller chassis team to functional prototype delivery",
-        "Cowrywise Campus Ambassador: grew student platform registrations by 15%",
+        "Speaker-Elect, RUNSA Legislative Council 2026/2027 — elected highest student legislative office",
+        "RUNSA Chief Whip: enforced parliamentary procedure across 15+ sessions, representing ~1,200+ undergraduates; supervised all four In-House Committees",
+        "RUNSA Legislative Summit 2026: sole developer of full event digital infrastructure — 611 delegates, 10+ institutions",
+        "Cowrywise Campus Ambassador: grew student platform registrations by 15% in one semester",
       ],
     },
   },
   {
-    id: "networking",
+    id: "gdt",
+    icon: "📏",
+    cat: "Manufacturing & Fabrication",
+    title: "GD&T & Tolerance Analysis",
+    level: "Fundamentals",
+    modal: {
+      tag: "Manufacturing",
+      title: "GD&T & Tolerance Analysis",
+      subtitle: "Geometric Dimensioning & Tolerancing · Fundamentals",
+      desc: "Applied dimensional accuracy and tolerance verification in SWEP fabrication work; familiar with GD&T principles for engineering drawings and precision manufacturing.",
+      pts: [
+        "Achieved ±0.05 mm dimensional tolerances on lathe operations during SWEP",
+        "Measurement verification using Vernier calipers and micrometers",
+        "Blueprint reading with tolerance specifications",
+        "Tolerance analysis for fit and assembly requirements",
+      ],
+    },
+  },
+  {
+    id: "hse",
+    icon: "🦺",
+    cat: "Manufacturing & Fabrication",
+    title: "HSE Compliance & Workshop Safety",
+    level: "Applied",
+    modal: {
+      tag: "Manufacturing",
+      title: "HSE Compliance & Workshop Safety",
+      subtitle: "Health, Safety & Environment · SWEP Applied",
+      pts: [
+        "Strict PPE compliance across all fabrication and machining activities",
+        "Fire suppression and grinding safety protocols",
+        "Workpiece clamping and machine guarding procedures",
+        "HSE compliance maintained across entire SWEP programme",
+      ],
+    },
+  },
+  {
+    id: "process-opt",
+    icon: "📈",
+    cat: "Professional Competencies",
+    title: "Process Optimisation & Root Cause Analysis",
+    level: "Applied",
+    modal: {
+      tag: "Professional",
+      title: "Process Optimisation & Root Cause Analysis",
+      subtitle: "Applied across engineering and digital projects",
+      pts: [
+        "Beam Deflection Automator: identified and eliminated manual propagation error — cut calculation time from ~40 min to under 4 min",
+        "RUNSA Summit: root-cause debugging of Firebase real-time sync under concurrent multi-device load",
+        "Parliamentary procedure: systematic identification and resolution of procedural non-compliance",
+        "Cowrywise: 15% registration growth through structured peer-outreach process improvement",
+      ],
+    },
+  },
     icon: "🌐",
     cat: "Technical",
     title: "Ethernet Cabling (RJ45/Cat6)",
@@ -339,11 +393,11 @@ export const PROJECTS = [
       featured: false,
       icon: "📊",
       title: "Beam Deflection Analysis Tool",
-      period: "2024",
+      period: "2025",
       subtitle: "Computational Engineering · Structural Analysis",
       interactiveTool: "/beam-deflector",
-      summary: "Automates the Double Integration Method for structural beam analysis, eliminating propagation errors in complex loading scenarios.",
-      tags: ["Structural Analysis", "Computational Tool", "Strength of Materials"],
+      summary: "Automates the Double Integration Method for structural beam analysis — cut per-beam calculation time from ~40 minutes to under 4 minutes and eliminated propagation errors. Adopted by 15+ coursemates for Strength of Materials coursework.",
+      tags: ["Python", "NumPy", "Structural Analysis", "Computational Tool", "Strength of Materials"],
       images: [
          { 
             src: "/projects/beam-diagram.png", 
@@ -361,19 +415,19 @@ export const PROJECTS = [
             alt: "Deflection Results"
          }
       ],
-      problem: "Manual Double Integration Method calculations for structural beams in Strength of Materials coursework were highly susceptible to propagation errors, especially under complex loading conditions.",
-      solution: "Developed a computational engineering tool to automate the calculation of bending moments, slope, and deflection, ensuring mathematical precision and significantly reducing analytical time.",
-      outcome: "Eliminated manual calculation errors and reduced lab report preparation time by over 90% for engineering peers.",
+      problem: "Manual Double Integration Method calculations for structural beams in Strength of Materials coursework were highly susceptible to propagation errors, especially under complex loading conditions — taking ~40 minutes per beam scenario by hand.",
+      solution: "Developed a Python/NumPy computational tool to automate the calculation of bending moments, slope, and deflection, ensuring mathematical precision and eliminating propagation errors across all load configurations.",
+      outcome: "Reduced per-beam calculation time from ~40 minutes to under 4 minutes. Adopted by 15+ coursemates for Strength of Materials lab reports — eliminating propagation errors across all load configurations tested.",
       modal: {
          tag: "Engineering Analysis Tool",
          title: "Beam Deflection Analysis Tool",
-         subtitle: "2024 · Strength of Materials · Computational Engineering",
-         desc: "Engineered a computational script to automate the Double Integration Method for structural analysis. The tool calculates bending moments, slope equations, and precise deflection values across various beam spans, validating theoretical coursework with computational accuracy.",
+         subtitle: "2025 · Strength of Materials · Python & NumPy",
+         desc: "Built a Python/NumPy tool to automate the Double Integration Method for structural beam analysis. Calculates bending moments, slope equations, and precise deflection values across various beam spans — reducing per-beam calculation time from ~40 minutes to under 4 minutes and adopted by 15+ coursemates.",
          pts: [
-            "Applied principles of Strength of Materials to model physical beam deformation under load.",
-            "Automated complex calculus-based derivations to prevent manual propagation errors.",
-            "Calculates critical structural values including maximum deflection and exact slope at support nodes.",
-            "Reduced analytical calculation time for structural lab reports by over 90%."
+            "Applied Strength of Materials principles to model physical beam deformation under distributed and point loads.",
+            "Automated complex calculus-based derivations to eliminate manual propagation errors.",
+            "Calculates critical structural values: maximum deflection, exact slope at support nodes, reaction forces.",
+            "Cut per-beam hand-calculation time from ~40 minutes to under 4 minutes — adopted by 15+ coursemates."
          ],
          code: `def calculate_deflection(load, length, E, I):\n    # Core engineering formula for max deflection in a simply supported beam\n    max_deflection = (5 * load * length**4) / (384 * E * I)\n    return max_deflection`,
          links: [{ label: "🚀 Launch Interactive Tool", url: "/beam-deflector" }],
@@ -565,6 +619,26 @@ export const PROJECTS = [
 
 export const EXPERIENCE = [
   {
+    id: "speaker-elect",
+    icon: "🏛️",
+    tag: "Student Govt",
+    year: "2026–Present",
+    title: "Speaker-Elect — RUNSA Legislative Council",
+    org: "Redeemer's University Student Association",
+    period: "May 2026 – Present",
+    loc: "Redeemer's University, Ede",
+    modal: {
+      tag: "Student Government · Incoming Speaker",
+      title: "Speaker-Elect — RUNSA Legislative Council",
+      subtitle: "Redeemer's University Student Association · 2026/2027 Session",
+      pts: [
+        "Elected Speaker of the RUNSA Legislative Council for the 2026/2027 academic session — the highest student legislative office at Redeemer's University",
+        "Will chair all plenary sessions, maintain order of business, and represent the Council at institutional level",
+        "Transition from Chief Whip (2024–2026) to Speaker — continuous legislative leadership across two consecutive sessions",
+      ],
+    },
+  },
+  {
     id: "Student Workshop Experience Program",
     icon: "🔩",
     tag: "Engineering",
@@ -578,13 +652,13 @@ export const EXPERIENCE = [
       title: "Student Workshop Experience Program (SWEP)",
       subtitle: "Redeemer's University · 200 Level · 2025",
       pts: [
-        "Operated lathe machines for cylindrical turning and threading on metal workpieces",
-        "Performed milling operations: surface finishing, shoulder milling, keyway cutting",
-        "Executed precision drilling with proper workpiece clamping and tool selection",
-        "Applied SMAW techniques to join mild steel components for fabrication projects",
-        "Utilized angle grinders for metal cutting, edge preparation, and surface finishing",
-        "Led chassis fabrication for the Maize Sheller Machine: petrol-engine powered, 50 kg/hr throughput",
-        "Contributed to Wind Tunnel Apparatus design: contraction cone ratio calculation and acrylic assembly",
+        "Lathe operations: cylindrical turning, facing, and threading on mild steel — dimensional tolerances to ±0.05 mm, verified with Vernier calipers and micrometers",
+        "Milling operations: surface finishing, shoulder milling, keyway cutting with correct workpiece clamping",
+        "Precision drilling with proper tool selection and workpiece clamping",
+        "SMAW welding: E6013 electrode, mild steel structural joints with post-weld inspection",
+        "Angle grinding: metal cutting, edge preparation, and surface finishing",
+        "Led chassis fabrication for the Maize Sheller Machine: petrol-engine powered, 50 kg/hr design throughput — interpreted drawings, welded frame, aligned drive system",
+        "Co-designed Wind Tunnel Apparatus: calculated contraction cone geometry analytically (continuity + Bernoulli), fabricated acrylic test section, integrated pitot-static instrumentation",
       ],
     },
   },
@@ -592,20 +666,20 @@ export const EXPERIENCE = [
     id: "Redeemer's University Student Association-gov",
     icon: "⚖️",
     tag: "Student Govt",
-    year: "2025–Present",
+    year: "2024–Present",
     title: "Chief Whip & In-House Committees Supervisor",
     org: "Redeemer's University Student Association Legislative Council",
-    period: "Oct 2025 – Present",
+    period: "Oct 2024 – Present",
     loc: "Redeemer's University, Ede",
     modal: {
       tag: "Student Government · Active",
       title: "Chief Whip & In-House Committees Supervisor",
-      subtitle: "RUNSA Legislative Council · Oct 2025 – Present",
+      subtitle: "RUNSA Legislative Council · Oct 2024 – Present",
       pts: [
-        "Enforce parliamentary procedures and maintain legislative order during high-stakes sessions",
-        "Supervise all In-House Committees — procedural compliance, reporting, and coordinated operations",
-        "Central coordination role in organizing the RUNSA Legislative Summit 2026",
-        "Additionally served as sole developer of the Summit's full digital infrastructure (611 delegates, 3 live apps)",
+        "Enforced parliamentary procedure and maintained session discipline across 15+ legislative council sessions, representing ~1,200+ undergraduate students",
+        "Supervised all four In-House Committees — set reporting standards, ensured procedural compliance, and tracked action items from motion to resolution",
+        "Recipient: Chief Whip Award — RUNSA Legislative Council, 2025–2026 Academic Session",
+        "Sole developer of the Summit's full digital infrastructure: 611 delegates across 10+ institutions, 3 live production apps, zero data loss",
       ],
     },
   },
@@ -1038,6 +1112,29 @@ export const CERTIFICATES = [
 ];
 
 export const AWARDS = [
+   {
+      id: "speaker-elect-award",
+      status: "awarded",
+      icon: "🏛️",
+      title: "Speaker-Elect — RUNSA Legislative Council",
+      org: "Redeemer's University Student Association",
+      year: "2026",
+      category: "Leadership",
+      desc: "Elected Speaker of the RUNSA Legislative Council for the 2026/2027 academic session — the highest student legislative office at Redeemer's University.",
+      modal: {
+         tag: "Leadership · Elected",
+         title: "Speaker-Elect — RUNSA Legislative Council",
+         subtitle: "Redeemer's University Student Association · 2026/2027 Session",
+         desc: "Elected Speaker of the RUNSA Legislative Council for the 2026/2027 academic session following two years of service as Chief Whip (2024–2026). Will chair all plenary sessions and represent the Council at institutional level.",
+         specs: [
+            { l: "Category", v: "Elected Leadership" },
+            { l: "Issuer", v: "Redeemer's University Student Association" },
+            { l: "Role", v: "Speaker, RUNSA Legislative Council" },
+            { l: "Session", v: "2026/2027 Academic Session" },
+         ],
+      },
+      images: [{ src: "/awards/speaker-elect.jpg", caption: "Speaker-Elect Announcement", alt: "Speaker-Elect RUNSA" }]
+   },
    {
       id: "chiefwhip-award",
       status: "awarded",
