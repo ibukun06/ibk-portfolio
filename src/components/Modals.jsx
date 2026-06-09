@@ -178,6 +178,7 @@ export function Modal({ data, onClose, t, openGallery }) {
 export function GalleryModal({ images, title, onClose, t }) {
   const [idx, setIdx] = useState(0);
   const [touchX, setTouchX] = useState(null);
+  const [failedIndexes, setFailedIndexes] = useState(new Set());
 
   useEffect(() => {
     const fn = (e) => {
@@ -187,21 +188,48 @@ export function GalleryModal({ images, title, onClose, t }) {
     };
     window.addEventListener("keydown", fn);
     document.body.style.overflow = "hidden";
-    return () => { window.removeEventListener("keydown", fn); document.body.style.overflow = ""; };
+    return () => {
+      window.removeEventListener("keydown", fn);
+      document.body.style.overflow = "";
+    };
   }, [onClose, images.length]);
 
   if (!images || images.length === 0) return null;
+
   const cur = images[idx];
+  const isFailed = failedIndexes.has(idx);
+
+  const markFailed = (index) => {
+    setFailedIndexes(prev => new Set([...prev, index]));
+  };
 
   return (
     <div
       onClick={onClose}
-      role="dialog" aria-modal="true" aria-label={`Gallery: ${title}`}
-      style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.96)", zIndex: 10001, display: "flex", alignItems: "center", justifyContent: "center", backdropFilter: "blur(8px)" }}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Gallery: ${title}`}
+      style={{
+        position: "fixed", inset: 0,
+        background: "rgba(0,0,0,0.96)",
+        zIndex: 10001,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backdropFilter: "blur(8px)",
+      }}
     >
       <div
         onClick={e => e.stopPropagation()}
-        style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative" }}
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          position: "relative",
+        }}
         onTouchStart={e => setTouchX(e.changedTouches[0].screenX)}
         onTouchEnd={e => {
           const endX = e.changedTouches[0].screenX;
@@ -210,15 +238,42 @@ export function GalleryModal({ images, title, onClose, t }) {
           setTouchX(null);
         }}
       >
-        <button onClick={onClose} aria-label="Close gallery"
-          style={{ position: "absolute", top: 16, right: 16, background: "rgba(255,255,255,0.1)", border: "none", borderRadius: 999, padding: "8px 18px", cursor: "pointer", color: "#fff", fontSize: 14, fontWeight: 600, backdropFilter: "blur(8px)", zIndex: 10 }}>
+        {/* Close button */}
+        <button
+          onClick={onClose}
+          aria-label="Close gallery"
+          style={{
+            position: "absolute", top: 16, right: 16,
+            background: "rgba(255,255,255,0.1)",
+            border: "none", borderRadius: 999,
+            padding: "8px 18px", cursor: "pointer",
+            color: "#fff", fontSize: 14, fontWeight: 600,
+            backdropFilter: "blur(8px)", zIndex: 10,
+          }}
+        >
           ✕ Close
         </button>
-        <div style={{ position: "absolute", top: 16, left: 16, background: "rgba(255,255,255,0.08)", color: "#fff", padding: "5px 14px", borderRadius: 999, fontSize: 12, fontWeight: 700, backdropFilter: "blur(8px)", zIndex: 10 }}>
+
+        {/* Counter */}
+        <div style={{
+          position: "absolute", top: 16, left: 16,
+          background: "rgba(255,255,255,0.08)",
+          color: "#fff", padding: "5px 14px",
+          borderRadius: 999, fontSize: 12, fontWeight: 700,
+          backdropFilter: "blur(8px)", zIndex: 10,
+        }}>
           {idx + 1} / {images.length}
         </div>
 
-        <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", width: "100%", padding: "60px 20px 20px" }}>
+        {/* Image area */}
+        <div style={{
+          flex: 1,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+          padding: "60px 20px 20px",
+        }}>
           {cur.placeholder ? (
             /* Engineering placeholder slide */
             <div style={{
@@ -226,75 +281,197 @@ export function GalleryModal({ images, title, onClose, t }) {
               background: "rgba(15,15,23,0.9)",
               border: "1px dashed rgba(99,179,237,0.35)",
               borderRadius: 16, padding: "48px 36px",
-              display: "flex", flexDirection: "column", alignItems: "center", gap: 18,
+              display: "flex", flexDirection: "column",
+              alignItems: "center", gap: 18,
               animation: "fadeIn 0.3s ease both",
               boxShadow: "0 8px 48px rgba(0,0,0,0.5)",
             }}>
-              {/* Mini graph paper grid SVG */}
               <svg width="200" height="120" viewBox="0 0 200 120" style={{ opacity: 0.2 }}>
-                {[20,40,60,80,100].map(y => <line key={y} x1="0" y1={y} x2="200" y2={y} stroke="#63b3ed" strokeWidth="0.6"/>)}
-                {[25,50,75,100,125,150,175].map(x => <line key={x} x1={x} y1="0" x2={x} y2="120" stroke="#63b3ed" strokeWidth="0.6"/>)}
-                <line x1="30" y1="30" x2="170" y2="30" stroke="#63b3ed" strokeWidth="2"/>
-                <line x1="30" y1="30" x2="30" y2="90" stroke="#63b3ed" strokeWidth="2"/>
-                <line x1="30" y1="90" x2="170" y2="90" stroke="#63b3ed" strokeWidth="2"/>
-                <line x1="170" y1="30" x2="170" y2="90" stroke="#63b3ed" strokeWidth="2"/>
-                <line x1="60" y1="30" x2="60" y2="90" stroke="#63b3ed" strokeWidth="1" strokeDasharray="4 3"/>
-                <line x1="100" y1="30" x2="100" y2="90" stroke="#63b3ed" strokeWidth="1" strokeDasharray="4 3"/>
-                <line x1="140" y1="30" x2="140" y2="90" stroke="#63b3ed" strokeWidth="1" strokeDasharray="4 3"/>
+                {[20, 40, 60, 80, 100].map(y =>
+                  <line key={y} x1="0" y1={y} x2="200" y2={y} stroke="#63b3ed" strokeWidth="0.6" />
+                )}
+                {[25, 50, 75, 100, 125, 150, 175].map(x =>
+                  <line key={x} x1={x} y1="0" x2={x} y2="120" stroke="#63b3ed" strokeWidth="0.6" />
+                )}
+                <line x1="30" y1="30" x2="170" y2="30" stroke="#63b3ed" strokeWidth="2" />
+                <line x1="30" y1="30" x2="30" y2="90" stroke="#63b3ed" strokeWidth="2" />
+                <line x1="30" y1="90" x2="170" y2="90" stroke="#63b3ed" strokeWidth="2" />
+                <line x1="170" y1="30" x2="170" y2="90" stroke="#63b3ed" strokeWidth="2" />
+                <line x1="60" y1="30" x2="60" y2="90" stroke="#63b3ed" strokeWidth="1" strokeDasharray="4 3" />
+                <line x1="100" y1="30" x2="100" y2="90" stroke="#63b3ed" strokeWidth="1" strokeDasharray="4 3" />
+                <line x1="140" y1="30" x2="140" y2="90" stroke="#63b3ed" strokeWidth="1" strokeDasharray="4 3" />
               </svg>
               <div style={{ textAlign: "center" }}>
-                <div style={{ fontSize: 13, fontWeight: 800, color: "#63b3ed", marginBottom: 8, letterSpacing: "0.5px", fontFamily: "'Syne', sans-serif" }}>
+                <div style={{
+                  fontSize: 13, fontWeight: 800,
+                  color: "#63b3ed", marginBottom: 8,
+                  letterSpacing: "0.5px",
+                  fontFamily: "'Syne', sans-serif",
+                }}>
                   {cur.alt || "Technical Drawing"}
                 </div>
-                <div style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", marginBottom: 6, fontFamily: "'DM Sans', sans-serif" }}>
+                <div style={{
+                  fontSize: 13,
+                  color: "rgba(255,255,255,0.55)",
+                  marginBottom: 6,
+                  fontFamily: "'DM Sans', sans-serif",
+                }}>
                   {cur.caption}
                 </div>
-                <div style={{ display: "inline-block", background: "rgba(99,179,237,0.12)", border: "1px solid rgba(99,179,237,0.3)", color: "#63b3ed", borderRadius: 999, padding: "4px 16px", fontSize: 10.5, fontWeight: 800, letterSpacing: "1px", textTransform: "uppercase", fontFamily: "'DM Sans', sans-serif" }}>
+                <div style={{
+                  display: "inline-block",
+                  background: "rgba(99,179,237,0.12)",
+                  border: "1px solid rgba(99,179,237,0.3)",
+                  color: "#63b3ed",
+                  borderRadius: 999,
+                  padding: "4px 16px",
+                  fontSize: 10.5, fontWeight: 800,
+                  letterSpacing: "1px",
+                  textTransform: "uppercase",
+                  fontFamily: "'DM Sans', sans-serif",
+                }}>
                   Will be added
                 </div>
               </div>
             </div>
-          ) : (
-            <>
-              <img
-                src={cur.src} alt={cur.alt || cur.caption || title}
-                style={{ maxWidth: "100%", maxHeight: "calc(100vh - 140px)", objectFit: "contain", borderRadius: 10, boxShadow: "0 8px 48px rgba(0,0,0,0.7)", animation: "fadeIn 0.3s ease both" }}
-                onError={e => {
-                  e.target.style.display = "none";
-                  if (e.target.nextSibling) e.target.nextSibling.style.display = "flex";
-                }}
-              />
-              <div style={{ display: "none", flexDirection: "column", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.35)", fontSize: 13, gap: 8 }}>
-                <div style={{ fontSize: 36, opacity: 0.3 }}>🖼️</div>
-                <div>Image pending: drop into public/{cur.src?.replace("/", "")}</div>
+          ) : isFailed ? (
+            /* Clean failed state — no broken image icon, no black screen */
+            <div style={{
+              maxWidth: 420, width: "100%",
+              background: "rgba(15,15,23,0.85)",
+              border: "1px solid rgba(255,255,255,0.08)",
+              borderRadius: 16,
+              padding: "48px 32px",
+              display: "flex", flexDirection: "column",
+              alignItems: "center", gap: 14,
+              animation: "fadeIn 0.3s ease both",
+            }}>
+              <div style={{ fontSize: 36, opacity: 0.3 }}>🖼️</div>
+              <div style={{
+                fontSize: 13, fontWeight: 700,
+                color: "rgba(255,255,255,0.5)",
+                textAlign: "center",
+                fontFamily: "'DM Sans', sans-serif",
+                lineHeight: 1.6,
+              }}>
+                Image not loading
               </div>
-            </>
+              {cur.caption && (
+                <div style={{
+                  fontSize: 12,
+                  color: "rgba(255,255,255,0.3)",
+                  textAlign: "center",
+                  fontFamily: "'DM Sans', sans-serif",
+                  lineHeight: 1.5,
+                  maxWidth: 320,
+                }}>
+                  {cur.caption}
+                </div>
+              )}
+              <div style={{
+                fontSize: 10,
+                color: "rgba(255,255,255,0.2)",
+                fontFamily: "'Fira Code', monospace",
+                marginTop: 4,
+              }}>
+                {cur.src}
+              </div>
+            </div>
+          ) : (
+            /* Normal image — key forces remount on slide change, clearing any stale error state */
+            <img
+              key={`gallery-img-${idx}`}
+              src={cur.src}
+              alt={cur.alt || cur.caption || title}
+              onError={() => markFailed(idx)}
+              style={{
+                maxWidth: "100%",
+                maxHeight: "calc(100vh - 140px)",
+                objectFit: "contain",
+                borderRadius: 10,
+                boxShadow: "0 8px 48px rgba(0,0,0,0.7)",
+                animation: "fadeIn 0.3s ease both",
+              }}
+            />
           )}
         </div>
 
-        {cur.caption && (
-          <div style={{ color: "rgba(255,255,255,0.65)", fontSize: 13, padding: "8px 20px", textAlign: "center", maxWidth: 600 }}>
+        {/* Caption */}
+        {cur.caption && !cur.placeholder && (
+          <div style={{
+            color: "rgba(255,255,255,0.65)",
+            fontSize: 13,
+            padding: "8px 20px",
+            textAlign: "center",
+            maxWidth: 600,
+          }}>
             {cur.caption}
           </div>
         )}
 
+        {/* Prev / Next arrows */}
         {images.length > 1 && (
           <>
-            <button onClick={() => setIdx(Math.max(0, idx - 1))} aria-label="Previous"
-              style={{ position: "absolute", left: 12, top: "50%", transform: "translateY(-50%)", background: "rgba(255,255,255,0.08)", border: "none", borderRadius: 999, padding: "12px 18px", cursor: "pointer", color: "#fff", fontSize: 22, opacity: idx > 0 ? 1 : 0.2, transition: "opacity 0.2s" }}>
+            <button
+              onClick={() => setIdx(Math.max(0, idx - 1))}
+              aria-label="Previous image"
+              style={{
+                position: "absolute", left: 12,
+                top: "50%", transform: "translateY(-50%)",
+                background: "rgba(255,255,255,0.08)",
+                border: "none", borderRadius: 999,
+                padding: "12px 18px", cursor: "pointer",
+                color: "#fff", fontSize: 22,
+                opacity: idx > 0 ? 1 : 0.2,
+                transition: "opacity 0.2s",
+              }}
+            >
               ←
             </button>
-            <button onClick={() => setIdx(Math.min(images.length - 1, idx + 1))} aria-label="Next"
-              style={{ position: "absolute", right: 12, top: "50%", transform: "translateY(-50%)", background: "rgba(255,255,255,0.08)", border: "none", borderRadius: 999, padding: "12px 18px", cursor: "pointer", color: "#fff", fontSize: 22, opacity: idx < images.length - 1 ? 1 : 0.2, transition: "opacity 0.2s" }}>
+            <button
+              onClick={() => setIdx(Math.min(images.length - 1, idx + 1))}
+              aria-label="Next image"
+              style={{
+                position: "absolute", right: 12,
+                top: "50%", transform: "translateY(-50%)",
+                background: "rgba(255,255,255,0.08)",
+                border: "none", borderRadius: 999,
+                padding: "12px 18px", cursor: "pointer",
+                color: "#fff", fontSize: 22,
+                opacity: idx < images.length - 1 ? 1 : 0.2,
+                transition: "opacity 0.2s",
+              }}
+            >
               →
             </button>
-            <div style={{ display: "flex", gap: 6, padding: "12px 0 24px" }}>
-              {images.map((_, i) => (
-                <button key={i} onClick={() => setIdx(i)} aria-label={`Go to image ${i + 1}`}
-                  style={{ width: i === idx ? 22 : 7, height: 7, borderRadius: 999, border: "none", padding: 0, cursor: "pointer", background: i === idx ? t.accent : "rgba(255,255,255,0.25)", transition: "all 0.25s" }} />
-              ))}
-            </div>
           </>
+        )}
+
+        {/* Dot indicators */}
+        {images.length > 1 && (
+          <div style={{ display: "flex", gap: 6, padding: "12px 0 24px" }}>
+            {images.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setIdx(i)}
+                aria-label={`Go to image ${i + 1}`}
+                style={{
+                  width: i === idx ? 22 : 7,
+                  height: 7,
+                  borderRadius: 999,
+                  border: "none",
+                  padding: 0,
+                  cursor: "pointer",
+                  background: i === idx
+                    ? "#63b3ed"
+                    : failedIndexes.has(i)
+                      ? "rgba(248,113,113,0.4)"
+                      : "rgba(255,255,255,0.25)",
+                  transition: "all 0.25s",
+                }}
+              />
+            ))}
+          </div>
         )}
       </div>
     </div>
