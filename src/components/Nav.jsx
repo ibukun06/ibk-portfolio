@@ -79,7 +79,7 @@ export default function Nav({ dark, toggle, t, openContact }) {
             aria-label="Back to top"
             style={{
               background: "none", border: "none", cursor: "pointer",
-              display: "flex", alignItems: "center", gap: 9,
+              display: "flex", alignItems: "center", justifyContent: "center",
               padding: 0, flexShrink: 0,
             }}
           >
@@ -92,14 +92,6 @@ export default function Nav({ dark, toggle, t, openContact }) {
                 flexShrink: 0,
               }} 
             />
-            <span style={{
-              fontWeight: 800, fontSize: 15,
-              color: t.text, letterSpacing: "-0.3px",
-              fontFamily: "'Syne', sans-serif",
-              textTransform: "uppercase", // Ensures it stays fully capitalized
-            }}>
-              IBUKUNOLUWA
-            </span>
           </button>
 
           {/* Desktop nav links */}
