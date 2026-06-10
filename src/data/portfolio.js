@@ -637,7 +637,7 @@ export const EXPERIENCE = [
       pts: [
         "Elected Speaker of the RUNSA Legislative Council for the 2026/2027 academic session — the highest student legislative office at Redeemer's University",
         "Will chair all plenary sessions, maintain order of business, and represent the Council at institutional level",
-        "Transition from Chief Whip (2024–2026) to Speaker — continuous legislative leadership across two consecutive sessions",
+        "Transition from Chief Whip (2025–2026) to Speaker — continuous legislative leadership across two consecutive sessions",
       ],
     },
   },
@@ -669,15 +669,15 @@ export const EXPERIENCE = [
     id: "Redeemer's University Student Association-gov",
     icon: "⚖️",
     tag: "Student Govt",
-    year: "2024–Present",
+    year: "2025–Present",
     title: "Chief Whip & In-House Committees Supervisor",
     org: "Redeemer's University Student Association Legislative Council",
-    period: "Oct 2024 – Present",
+    period: "Oct 2025 – Present",
     loc: "Redeemer's University, Ede",
     modal: {
       tag: "Student Government · Active",
       title: "Chief Whip & In-House Committees Supervisor",
-      subtitle: "RUNSA Legislative Council · Oct 2024 – Present",
+      subtitle: "RUNSA Legislative Council · Oct 2025 – Present",
       pts: [
         "Enforced parliamentary procedure and maintained session discipline across 15+ legislative council sessions, representing ~1,200+ undergraduate students",
         "Supervised all four In-House Committees — set reporting standards, ensured procedural compliance, and tracked action items from motion to resolution",
@@ -1128,7 +1128,7 @@ export const AWARDS = [
          tag: "Leadership · Elected",
          title: "Speaker-Elect — RUNSA Legislative Council",
          subtitle: "Redeemer's University Student Association · 2026/2027 Session",
-         desc: "Elected Speaker of the RUNSA Legislative Council for the 2026/2027 academic session following two years of service as Chief Whip (2024–2026). Will chair all plenary sessions and represent the Council at institutional level.",
+         desc: "Elected Speaker of the RUNSA Legislative Council for the 2026/2027 academic session following two years of service as Chief Whip (2025–2026). Will chair all plenary sessions and represent the Council at institutional level.",
          specs: [
             { l: "Category", v: "Elected Leadership" },
             { l: "Issuer", v: "Redeemer's University Student Association" },
