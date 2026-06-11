@@ -1248,6 +1248,7 @@ export const EVENTS = [
       desc: "Leadership and networking conference themed 'The Seat of Kings.' 7 speakers including the SA to the Governor of Osun State. Backed by the Osun State Ministry of Federal Affairs, Munitel, and VT Brand. 150–300 attendees.",
       image: "/events/dominion-mandate.jpg",
       images: [
+         { src: "/events/dominion-mandate.jpg", caption: "The Seat of Kings — SAPETRO Theatre", alt: "IBK at The Dominion Mandate 2.0 conference banner" },
          { src: "/events/dominion-mandate-cover.jpg",    caption: "The Seat of Kings — with Anuoluwakiisi Arowolo", alt: "IBK and Kiisi at the Dominion Mandate 2.0 banner" },
          { src: "/events/dominion-mandate-audience.jpg", caption: "150–300 attendees packed SAPETRO Theatre", alt: "Packed audience at Dominion Mandate 2.0" },
          { src: "/events/dominion-mandate-panel.jpg",    caption: "Panel session — 7 speakers including SA to the Governor of Osun State", alt: "Panel session at Dominion Mandate 2.0" },
