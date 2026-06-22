@@ -88,7 +88,7 @@ function FeaturedCard({ project, open, setGallery, t, mobile }) {
           {/* Gallery button */}
           {project.images && project.images.length > 0 && (
             <button
-              onClick={() => setGallery({ images: project.images, title: project.title })}
+              onClick={() => setGallery({ images: project.images, title: project.title, video: project.video, videoCaption: project.videoCaption })}
               style={{ position: "absolute", bottom: 12, left: 12, background: "rgba(0,0,0,0.65)", border: "none", borderRadius: 8, padding: "6px 12px", cursor: "pointer", color: "#fff", fontSize: 11, fontWeight: 700, backdropFilter: "blur(4px)", zIndex: 2 }}
             >
               🖼️ {project.images.length} images
