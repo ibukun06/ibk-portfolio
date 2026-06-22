@@ -68,38 +68,26 @@ function EventCard({ ev, open, setGallery, t }) {
           {isUpcoming ? "Upcoming" : isPlaceholder ? "Add Event" : "Past"}
         </div>
 
-        {/* Gallery button */}
-        {ev.images && ev.images.length > 0 && !isPlaceholder && (
+        {/* Gallery button — opens unified viewer (video first slide, then photos) */}
+        {((ev.images && ev.images.length > 0) || ev.video) && !isPlaceholder && (
           <button
-            onClick={() => setGallery({ images: ev.images, title: ev.title })}
+            onClick={() => setGallery({ images: ev.images, video: ev.video, videoCaption: ev.videoCaption, title: ev.title })}
             style={{
               position: "absolute", bottom: 10, left: 10,
               background: "rgba(0,0,0,0.55)", border: "none",
               borderRadius: 7, padding: "4px 10px",
               color: "#fff", fontSize: 10.5, fontWeight: 700, cursor: "pointer",
               backdropFilter: "blur(4px)",
+              display: "flex", alignItems: "center", gap: 5,
             }}
           >
-            🖼️ {ev.images.length} photos
-          </button>
-        )}
-
-        {/* Video button */}
-        {ev.video && !isPlaceholder && (
-          <button
-            onClick={() => setGallery({ video: ev.video, videoCaption: ev.videoCaption, title: ev.title })}
-            style={{
-              position: "absolute", bottom: 10,
-              left: ev.images && ev.images.length > 0 ? "auto" : 10,
-              right: ev.images && ev.images.length > 0 ? 10 : "auto",
-              background: "rgba(0,0,0,0.55)", border: "none",
-              borderRadius: 7, padding: "4px 10px",
-              color: "#fff", fontSize: 10.5, fontWeight: 700, cursor: "pointer",
-              backdropFilter: "blur(4px)",
-              display: "flex", alignItems: "center", gap: 4,
-            }}
-          >
-            ▶️ Video
+            {ev.video && <span>▶️</span>}
+            {ev.images && ev.images.length > 0 && <span>🖼️</span>}
+            {ev.video && ev.images?.length > 0
+              ? `Video + ${ev.images.length} photos`
+              : ev.video
+                ? "Watch video"
+                : `${ev.images.length} photos`}
           </button>
         )}
       </div>

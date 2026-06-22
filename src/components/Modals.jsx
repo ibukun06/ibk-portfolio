@@ -175,16 +175,22 @@ export function Modal({ data, onClose, t, openGallery }) {
 }
 
 /* ═══ Gallery Lightbox ═══════════════════════════════════════════ */
-export function GalleryModal({ images, title, onClose, t }) {
+export function GalleryModal({ images, video, videoCaption, title, onClose, t }) {
   const [idx, setIdx] = useState(0);
   const [touchX, setTouchX] = useState(null);
   const [failedIndexes, setFailedIndexes] = useState(new Set());
+
+  // Build a single mixed slide list: video first (if present), then all photos.
+  const slides = [
+    ...(video ? [{ isVideo: true, src: video, caption: videoCaption }] : []),
+    ...(images || []),
+  ];
 
   useEffect(() => {
     const fn = (e) => {
       if (e.key === "Escape") onClose();
       if (e.key === "ArrowLeft") setIdx(i => Math.max(0, i - 1));
-      if (e.key === "ArrowRight") setIdx(i => Math.min(images.length - 1, i + 1));
+      if (e.key === "ArrowRight") setIdx(i => Math.min(slides.length - 1, i + 1));
     };
     window.addEventListener("keydown", fn);
     document.body.style.overflow = "hidden";
@@ -192,11 +198,11 @@ export function GalleryModal({ images, title, onClose, t }) {
       window.removeEventListener("keydown", fn);
       document.body.style.overflow = "";
     };
-  }, [onClose, images.length]);
+  }, [onClose, slides.length]);
 
-  if (!images || images.length === 0) return null;
+  if (!slides || slides.length === 0) return null;
 
-  const cur = images[idx];
+  const cur = slides[idx];
   const isFailed = failedIndexes.has(idx);
 
   const markFailed = (index) => {
@@ -233,7 +239,7 @@ export function GalleryModal({ images, title, onClose, t }) {
         onTouchStart={e => setTouchX(e.changedTouches[0].screenX)}
         onTouchEnd={e => {
           const endX = e.changedTouches[0].screenX;
-          if (touchX !== null && endX < touchX - 40 && idx < images.length - 1) setIdx(idx + 1);
+          if (touchX !== null && endX < touchX - 40 && idx < slides.length - 1) setIdx(idx + 1);
           if (touchX !== null && endX > touchX + 40 && idx > 0) setIdx(idx - 1);
           setTouchX(null);
         }}
@@ -262,10 +268,10 @@ export function GalleryModal({ images, title, onClose, t }) {
           borderRadius: 999, fontSize: 12, fontWeight: 700,
           backdropFilter: "blur(8px)", zIndex: 10,
         }}>
-          {idx + 1} / {images.length}
+          {idx + 1} / {slides.length}
         </div>
 
-        {/* Image area */}
+        {/* Media area */}
         <div style={{
           flex: 1,
           display: "flex",
@@ -274,7 +280,25 @@ export function GalleryModal({ images, title, onClose, t }) {
           width: "100%",
           padding: "60px 20px 20px",
         }}>
-          {cur.placeholder ? (
+          {cur.isVideo ? (
+            /* Video slide */
+            <video
+              key={`gallery-video-${idx}`}
+              src={cur.src}
+              controls
+              autoPlay
+              playsInline
+              onError={() => markFailed(idx)}
+              style={{
+                maxWidth: "100%",
+                maxHeight: "calc(100vh - 140px)",
+                borderRadius: 10,
+                boxShadow: "0 8px 48px rgba(0,0,0,0.7)",
+                animation: "fadeIn 0.3s ease both",
+                background: "#000",
+              }}
+            />
+          ) : cur.placeholder ? (
             /* Engineering placeholder slide */
             <div style={{
               maxWidth: 520, width: "100%",
@@ -346,7 +370,7 @@ export function GalleryModal({ images, title, onClose, t }) {
               alignItems: "center", gap: 14,
               animation: "fadeIn 0.3s ease both",
             }}>
-              <div style={{ fontSize: 36, opacity: 0.3 }}>🖼️</div>
+              <div style={{ fontSize: 36, opacity: 0.3 }}>{cur.isVideo ? "🎬" : "🖼️"}</div>
               <div style={{
                 fontSize: 13, fontWeight: 700,
                 color: "rgba(255,255,255,0.5)",
@@ -354,7 +378,7 @@ export function GalleryModal({ images, title, onClose, t }) {
                 fontFamily: "'DM Sans', sans-serif",
                 lineHeight: 1.6,
               }}>
-                Image not loading
+                {cur.isVideo ? "Video not loading" : "Image not loading"}
               </div>
               {cur.caption && (
                 <div style={{
@@ -410,11 +434,11 @@ export function GalleryModal({ images, title, onClose, t }) {
         )}
 
         {/* Prev / Next arrows */}
-        {images.length > 1 && (
+        {slides.length > 1 && (
           <>
             <button
               onClick={() => setIdx(Math.max(0, idx - 1))}
-              aria-label="Previous image"
+              aria-label="Previous slide"
               style={{
                 position: "absolute", left: 12,
                 top: "50%", transform: "translateY(-50%)",
@@ -429,8 +453,8 @@ export function GalleryModal({ images, title, onClose, t }) {
               ←
             </button>
             <button
-              onClick={() => setIdx(Math.min(images.length - 1, idx + 1))}
-              aria-label="Next image"
+              onClick={() => setIdx(Math.min(slides.length - 1, idx + 1))}
+              aria-label="Next slide"
               style={{
                 position: "absolute", right: 12,
                 top: "50%", transform: "translateY(-50%)",
@@ -438,7 +462,7 @@ export function GalleryModal({ images, title, onClose, t }) {
                 border: "none", borderRadius: 999,
                 padding: "12px 18px", cursor: "pointer",
                 color: "#fff", fontSize: 22,
-                opacity: idx < images.length - 1 ? 1 : 0.2,
+                opacity: idx < slides.length - 1 ? 1 : 0.2,
                 transition: "opacity 0.2s",
               }}
             >
@@ -448,13 +472,13 @@ export function GalleryModal({ images, title, onClose, t }) {
         )}
 
         {/* Dot indicators */}
-        {images.length > 1 && (
+        {slides.length > 1 && (
           <div style={{ display: "flex", gap: 6, padding: "12px 0 24px" }}>
-            {images.map((_, i) => (
+            {slides.map((s, i) => (
               <button
                 key={i}
                 onClick={() => setIdx(i)}
-                aria-label={`Go to image ${i + 1}`}
+                aria-label={s.isVideo ? "Go to video" : `Go to image ${i + 1}`}
                 style={{
                   width: i === idx ? 22 : 7,
                   height: 7,
@@ -466,7 +490,9 @@ export function GalleryModal({ images, title, onClose, t }) {
                     ? "#63b3ed"
                     : failedIndexes.has(i)
                       ? "rgba(248,113,113,0.4)"
-                      : "rgba(255,255,255,0.25)",
+                      : s.isVideo
+                        ? "rgba(251,191,36,0.5)"
+                        : "rgba(255,255,255,0.25)",
                   transition: "all 0.25s",
                 }}
               />
