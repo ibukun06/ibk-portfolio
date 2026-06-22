@@ -105,7 +105,15 @@ export default function App() {
         />
       )}
       {contactOpen && <ContactModal onClose={closeContact} t={t} />}
-      {gallery && <GalleryModal images={gallery.images} title={gallery.title} onClose={() => setGallery(null)} t={t} />}
+      {gallery && (
+      <GalleryModal
+        images={gallery.images}
+        video={gallery.video}
+        videoCaption={gallery.videoCaption}
+        title={gallery.title}
+        onClose={() => setGallery(null)}
+        t={t}
+        />)}
     </div>
   );
 }
