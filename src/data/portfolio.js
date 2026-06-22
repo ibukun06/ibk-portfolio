@@ -1218,17 +1218,16 @@ export const EVENTS = [
       loc: "Redeemer's University",
       role: "Organizer",
       desc: "Organized and planned the summit themed 'The Catalyst of Transformation: Legislating the Future for Democratic Leadership.'",
-      image:  "/events/placeholder.png",
+      image:  "/events/legislative-summit-ibk-group.jpg",
       images: [
-         { src: "/events/legislative-summit-cover.jpg", caption: "RUNSA Legislative Summit 2026 — organizing team", alt: "RUNSA Legislative Summit group photo" },
-         { src: "/events/legislative-summit-guests.jpg", caption: "Distinguished guests including Rt. Hon. Adewale Olumide Egbedun", alt: "Distinguished guests at the Legislative Summit" },
-         { src: "/events/legislative-summit-ibk-group.jpg", caption: "IBK with fellow committee members at the Summit", alt: "IBK at the RUNSA Legislative Summit" },
+         { src: "/events/legislative-summit-cover.jpg", caption: "RUNSA Legislative Summit 2026 — Ibukunoluwa with delegates from University of Osun", alt: "RUNSA Legislative Summit group photo" },
+         { src: "/events/legislative-summit-guests.jpg", caption: "Distinguished guests including Hon. Adewumi Adeyemi Irekandu", alt: "Distinguished guests at the Legislative Summit" },
+         { src: "/events/legislative-summit-ibk-group.jpg", caption: "IBK with Delegates from Yaba College of Technology at the Summit", alt: "IBK at the RUNSA Legislative Summit" },
          { src: "/events/legislative-summit-podium.jpg", caption: "Summit proceedings — SAPETRO Theatre", alt: "Speaker at the Legislative Summit podium" },
-         { src: "/events/legislative-summit-speaker.jpg", caption: "Session in progress — Legislative Summit 2026", alt: "Speaker at the Legislative Summit" },
-         { src: "/events/legislative-summit-speaker-2.jpg", caption: "The Amazing Speakers — Legislative Summit 2026", alt: "Speaker at the Legislative Summit" },
+         { src: "/events/legislative-summit-speaker.jpg", caption: "Keynote Session taking my Hon. Olamide, representing the Honorable Speaker of Osun State House of Assembly — Legislative Summit 2026", alt: "Speaker at the Legislative Summit" },
+         { src: "/events/legislative-summit-speaker-2.jpg", caption: "Side photo of Hon. Prince Dr. Kasope Ajibade — Legislative Summit 2026", alt: "Speaker at the Legislative Summit" },
          { src: "/events/legislative-summit-audience.jpg", caption: "611 delegates from 7 institutions", alt: "Full audience at the RUNSA Legislative Summit" },
          { src: "/events/legislative-summit-flyer.jpg", caption: "RUNSA Legislative Summit — official flyer", alt: "Legislative Summit flyer" },
-         { src: "/events/legislative-summit.jpg", caption: "Certificate of Appreciation", alt: "Legislative Summit Certificate" },
          { src: "/events/legislative-summit.jpg", caption: "Certificate of Appreciation", alt: "Legislative Summit Certificate" }
       ],
       video: "/events/legislative-summit-slo-mo.mp4",
@@ -1389,14 +1388,13 @@ export const EVENTS = [
       loc: "Seap Holdings",
       role: "Participant",
       desc: "Active participation and engagement during the Secretariat Workshop 3.0.",
-      image: "/events/placeholder.png",
+      image: "/events/secretariat-workshop-candid.jpg",
       images: [
          { src: "/events/secretariat-workshop-flyer.jpg", caption: "Secretariat Workshop 3.0 — Building Systems that Outlive Administrations", alt: "Secretariat Workshop 3.0 flyer" },
          { src: "/events/secretariat-workshop-flyer-2.jpg", caption: "RUNSA × SPE — Secretariat Workshop 3.0", alt: "Secretariat Workshop 3.0 second flyer" },
          { src: "/events/secretariat-workshop-ibk.jpg", caption: "IBK at Secretariat Workshop 3.0", alt: "IBK at Secretariat Workshop 3.0" },
          { src: "/events/secretariat-workshop-candid.jpg", caption: "Connecting with fellow student leaders", alt: "Candid moment at Secretariat Workshop 3.0" },
-         { src: "/events/secretariat-workshop.jpg", caption: "Certificate of Participation", alt: "Secretariat Workshop 3.0 Certificate" },
-         { src: "/events/secretariat-workshop.jpg", caption: "Certificate of Participation", alt: "Secretariat Workshop Certificate" }
+         { src: "/events/secretariat-workshop.jpg", caption: "Certificate of Participation", alt: "Secretariat Workshop 3.0 Certificate" }
       ],
       modal: {
          tag: "Past Event",
